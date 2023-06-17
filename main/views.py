@@ -1,15 +1,34 @@
-from django.shortcuts import render
-
+from django.shortcuts import render,get_object_or_404,redirect
+from .models import *
 # Create your views here.
 
 def home(request):
     return render(request, 'home.html')
 
 def properties(request):
-    return render(request, 'properties.html')
+    projeler = Projeler.objects.all()
+    isting_count = Projeler.objects.count()
 
-def property_single(request):
-    return render(request, 'property-single.html')
+    # sehre_gore_projeler = Projeler.objects.filter(sehir=pk)
+
+    context = {
+        'projeler' : projeler,
+        'isting_count' : isting_count,
+        # 'sehre_gore_projeler' : sehre_gore_projeler
+    }
+    return render(request, 'properties.html', context)
+
+def property_single(request,pk):
+
+    project_detail = get_object_or_404(Projeler, proje_ismi=pk)
+    project_details = Projeler.objects.filter(proje_ismi=pk)
+
+    context = {
+        'project_detail' : project_detail,
+        'project_details' :project_details,
+    }
+
+    return render(request, 'property-single.html', context)
 
 def about(request):
     return render(request, 'about.html')

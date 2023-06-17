@@ -103,19 +103,19 @@
 								<ul class="homec-header__list">
 									<li>
 										<a href="mailto:info@landinvestgroup.com.tr">
-												<img src="{% static 'img/email-icon.svg' %}" alt="#">
+											<img src="{% static 'img/email-icon.svg' %}" alt="#">
 											<span>info@landinvestgroup.com.tr</span>
 										</a>
 									</li>
 									<li>
 										<a href="tel:+00239040248">
-												<img src="{% static 'img/phone-icon.svg' %}" alt="#">
+											<img src="{% static 'img/phone-icon.svg' %}" alt="#">
 											<span> +90 312 220 00 63</span>
 										</a>
 									</li>
 									<li>
 										<a href="mailto:info@landinvestgroup.com.tr">
-												<img src="{% static 'img/locations-icon.svg' %}" alt="#">
+											<img src="{% static 'img/locations-icon.svg' %}" alt="#">
 											<span>Kızılırmak Mahallesi Ufuk Üniversitesi Cad. Kat:11 No:3/54, 
 Ankara, Türkiye</span>
 										</a>
@@ -177,71 +177,37 @@ Ankara, Türkiye</span>
 							<div class="homec-header__inside">
 								<div class="homec-header__group">
 									<div class="homec-header__logo">
-								<a href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
+										<a href="{% url 'home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
 									</div>
 									<div class="homec-header__menu">
 										<div class="navbar">
 											<div class="nav-item">                                      
 												<!-- Main Menu -->
 												<ul class="nav-menu menu navigation list-none">
-													<li><a href="#">Home</a>
-														<ul class="sub-menu">
-															<li><a href="index.html">Homepage 01</a></li>
-															<li><a href="index-2.html">Homepage 02</a></li>
-															<li><a href="index-3.html">Homepage 03</a></li>
-														</ul>
+													<li><a href="{% url 'home' %}">Ana Sayfa</a>
+								
 													</li>
-													<li ><a href="#">Properties</a>
-														<ul class="sub-menu">
-															<li><a href="property-grid.html">Properties</a></li>
-															<li><a href="property-single.html">Property Single</a></li>
-															<li><a href="add-property.html">Add Property</a></li>
-															<li><a href="dashboard.html">Dashboard</a></li>
-															<li><a href="submit-property.html">Submit Property</a></li>
-															<li><a href="edit-property.html">Edit Property</a></li>
-														</ul>
+													<li ><a href="{% url 'properties' %}">Projelerimiz</a>
+								
 													</li>
-													<li ><a href="#">Pages</a>
-														<ul class="sub-menu">
-															<li><a href="about.html">About Us</a></li>
-															<li><a href="pricing.html">Pricing</a></li>
-															<li><a href="payment-method.html">Payment Method</a></li>
-															<li><a href="faq.html">Faq's</a></li>
-															<li><a href="login.html">Login</a></li>
-															<li><a href="signup.html">Signup</a></li>
-															<li><a href="404.html">Error Page</a></li>
-														</ul>
+												</li>
+												<li ><a href="https://landinvestgroup.sahibinden.com/" target="_blank">Porföylerimiz</a>
+							
+												</li>
+													<li ><a href="{% url 'about' %}">Biz Kimiz?</a>
+												
 													</li>
-													<li ><a href="#">Agents</a>
-														<ul class="sub-menu">
-															<li><a href="our-agent.html">Our Agent</a></li>
-															<li><a href="agent-detail.html">Agent Details</a></li>
-														</ul>
+													<li ><a href="{% url 'blog' %}">Blog</a>
 													</li>
-													<li ><a href="#">News</a>
-														<ul class="sub-menu">
-															<li><a href="blog.html">News</a></li>
-															<li><a href="blog-single.html">News Single</a></li>
-														</ul>
+													<li ><a href="{% url 'contact' %}">İletişim</a>
 													</li>
-													<li><a href="contact-us.html">Contact</a></li>
 												</ul>
 												<!-- End Main Menu -->
 											</div>
 										</div>
 									</div>
 								</div>
-								<button type="button" class="offcanvas-toggler" data-bs-toggle="modal" data-bs-target="#offcanvas-modal"><span class="line"></span><span class="line"></span><span class="line"></span>
-								</button>
-								<div class="homec-header__button">
-									<a href="dashboard.html" class="homec-header__icon">
-										<svg width="28" height="32" viewBox="0 0 28 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M13.9659 16.2014C18.423 16.2014 22.0666 12.5579 22.0666 8.1007C22.0666 3.64352 18.423 0 13.9659 0C9.50869 0 5.86523 3.64352 5.86523 8.1007C5.86523 12.5579 9.50876 16.2014 13.9659 16.2014Z" />
-											<path d="M27.8681 22.6752C27.6558 22.1446 27.3729 21.6494 27.0545 21.1895C25.4273 18.784 22.9158 17.1922 20.0858 16.8031C19.7321 16.7677 19.343 16.8384 19.06 17.0507C17.5743 18.1473 15.8056 18.7133 13.9661 18.7133C12.1266 18.7133 10.3579 18.1473 8.87219 17.0507C8.58917 16.8384 8.20005 16.7323 7.84634 16.8031C5.0164 17.1922 2.46948 18.784 0.877655 21.1895C0.55929 21.6494 0.276269 22.18 0.0640708 22.6752C-0.0420283 22.8875 -0.00668454 23.1351 0.0994145 23.3474C0.382436 23.8426 0.736144 24.3379 1.05451 24.7623C1.54973 25.4345 2.08036 26.0358 2.68174 26.6018C3.17696 27.097 3.74294 27.5569 4.30898 28.0167C7.10351 30.1039 10.4641 31.2004 13.9307 31.2004C17.3974 31.2004 20.758 30.1038 23.5525 28.0167C24.1185 27.5923 24.6845 27.097 25.1798 26.6018C25.7457 26.0358 26.3117 25.4344 26.807 24.7623C27.1607 24.3025 27.4791 23.8426 27.7621 23.3474C27.9389 23.1351 27.9742 22.8874 27.8681 22.6752Z"/>
-										</svg>
-									</a>
-									<a href="add-property.html" class="homec-btn"><span>Add Property</span></a>
-								</div>
+						
 							</div>
 						</div>
 					</div>
@@ -249,27 +215,23 @@ Ankara, Türkiye</span>
 			</div>
 		</header>
 		<!-- End Header -->
-
+		{% for a in project_details %}
 		<!-- Breadcrumbs -->
-		<section class="breadcrumbs__content" style="background-image: url(https://placehold.co/1920x455);">
+		<section class="breadcrumbs__content" style="background-color: rgb(112, 112, 112);">
 			<!-- <div class="homec-overlay"></div> -->
 			<div class="container">
 				<div class="row">
 					<!-- Breadcrumb-Content -->
 					<div class="col-12">
 						<div class="breadcrumb-content">
-							<ul class="breadcrumb__menu list-none">
-								<li><a href="index.html">Home</a></li>
-								<li class="active"><a href="property-grid.html">Latest Properties</a></li>
-							</ul>
-							<h2 class="breadcrumb__title m-0">Latest Properties</h2>
+							<h2 class="breadcrumb__title m-0">{{a.proje_ismi}}</h2>
 						</div>	
 					</div>
 				</div>
 			</div>
 		</section>
 		<!-- End breadcrumbs -->
-		
+	
         <!-- Property Single Slider -->
 		<section class="pd-top-80 pd-btm-80">
 			<div class="container">
@@ -281,162 +243,8 @@ Ankara, Türkiye</span>
 									<ul class="slides">
 										<li>
 											<div class="homec-image-gallery">
-												<!-- Amount Card -->
-												<div class="homec-amount-card homec-amount-card__sticky">
-													<h4 class="homec-amount-card__amount">$3,976<span>Per Month</span></h4>
-												</div>
-												<!-- End Amount Card -->
 												<div class="homec-overlay"></div>
-												<img src="https://placehold.co/1170x600" alt="#">
-												<div class="homec-image-gallery__bottom">
-													<div class="homec-image-gallery__content">
-														<h3 class="homec-image-gallery__title">Modern House With Pool</h3>
-														<p class="homec-image-gallery__text">
-														<img src="img/map-icon.svg" alt="#">
-														Kızılırmak Mahallesi Ufuk Üniversitesi Cad. Kat:11 No:3/54, 
-Ankara, Türkiye</p>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="homec-image-gallery">
-												<!-- Amount Card -->
-												<div class="homec-amount-card homec-amount-card__sticky">
-													<h4 class="homec-amount-card__amount">$5,976<span>Per Month</span></h4>
-												</div>
-												<!-- End Amount Card -->
-												<div class="homec-overlay"></div>
-												<img src="https://placehold.co/1170x600" alt="#">
-												<div class="homec-image-gallery__bottom">
-													<div class="homec-image-gallery__content">
-														<h3 class="homec-image-gallery__title">Affordable Green Villa House</h3>
-														<p class="homec-image-gallery__text">
-														<img src="img/map-icon.svg" alt="#">
-														Kızılırmak Mahallesi Ufuk Üniversitesi Cad. Kat:11 No:3/54, 
-Ankara, Türkiye</p>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="homec-image-gallery">
-												<!-- Amount Card -->
-												<div class="homec-amount-card homec-amount-card__sticky">
-													<h4 class="homec-amount-card__amount">$3,976<span>Per Month</span></h4>
-												</div>
-												<!-- End Amount Card -->
-												<div class="homec-overlay"></div>
-												<img src="https://placehold.co/1170x600" alt="#">
-												<div class="homec-image-gallery__bottom">
-													<div class="homec-image-gallery__content">
-														<h3 class="homec-image-gallery__title">Modern House With Pool</h3>
-														<p class="homec-image-gallery__text">
-														<img src="img/map-icon.svg" alt="#">
-														Kızılırmak Mahallesi Ufuk Üniversitesi Cad. Kat:11 No:3/54, 
-Ankara, Türkiye</p>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="homec-image-gallery">
-												<!-- Amount Card -->
-												<div class="homec-amount-card homec-amount-card__sticky">
-													<h4 class="homec-amount-card__amount">$5,976<span>Per Month</span></h4>
-												</div>
-												<!-- End Amount Card -->
-												<div class="homec-overlay"></div>
-												<img src="https://placehold.co/1170x600" alt="#">
-												<div class="homec-image-gallery__bottom">
-													<div class="homec-image-gallery__content">
-														<h3 class="homec-image-gallery__title">Affordable Green Villa House</h3>
-														<p class="homec-image-gallery__text">
-														<img src="img/map-icon.svg" alt="#">
-														Kızılırmak Mahallesi Ufuk Üniversitesi Cad. Kat:11 No:3/54, 
-Ankara, Türkiye</p>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="homec-image-gallery">
-												<!-- Amount Card -->
-												<div class="homec-amount-card homec-amount-card__sticky">
-													<h4 class="homec-amount-card__amount">$3,976<span>Per Month</span></h4>
-												</div>
-												<!-- End Amount Card -->
-												<div class="homec-overlay"></div>
-												<img src="https://placehold.co/1170x600" alt="#">
-												<div class="homec-image-gallery__bottom">
-													<div class="homec-image-gallery__content">
-														<h3 class="homec-image-gallery__title">Modern House With Pool</h3>
-														<p class="homec-image-gallery__text">
-														<img src="img/map-icon.svg" alt="#">
-														Kızılırmak Mahallesi Ufuk Üniversitesi Cad. Kat:11 No:3/54, 
-Ankara, Türkiye</p>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="homec-image-gallery">
-												<!-- Amount Card -->
-												<div class="homec-amount-card homec-amount-card__sticky">
-													<h4 class="homec-amount-card__amount">$5,976<span>Per Month</span></h4>
-												</div>
-												<!-- End Amount Card -->
-												<div class="homec-overlay"></div>
-												<img src="https://placehold.co/1170x600" alt="#">
-												<div class="homec-image-gallery__bottom">
-													<div class="homec-image-gallery__content">
-														<h3 class="homec-image-gallery__title">Affordable Green Villa House</h3>
-														<p class="homec-image-gallery__text">
-														<img src="img/map-icon.svg" alt="#">
-														Kızılırmak Mahallesi Ufuk Üniversitesi Cad. Kat:11 No:3/54, 
-Ankara, Türkiye</p>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="homec-image-gallery">
-												<!-- Amount Card -->
-												<div class="homec-amount-card homec-amount-card__sticky">
-													<h4 class="homec-amount-card__amount">$3,976<span>Per Month</span></h4>
-												</div>
-												<!-- End Amount Card -->
-												<div class="homec-overlay"></div>
-												<img src="https://placehold.co/1170x600" alt="#">
-												<div class="homec-image-gallery__bottom">
-													<div class="homec-image-gallery__content">
-														<h3 class="homec-image-gallery__title">Modern House With Pool</h3>
-														<p class="homec-image-gallery__text">
-														<img src="img/map-icon.svg" alt="#">
-														Kızılırmak Mahallesi Ufuk Üniversitesi Cad. Kat:11 No:3/54, 
-Ankara, Türkiye</p>
-													</div>
-												</div>
-											</div>
-										</li>
-										<li>
-											<div class="homec-image-gallery">
-												<!-- Amount Card -->
-												<div class="homec-amount-card homec-amount-card__sticky">
-													<h4 class="homec-amount-card__amount">$5,976<span>Per Month</span></h4>
-												</div>
-												<!-- End Amount Card -->
-												<div class="homec-overlay"></div>
-												<img src="https://placehold.co/1170x600" alt="#">
-												<div class="homec-image-gallery__bottom">
-													<div class="homec-image-gallery__content">
-														<h3 class="homec-image-gallery__title">Affordable Green Villa House</h3>
-														<p class="homec-image-gallery__text">
-														<img src="img/map-icon.svg" alt="#">
-														Kızılırmak Mahallesi Ufuk Üniversitesi Cad. Kat:11 No:3/54, 
-Ankara, Türkiye</p>
-													</div>
-												</div>
+												<img src="{{a.image_ana_foto.url}}" alt="#">
 											</div>
 										</li>
 									</ul>
@@ -446,42 +254,32 @@ Ankara, Türkiye</p>
 										<ul class="slides">
 											<li>
 												<div class="single-thumbs">
-													<img src="https://placehold.co/270x180" alt="thumbs">
+													<img src="{{a.image_alt_foto1.url}}" alt="thumbs">
 												</div>
 											</li>
 											<li>
 												<div class="single-thumbs">
-													<img src="https://placehold.co/270x180" alt="thumbs">
+													<img src="{{a.image_alt_foto2.url}}" alt="thumbs">
 												</div>
 											</li>
 											<li>
 												<div class="single-thumbs">
-													<img src="https://placehold.co/270x180" alt="thumbs">
+													<img src="{{a.image_alt_foto3.url}}" alt="thumbs">
 												</div>
 											</li>
 											<li>
 												<div class="single-thumbs">
-													<img src="https://placehold.co/270x180" alt="thumbs">
+													<img src="{{a.image_alt_foto4.url}}" alt="thumbs">
 												</div>
 											</li>
 											<li>
 												<div class="single-thumbs">
-													<img src="https://placehold.co/270x180" alt="thumbs">
+													<img src="{{a.image_alt_foto5.url}}" alt="thumbs">
 												</div>
 											</li>
 											<li>
 												<div class="single-thumbs">
-													<img src="https://placehold.co/270x180" alt="thumbs">
-												</div>
-											</li>
-											<li>
-												<div class="single-thumbs">
-													<img src="https://placehold.co/270x180" alt="thumbs">
-												</div>
-											</li>
-											<li>
-												<div class="single-thumbs">
-													<img src="https://placehold.co/270x180" alt="thumbs">
+													<img src="{{a.image_alt_foto6.url}}" alt="thumbs">
 												</div>
 											</li>
 										</ul>
@@ -501,11 +299,10 @@ Ankara, Türkiye</p>
                 <div class="row">                                                   
                     <div class="col-lg-8 ol-12">
                         <div class="list-group homec-list-tabs homec-list-tabs--v2" id="list-tab" role="tablist">
-							<a class="list-group-item active" data-bs-toggle="list" href="#homec-pd-tab1" role="tab">Property Details</a>
-							<a class="list-group-item" data-bs-toggle="list" href="#homec-pd-tab2" role="tab">Floor Plans</a>
-							<a class="list-group-item" data-bs-toggle="list" href="#homec-pd-tab3" role="tab">Property Video </a>
-							<a class="list-group-item" data-bs-toggle="list" href="#homec-pd-tab4" role="tab">Locations </a>
-							<a class="list-group-item" data-bs-toggle="list" href="#homec-pd-tab5" role="tab">Review</a>
+							<a class="list-group-item active" data-bs-toggle="list" href="#homec-pd-tab1" role="tab">Proje Detayları</a>
+							<a class="list-group-item" data-bs-toggle="list" href="#homec-pd-tab2" role="tab">Proje Planı</a>
+							<a class="list-group-item" data-bs-toggle="list" href="#homec-pd-tab3" role="tab">Proje Videosu</a>
+							<a class="list-group-item" data-bs-toggle="list" href="#homec-pd-tab4" role="tab">Proje Lokasyonu</a>
 						</div>
 
                         <div class="homec-pdetails-tab">
@@ -513,51 +310,10 @@ Ankara, Türkiye</p>
                                 <!--  Property Details -->
                                 <div class="tab-pane fade show active" id="homec-pd-tab1" role="tabpanel">
                                     <div class="homec-pdetails-tab__inner">
-                                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, </p> 
-                                        <p>discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.</p> 
+										
+                                        <p>{{a.Açıklama | safe}} </p> 
+                                       
                                         <!-- Homec Features -->
-                                        <div class="homec-ptdetails-features mg-top-30">
-                                            <h4 class="homec-ptdetails-features__title">Additional Details</h4>
-                                            <ul class="homec-ptdetails-features__list">
-                                                <li><b>Building Age:</b> <span>2 Years</span></li>
-                                                <li><b>Cooling:</b> <span>Yes</span></li>
-                                                <li><b>Gass:</b> <span>Yes</span></li>
-                                                <li><b>Parking:</b> <span>Yes</span></li>
-                                                <li><b>Sewer:</b> <span>Yes</span></li>
-                                                <li><b>Exercise Room:</b> <span>Yes</span></li>
-                                                <li><b>Heating:</b> <span>Yes</span></li>
-                                                <li><b>Water:</b> <span>Yes</span></li>
-                                                <li><b>Storage:</b> <span>Yes</span></li>
-                                            </ul>
-                                        </div>
-                                        <!-- End Homec Features -->
-										<!-- Homec Features -->
-										<div class="homec-ptdetails-features mg-top-30">
-                                            <h4 class="homec-ptdetails-features__title">Nearest Place</h4>
-                                            <ul class="homec-ptdetails-features__list">
-                                                <li><b>Airport:</b> <span>3 KM</span></li>
-                                                <li><b>Hospital:</b> <span>2 KM</span></li>
-                                                <li><b>Breach:</b> <span>3 KM</span></li>
-                                                <li><b>School:</b> <span>4 KM</span></li>
-                                                <li><b>Park:</b> <span>2 KM</span></li>
-                                            </ul>
-                                        </div>
-                                        <!-- End Homec Features -->
-										<!-- Homec Features -->
-										<div class="homec-ptdetails-features mg-top-30">
-                                            <h4 class="homec-ptdetails-features__title">Aminities</h4>
-                                            <ul class="homec-ptdetails-features__list">
-                                                <li><b><i class="fas fa-check"></i> Elevator in building</b></li>
-                                                <li><b><i class="fas fa-check"></i> Alcohol</b></li>
-                                                <li><b><i class="fas fa-check"></i> Reservations</b></li>
-                                                <li><b><i class="fas fa-check"></i> Free coffe and tea</b></li>
-                                                <li><b><i class="fas fa-check"></i> Accepts Credit Cards</b></li>
-                                                <li><b><i class="fas fa-check"></i> Air Condition</b></li>
-                                                <li><b><i class="fas fa-check"></i> Cable Tv</b></li>
-                                                <li><b><i class="fas fa-check"></i> Balcony</b></li>
-                                            </ul>
-                                        </div>
-                                        <!-- End Homec Features -->
                                     </div>
                                 </div>
                                 <!--  End Property Details -->
@@ -568,15 +324,15 @@ Ankara, Türkiye</p>
                                             <!-- Single Accordion -->
                                             <div class="accordion-item homec-accordion__single homec-accordion__single--floor mg-top-20">
                                                 <h2 class="accordion-header" id="homect-1">
-                                                    <button class="accordion-button collapsed homec-accordion__heading homec-accordion__heading--floor" type="button" data-bs-toggle="collapse" data-bs-target="#ac-collapseOne" >1st Floor Stature</button>
+                                                    <button class="accordion-button collapsed homec-accordion__heading homec-accordion__heading--floor" type="button" data-bs-toggle="collapse" data-bs-target="#ac-collapseOne" >Plan1</button>
                                                 </h2>
                                                 <div id="ac-collapseOne" class="accordion-collapse collapse" aria-labelledby="homect-1" data-bs-parent="#homec-accordion">
                                                     <div class="accordion-body homec-accordion__body homec-accordion__body--floor">
                                                         <div class="floor-plan-img">
-                                                            <img src="img/floor-plane-img.png" alt="#">
+                                                            <img src="{% static 'img/floor-plane-img.png' %}" alt="#">
                                                         </div>
                                                         <div class="floor-plan-content">
-                                                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney C</p>
+                                                            <p>Plan içeriğiasdasdads</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -585,15 +341,15 @@ Ankara, Türkiye</p>
                                             <!-- Single Accordion -->
                                             <div class="accordion-item homec-accordion__single homec-accordion__single--floor active mg-top-20">
                                                 <h2 class="accordion-header" id="homect-2">
-                                                    <button class="accordion-button collapsed  homec-accordion__heading homec-accordion__heading--floor" type="button" data-bs-toggle="collapse" data-bs-target="#ac-collapseTwo">2nd Floor Stature  </button>
+                                                    <button class="accordion-button collapsed  homec-accordion__heading homec-accordion__heading--floor" type="button" data-bs-toggle="collapse" data-bs-target="#ac-collapseTwo">Plan2</button>
                                                 </h2>
                                                 <div id="ac-collapseTwo" class="accordion-collapse collapse show" aria-labelledby="homect-2" data-bs-parent="#homec-accordion">
                                                     <div class="accordion-body homec-accordion__body homec-accordion__body--floor">
                                                         <div class="floor-plan-img">
-                                                            <img src="img/floor-plane-img.png" alt="#">
+															<img src="{% static 'img/floor-plane-img.png' %}" alt="#">
                                                         </div>
                                                         <div class="floor-plan-content">
-                                                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney C</p>
+                                                            <p>Plan içeriği</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -602,15 +358,15 @@ Ankara, Türkiye</p>
 											<!-- Single Accordion -->
 											 <div class="accordion-item homec-accordion__single homec-accordion__single--floor mg-top-20">
                                                 <h2 class="accordion-header" id="homect-3">
-                                                    <button class="accordion-button collapsed homec-accordion__heading homec-accordion__heading--floor" type="button" data-bs-toggle="collapse" data-bs-target="#ac-collapseThree" >3rd Floor Stature</button>
+                                                    <button class="accordion-button collapsed homec-accordion__heading homec-accordion__heading--floor" type="button" data-bs-toggle="collapse" data-bs-target="#ac-collapseThree" >Plan3</button>
                                                 </h2>
                                                 <div id="ac-collapseThree" class="accordion-collapse collapse" aria-labelledby="homect-3" data-bs-parent="#homec-accordion">
                                                     <div class="accordion-body homec-accordion__body homec-accordion__body--floor">
                                                         <div class="floor-plan-img">
-                                                            <img src="img/floor-plane-img.png" alt="#">
+															<img src="{% static 'img/floor-plane-img.png' %}" alt="#">
                                                         </div>
                                                         <div class="floor-plan-content">
-                                                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney C</p>
+                                                            <p>Plan içeriği</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -619,15 +375,15 @@ Ankara, Türkiye</p>
 											 <!-- Single Accordion -->
 											 <div class="accordion-item homec-accordion__single homec-accordion__single--floor mg-top-20">
                                                 <h2 class="accordion-header" id="homect-4">
-                                                    <button class="accordion-button collapsed homec-accordion__heading homec-accordion__heading--floor" type="button" data-bs-toggle="collapse" data-bs-target="#ac-collapseFour" >4th Floor Stature</button>
+                                                    <button class="accordion-button collapsed homec-accordion__heading homec-accordion__heading--floor" type="button" data-bs-toggle="collapse" data-bs-target="#ac-collapseFour" >Plan4</button>
                                                 </h2>
                                                 <div id="ac-collapseFour" class="accordion-collapse collapse" aria-labelledby="homect-4" data-bs-parent="#homec-accordion">
                                                     <div class="accordion-body homec-accordion__body homec-accordion__body--floor">
                                                         <div class="floor-plan-img">
-                                                            <img src="img/floor-plane-img.png" alt="#">
+															<img src="{% static 'img/floor-plane-img.png' %}" alt="#">
                                                         </div>
                                                         <div class="floor-plan-content">
-                                                            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney C</p>
+                                                            <p>Plan içeriği</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -640,19 +396,18 @@ Ankara, Türkiye</p>
                                 <!--  Property Video -->
                                 <div class="tab-pane fade" id="homec-pd-tab3" role="tabpanel">
                                     <div class="homec-pdetails-tab__inner">
-                                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden end to main to marked.</p> 
                                         <!-- Homec Features -->
                                         <div class="homec-ptdetails-video">
                                             <div class="homec-overlay"></div>
-                                           <img src="https://placehold.co/785x410" alt="#">
+                                           <img src="{% static 'img/kanal.jpg' %}" alt="#">
                                            <div class="homec-ptdetails-video__video">
-												<a data-video-id="FzcfZyEhOoI" class="js-video-btn homec-btn homec-btn__second homec-btn__video">
+												<a data-video-id="XHOWsn2b-HI" class="js-video-btn homec-btn homec-btn__second homec-btn__video">
 													<div class="homec-btn__inside">
 														<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
 															<path fill-rule="evenodd" clip-rule="evenodd" d="M24 45.6001C35.9293 45.6001 45.6001 35.9296 45.6001 24C45.6001 12.0707 35.9296 2.39995 24 2.39995C12.0707 2.39995 2.39995 12.0707 2.39995 24C2.39995 35.9293 12.0707 45.6001 24 45.6001ZM24 48C37.2547 48 48 37.2547 48 24C48 10.7451 37.2547 0 24 0C10.7451 0 0 10.7451 0 24C0 37.2547 10.7451 48 24 48Z" fill="#111111"/>
 															<path fill-rule="evenodd" clip-rule="evenodd" d="M30.2363 24L19.1998 16.6424V31.3579L30.2363 24ZM32.4661 22.6023C33.4637 23.2673 33.4637 24.733 32.4661 25.3981L19.4115 34.1013C18.2951 34.8456 16.7996 34.0451 16.7996 32.7033V15.297C16.7996 13.9552 18.2951 13.1549 19.4115 13.8993L32.4661 22.6023Z" fill="#111111"/>
 														</svg>
-														<span>Play Video</span>
+														<span>Videoyu Oynat</span>
 													</div>
 												</a>
                                            </div>
@@ -675,168 +430,47 @@ Ankara, Türkiye</p>
 															<path d="M15.2923 6.18457C12.4818 6.18457 10.1953 8.47109 10.1953 11.2816C10.1953 14.0921 12.4818 16.3786 15.2923 16.3786C18.1028 16.3786 20.3893 14.0921 20.3893 11.2816C20.3893 8.47109 18.1028 6.18457 15.2923 6.18457ZM15.2923 14.3398C13.606 14.3398 12.2341 12.9679 12.2341 11.2816C12.2341 9.59528 13.606 8.22337 15.2923 8.22337C16.9786 8.22337 18.3505 9.59528 18.3505 11.2816C18.3505 12.9679 16.9786 14.3398 15.2923 14.3398Z" />
 														</svg>
 													</div>
-													<h4 class="homec-location-card__title">Address</h4>
-													<p  class="homec-location-card__desc">70 Washington Square South, New York, NY 10012, United States</p>
+													<h4 class="homec-location-card__title">Adres</h4>
+													<p  class="homec-location-card__desc">{{a.Lokasyon}}</p>
 												</div>
 											</div>
 											<div class="col-lg-6 col-md-6 col-12">
 												<div class="homec-location-card mg-top-20">
-													<p  class="homec-location-card__text">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden end to main to marked.</p>
+													<p  class="homec-location-card__text">{{a.lokasyon_bilgileri}}</p>
 												</div>
 											</div>
 										</div>
                                        <div class="homec-gmap-canvas mg-top-30">
-                                            <iframe id="homec-gmap-canvas"  class="homec-gmap-iframe" src="https://maps.google.com/maps?q=&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+                                            <iframe id="homec-gmap-canvas"  class="homec-gmap-iframe" src="{{a.map}}"></iframe>
                                         </div>
                                     </div>
                                 </div>
                                 <!--  End Property Map -->
-                                <!--  Property Review -->
-                                <div class="tab-pane fade" id="homec-pd-tab5" role="tabpanel">
-                                    <div class="homec-pdetails-tab__inner">
-                                       <div class="homec-pdetails-tab--review">
-                                            <div class="homec-testimonial homec-testimonial--review homec-border mg-top-30">
-                                                <div class="homec-rating--main mg-btm-15">
-                                                    <!-- Author Rating -->
-                                                    <ul class="homec-rating list-none">
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                    </ul>
-                                                    <span class="homec-primary-color">2 days ago</span>
-                                                </div>
-                                                <!-- Testimonial Text -->
-                                                <p class="homec-testimonial__text">“There are many variations of passages of Lorem Ipsum available, in majority have into the find end to suffered.”</p>
-                                                <div class="homec-testimonial__bottom">
-                                                    <!-- Testimonial Author -->
-                                                    <div class="homec-testimonial__author">
-                                                        <img src="https://placehold.co/64x64" alt="#">
-                                                        <div class="homec-testimonial__author--info">
-                                                            <h5 class="homec-testimonial__author--title">Arnold Burner</h5>
-                                                            <p class="homec-testimonial__author--position">Senior Designer</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="homec-testimonial homec-testimonial--review homec-border mg-top-30">
-                                                <div class="homec-rating--main mg-btm-15">
-                                                    <!-- Author Rating -->
-                                                    <ul class="homec-rating list-none">
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                    </ul>
-                                                    <span class="homec-primary-color">2 days ago</span>
-                                                </div>
-                                                <!-- Testimonial Text -->
-                                                <p class="homec-testimonial__text">“There are many variations of passages of Lorem Ipsum available, in majority have into the find end to suffered.”</p>
-                                                <div class="homec-testimonial__bottom">
-                                                    <!-- Testimonial Author -->
-                                                    <div class="homec-testimonial__author">
-                                                        <img src="https://placehold.co/64x64" alt="#">
-                                                        <div class="homec-testimonial__author--info">
-                                                            <h5 class="homec-testimonial__author--title">Arnold Burner</h5>
-                                                            <p class="homec-testimonial__author--position">Senior Designer</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="homec-testimonial homec-testimonial--review homec-border mg-top-30">
-                                                <div class="homec-rating--main mg-btm-15">
-                                                    <!-- Author Rating -->
-                                                    <ul class="homec-rating list-none">
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                        <li><i class="fa-solid fa-star"></i></li>
-                                                    </ul>
-                                                    <span class="homec-primary-color">2 days ago</span>
-                                                </div>
-                                                <!-- Testimonial Text -->
-                                                <p class="homec-testimonial__text">“There are many variations of passages of Lorem Ipsum available, in majority have into the find end to suffered.”</p>
-                                                <div class="homec-testimonial__bottom">
-                                                    <!-- Testimonial Author -->
-                                                    <div class="homec-testimonial__author">
-                                                        <img src="https://placehold.co/64x64" alt="#">
-                                                        <div class="homec-testimonial__author--info">
-                                                            <h5 class="homec-testimonial__author--title">Arnold Burner</h5>
-                                                            <p class="homec-testimonial__author--position">Senior Designer</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                       </div>
-                                       <div class="col-12 d-flex justify-content-center mg-top-40">
-											<div class="homec-comments-form homec-comments-form--reviews">
-												<h2 class="homec-comments-form__title m-0">Sent Review</h2>
-												<p class="homec-comments-form__text">Your email address will not be published. Required fields are marked *</p>
-												<div class="row">
-													<div class="col-lg-6 col-md-6 col-12">
-														<div class="form-group homec-form-input">
-															<input class="ecom-wc__form-input" type="text" name="f_name" placeholder="Ahmet Öz" required="required">
-														</div>
-													</div>
-													<div class="col-lg-6 col-md-6 col-12">
-														<div class="form-group homec-form-input homec-form-input--review">
-															<ul class="homec-rating list-none">
-																<li><i class="fa-solid fa-star"></i></li>
-																<li><i class="fa-solid fa-star"></i></li>
-																<li><i class="fa-solid fa-star"></i></li>
-																<li><i class="fa-solid fa-star"></i></li>
-																<li><i class="fa-solid fa-star"></i></li>
-															</ul>
-														</div>
-													</div>
-													<div class="col-12">
-														<div class="form-group homec-form-input">
-															<textarea class="ecom-wc__form-input" name="f_name" placeholder="Write Here"></textarea>
-														</div>
-													</div>
-													<div class="col-12 d-flex justify-content-end mg-top-20">
-														<button type="submit" class="homec-btn homec-btn__second"><span>Submit Now</span></button>
-													</div>
-												</div>
-											</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!--  End Property Review -->
+                       
                             </div>
                         </div>
                     </div>
+					{% endfor %} 
                     <div class="col-lg-4 col-12">
                         <!-- Property Agent Card -->
                         <div class="homec-property-ag homec-property-ag--side homec-bg-cover" style="background-image: url('img/property-ag-bg.svg');">
-                            <h3 class="homec-property-ag__title">Property Agent</h3>
+                            <h3 class="homec-property-ag__title">İletişime Geçin</h3>
                             <!-- Property Profile -->
-                            <div class="homec-property-ag__author">
-                                <div class="homec-property-ag__author--img">
-                                    <img src="https://placehold.co/90x90" alt="#">
-                                </div>
-                                <div class="homec-property-ag__author--content">
-                                    <h4 class="homec-property-ag__author--title">Wade De Warren<span>Gayrimenkul Danışmanı</span></h4>
-                                </div>
-                            </div>
                             <!-- End Property Profile -->
                             <form action="#" class="homec-property-ag__form">
                                 <div class="form-group">
-                                    <input type="text" name="first_name" placeholder="Abdullah Al">
+                                    <input type="text" name="first_name" placeholder="isim">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" name="last_name" placeholder="Mamun">
+                                    <input type="text" name="last_name" placeholder="Soyisim">
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" name="fullname" placeholder="Your email">
+                                    <input type="email" name="fullname" placeholder="Email">
                                 </div>
                                 <div class="form-group">
-                                    <textarea name="Message" placeholder="Description" required="required"></textarea>
+                                    <textarea name="Message" placeholder="Mesajınız" required="required"></textarea>
                                 </div>
-                                <button type="submit" class="homec-btn homec-btn__second homec-property-ag__button"><span>Send Message Now</span></button>
+                                <button type="submit" class="homec-btn homec-btn__second homec-property-ag__button"><span>Gönder</span></button>
                             </form>
                         </div>
                         <!-- End Property Agent Card -->

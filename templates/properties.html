@@ -16,7 +16,7 @@
 		<title>Homeco - Real Estate HTML Template.</title>
 		
 		<!-- Fav Icon -->
-		<link rel="icon" href="img/favicon.png' %}">
+		<link rel="icon" href="img/favicon.png'">
 		
 		<!-- Google Fonts -->
 		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet"> 
@@ -242,7 +242,7 @@ Ankara, Türkiye</span>
 		<!-- End Header -->
 
 		<!-- Breadcrumbs -->
-			<section class="breadcrumbs__content" style="background-image:url('static/img/bread-overlay.jpg');">
+		<section class="breadcrumbs__content" style="background-image:url('static/img/bread-overlay.jpg');">
 			<!-- <div class="homec-overlay"></div> -->
 			<div class="container">
 				<div class="row">
@@ -271,7 +271,7 @@ Ankara, Türkiye</span>
 								</form>
 								<!-- Show Results -->
 								<div class="hoemc-showing-results">
-									<p class="hoemc-showing-results__text"><span>17</span> proje</p>
+									<p class="hoemc-showing-results__text"><span>{{isting_count}}</span> proje</p>
 								</div>
 								<!-- End Show Results -->
 							</div>
@@ -342,29 +342,31 @@ Ankara, Türkiye</span>
 							<!-- Grid Tab -->
 							<div class="tab-pane fade show active" id="homec-grid" role="tabpanel">
 								<div class="row">
+									{% for a in projeler %}
 									<div class="col-md-6 col-12 mg-top-30">
 										<!-- Single property-->
+									
 										<div class="homec-property">
 											<!-- Property Head-->
 											<div class="homec-property__head">
-												<img src="https://placehold.co/350x220" alt="#">
-												<!-- Top Sticky -->
-									
-												<!-- End Top Sticky -->
+												<img src="{{a.image_ana_foto.url}}" alt="#">
 											</div>
 											<!-- Property Body-->
+										
 											<div class="homec-property__body">
 												<div class="homec-property__topbar">
-													<span class="homec-property__salebadge">Devam Ediyor</span>
+													<span class="homec-property__salebadge">{{a.status}}</span>
 												</div>
-												<h3 class="homec-property__title"><a href="property-single.html">KANAL-İSTANBUL PROJESİ</a></h3>
+												<h3 class="homec-property__title"><a href="{% url 'property_single' a.proje_ismi %}">{{a.proje_ismi}}</a></h3>
 												<div class="homec-property__text">
-													<img src="{% static 'img/location-icon.svg' %}" alt="#"><p>İSTANBUL ARNAVUTKÖY</p>
+													<p>{{a.Lokasyon_kısa}}</p>
 												</div>
 											</div>
 										</div>
+										 
 										<!-- End Single property-->
 									</div>
+									{% endfor %}  
 								
 								</div>
 								<div class="row mg-top-40">
