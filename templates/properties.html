@@ -129,20 +129,19 @@
 									<li>
 										<a href="mailto:info@landinvestgroup.com.tr">
 											<img src="{% static 'img/email-icon.svg' %}" alt="#">
-											<span>info@landinvestgroup.com.tr</span>
+											<span style="font-size: 13.1px;">info@landinvestgroup.com.tr</span>
 										</a>
 									</li>
 									<li>
 										<a href="tel:+00239040248">
 											<img src="{% static 'img/phone-icon.svg' %}" alt="#">
-											<span> +90 312 220 00 63</span>
+											<span style="font-size: 13.1px;"> +90 312 220 00 63</span>
 										</a>
 									</li>
 									<li>
 										<a href="mailto:info@landinvestgroup.com.tr">
 											<img src="{% static 'img/locations-icon.svg' %}" alt="#">
-											<span>Kızılırmak Mahallesi Ufuk Üniversitesi Cad. Kat:11 No:3/54, 
-Ankara, Türkiye</span>
+											<span style="font-size: 13.1px;">Kızılırmak Mahallesi Ufuk Üniversitesi Cad. Kat:11 No:3/54, Çankaya Ankara, Türkiye</span>
 										</a>
 									</li>
 								</ul>
@@ -209,23 +208,33 @@ Ankara, Türkiye</span>
 											<div class="nav-item">                                      
 												<!-- Main Menu -->
 												<ul class="nav-menu menu navigation list-none">
-													<li><a href="{% url 'home' %}">Ana Sayfa</a>
+														<li><a href="{% url 'home' %}">Ana Sayfa</a>
+									
+														</li>
+														<li class="menu-item-has-children"><a href="{% url 'properties' %}">Projelerimiz</a>
+															<ul class="sub-menu">
+																<li><a href="projelerimiz/durumu/devam ediyor">Devam eden projeler </a></li>
+																<li><a href="projelerimiz/durumu/planlanan">Planlanan projeler</a></li>
+																<li><a href="projelerimiz/durumu/tamamlandı">Tamamlanan projeler</a></li>
+															</ul>
+														</li>
+													</li>
+													<li ><a href="https://landinvestgroup.sahibinden.com/" target="_blank">Porföylerimiz</a>
 								
 													</li>
-													<li ><a href="{% url 'properties' %}">Projelerimiz</a>
-								
-													</li>
-												</li>
-												<li ><a href="https://landinvestgroup.sahibinden.com/" target="_blank">Porföylerimiz</a>
-							
-												</li>
-													<li ><a href="{% url 'about' %}">Biz Kimiz?</a>
-												
-													</li>
-													<li ><a href="{% url 'blog' %}">Blog</a>
-													</li>
-													<li ><a href="{% url 'contact' %}">İletişim</a>
-													</li>
+														<li ><a href="{% url 'about' %}">Hakkımızda</a>
+													
+														</li>
+														<li ><a href="{% url 'blog' %}">Blog</a>
+														</li>
+														<li ><a href="{% url 'contact' %}">İletişim</a>
+														</li>
+														<li>
+															<select class="selectpicker" data-width="fit">
+																<option data-content='<span class="flag-icon flag-icon-us"></span> English'>Türkçe</option>
+																<option  data-content='<span class="flag-icon flag-icon-mx"></span> Español'>English</option>
+															</select>
+														</li>
 												</ul>
 												<!-- End Main Menu -->
 											</div>
@@ -240,6 +249,13 @@ Ankara, Türkiye</span>
 			</div>
 		</header>
 		<!-- End Header -->
+	<!-- side buttons  Hero -->
+		<div id="mySidenav" class="sidenav">
+		<a href="tel:+903122200063" id="about" ><i class="fa-solid fa-phone"style="margin-left: 0!important;"  ></i></a>
+		<a href="mailto:info@landinvestgroup.com.tr" id="mail"><i class="fa-regular fa-envelope ms-1" style="margin-left: 0!important;" ></i></a>
+		<a href="https://wa.me/+905057376999" target="_blank" id="projects"><i class="fa-brands fa-whatsapp  ms-1" style="margin-left: 0!important;" ></i></a>
+	</div>
+		<!-- end of side buttons  -->
 
 		<!-- Breadcrumbs -->
 		<section class="breadcrumbs__content" style="background-image:url('static/img/bread-overlay.jpg');">
@@ -327,12 +343,7 @@ Ankara, Türkiye</span>
 							</div>
 							<!-- End Single Sidebar -->
 
-							<!-- Single Sidebar -->
-							<div class="d-flex justify-content-center">
-								<form >
-									<button type="submit" class="homec-btn" style="padding: 0px 60px;"><span>Ara</span></button>
-								</form>
-							</div>
+	
 							<!-- End Single Sidebar -->
 						</div>
 		
@@ -342,13 +353,13 @@ Ankara, Türkiye</span>
 							<!-- Grid Tab -->
 							<div class="tab-pane fade show active" id="homec-grid" role="tabpanel">
 								<div class="row">
-									{% for a in projeler %}
-									<div class="col-md-6 col-12 mg-top-30">
+									{% for a in project %}
+									<div class="col-md-6 col-12 mg-top-30" >
 										<!-- Single property-->
 									
-										<div class="homec-property">
+										<div class="homec-property" >
 											<!-- Property Head-->
-											<div class="homec-property__head">
+											<div class="homec-property__head" style="height: 220px;">
 												<img src="{{a.image_ana_foto.url}}" alt="#">
 											</div>
 											<!-- Property Body-->
@@ -369,232 +380,70 @@ Ankara, Türkiye</span>
 									{% endfor %}  
 								
 								</div>
+					
+								{% if project.has_previous %}
+									<a href="?page={{ project.previous_page_number }}">previous</a>
+								{% endif %}
+						
+								<span class="current">
+									Page {{ project.number }} of {{ project.paginator.num_pages }}.
+								</span>
+						
+								{% if project.has_next %}
+									<a href="?page={{ project.next_page_number }}">next</a>
+								{% endif %}
+								
+							
+
 								<div class="row mg-top-40">
 									<div class="homec-pagination">
 										<ul class="homec-pagination__list list-none">
-											<li class="homec-pagination__button"><a href="#">Prev</a></li>
-											<li><a href="#">01</a></li>
-											<li class="active"><a href="#">02</a></li>
-											<li><a href="#">03</a></li>
-											<li><a href="#">04</a></li>
-											<li><a href="#">05</a></li>
-											<li><a href="#">...</a></li>
-											<li><a href="#">24</a></li>
-											<li class="homec-pagination__button"><a href="#">Next</a></li>
+											<li class="homec-pagination__button">
+												{% if project.has_previous %}
+													<a href="?page={{ project.previous_page_number }}">Önceki</a>
+												{% endif %}
+											</li>
+						
+											<li class="active"><a href="#">{{ project.number }}</a></li>
+		
+											<li class="homec-pagination__button">
+												{% if project.has_next %}
+													<a href="?page={{ project.next_page_number }}">Sonraki</a>
+												{% endif %}
+											</li>
 										</ul>
 									</div>
 								</div>
+								
 							</div>
 							<!-- End Grid Tab -->
 							<!-- List Tab -->
 							<div class="tab-pane fade" id="homec-list" role="tabpanel">
 
 								<div class="row">
+								
+									{% for a in projeler %}
 									<div class="col-12 mg-top-30">
 										<!-- Single property-->
 										<div class="homec-property homec-property__list-style">
 											<!-- Property Head-->
 											<div class="homec-property__head">
-												<img src="https://placehold.co/350x220" alt="#">
-												<!-- Top Sticky -->
-												<div class="homec-property__hsticky">
-													<a href="#" class="homec-heart">
-														<svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M10.5745 3.73257L11.1008 4.69447L11.6272 3.73258C11.9704 3.10535 12.5438 2.26267 13.3886 1.60933C14.2595 0.935774 15.2355 0.6 16.3044 0.6C19.29 0.6 21.6017 3.03446 21.6017 6.3966C21.6017 8.18186 20.8932 9.70959 19.5597 11.3187C18.211 12.9462 16.2694 14.6033 13.8617 16.6552L14.2508 17.1119L13.8617 16.6552L13.8611 16.6557C13.0479 17.3487 12.1237 18.1363 11.1625 18.9769L11.1623 18.977C11.1457 18.9916 11.1241 18.9999 11.1008 18.9999C11.0776 18.9999 11.056 18.9916 11.0394 18.9771L11.0391 18.9768C10.0784 18.1367 9.15452 17.3493 8.34203 16.6569L8.34054 16.6556L8.34053 16.6556C5.93251 14.6035 3.99081 12.9463 2.64202 11.3188C1.30844 9.70958 0.6 8.18186 0.6 6.3966C0.6 3.03446 2.91167 0.6 5.89732 0.6C6.96614 0.6 7.94219 0.935773 8.81311 1.60933C9.6579 2.26267 10.2313 3.10532 10.5745 3.73257Z" stroke-width="1.2"/>
-														</svg>
-													</a>
-													<a href="agent-detail.html" class="homec-property__asticky">
-														<img src="https://placehold.co/35x35" alt="#">
-														<h4 class="homec-property__asticky--label">Wade Wirren<span>Agent</span></h4>
-													</a>
-												</div>
-												<!-- End Top Sticky -->
+												<img src="{{a.image_ana_foto.url}}" alt="#">
 											</div>
 											<!-- Property Body-->
 											<div class="homec-property__body">
 												<div class="homec-property__topbar">
-													<div class="homec-property__price">$3,976 <span>/month</span></div>
-													<span class="homec-property__salebadge">To Sale</span>
+													<span class="homec-property__salebadge">{{a.status}}</span>
 												</div>
-												<h3 class="homec-property__title"><a href="property-single.html">Northwest Office Space</a></h3>
+												<h3 class="homec-property__title"><a href="property-single.html">{{a.proje_ismi}}</a></h3>
 												<div class="homec-property__text">
-													<img src="{% static 'img/location-icon.svg' %}" alt="#"><p>Kızılırmak Mahallesi Ufuk Üniversitesi Cad. Kat:11 No:3/54, 
-Ankara, Türkiye</p>
+													<img src="{% static 'img/location-icon.svg' %}" alt="#"><p>{{a.Lokasyon_kısa}}</p>
 												</div>
-												<!-- Property List-->
-												<ul class="homec-property__list homec-border-top list-none">
-													<li><img src="{% static 'img/room-icon.svg' %}" alt="#">3 Room</li>
-													<li><img src="{% static 'img/bath-icon.svg' %}" alt="#">2 Bathroom</li>
-													<li><img src="{% static 'img/size-icon.svg' %}" alt="#">5x9 m2</li>
-												</ul>
 											</div>
 										</div>
 										<!-- End Single property-->
 									</div>
-									<div class="col-12 mg-top-30">
-										<!-- Single property-->
-										<div class="homec-property homec-property__list-style">
-											<!-- Property Head-->
-											<div class="homec-property__head">
-												<img src="https://placehold.co/350x220" alt="#">
-												<!-- Top Sticky -->
-												<div class="homec-property__hsticky">
-													<a href="#" class="homec-heart">
-														<svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M10.5745 3.73257L11.1008 4.69447L11.6272 3.73258C11.9704 3.10535 12.5438 2.26267 13.3886 1.60933C14.2595 0.935774 15.2355 0.6 16.3044 0.6C19.29 0.6 21.6017 3.03446 21.6017 6.3966C21.6017 8.18186 20.8932 9.70959 19.5597 11.3187C18.211 12.9462 16.2694 14.6033 13.8617 16.6552L14.2508 17.1119L13.8617 16.6552L13.8611 16.6557C13.0479 17.3487 12.1237 18.1363 11.1625 18.9769L11.1623 18.977C11.1457 18.9916 11.1241 18.9999 11.1008 18.9999C11.0776 18.9999 11.056 18.9916 11.0394 18.9771L11.0391 18.9768C10.0784 18.1367 9.15452 17.3493 8.34203 16.6569L8.34054 16.6556L8.34053 16.6556C5.93251 14.6035 3.99081 12.9463 2.64202 11.3188C1.30844 9.70958 0.6 8.18186 0.6 6.3966C0.6 3.03446 2.91167 0.6 5.89732 0.6C6.96614 0.6 7.94219 0.935773 8.81311 1.60933C9.6579 2.26267 10.2313 3.10532 10.5745 3.73257Z" stroke-width="1.2"/>
-														</svg>
-													</a>
-													<a href="agent-detail.html" class="homec-property__asticky">
-														<img src="https://placehold.co/35x35" alt="#">
-														<h4 class="homec-property__asticky--label">Wade Wirren<span>Agent</span></h4>
-													</a>
-												</div>
-												<!-- End Top Sticky -->
-											</div>
-											<!-- Property Body-->
-											<div class="homec-property__body">
-												<div class="homec-property__topbar">
-													<div class="homec-property__price">$3,976 <span>/month</span></div>
-													<span class="homec-property__salebadge">To Sale</span>
-												</div>
-												<h3 class="homec-property__title"><a href="property-single.html">Countryside Lake View...</a></h3>
-												<div class="homec-property__text">
-													<img src="{% static 'img/location-icon.svg' %}" alt="#"><p>Kızılırmak Mahallesi Ufuk Üniversitesi Cad. Kat:11 No:3/54, 
-Ankara, Türkiye</p>
-												</div>
-												<!-- Property List-->
-												<ul class="homec-property__list homec-border-top list-none">
-													<li><img src="{% static 'img/room-icon.svg' %}" alt="#">3 Room</li>
-													<li><img src="{% static 'img/bath-icon.svg' %}" alt="#">2 Bathroom</li>
-													<li><img src="{% static 'img/size-icon.svg' %}" alt="#">5x9 m2</li>
-												</ul>
-											</div>
-										</div>
-										<!-- End Single property-->
-									</div>
-									<div class="col-12 mg-top-30">
-										<!-- Single property-->
-										<div class="homec-property homec-property__list-style">
-											<!-- Property Head-->
-											<div class="homec-property__head">
-												<img src="https://placehold.co/350x220" alt="#">
-												<!-- Top Sticky -->
-												<div class="homec-property__hsticky">
-													<a href="#" class="homec-heart">
-														<svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M10.5745 3.73257L11.1008 4.69447L11.6272 3.73258C11.9704 3.10535 12.5438 2.26267 13.3886 1.60933C14.2595 0.935774 15.2355 0.6 16.3044 0.6C19.29 0.6 21.6017 3.03446 21.6017 6.3966C21.6017 8.18186 20.8932 9.70959 19.5597 11.3187C18.211 12.9462 16.2694 14.6033 13.8617 16.6552L14.2508 17.1119L13.8617 16.6552L13.8611 16.6557C13.0479 17.3487 12.1237 18.1363 11.1625 18.9769L11.1623 18.977C11.1457 18.9916 11.1241 18.9999 11.1008 18.9999C11.0776 18.9999 11.056 18.9916 11.0394 18.9771L11.0391 18.9768C10.0784 18.1367 9.15452 17.3493 8.34203 16.6569L8.34054 16.6556L8.34053 16.6556C5.93251 14.6035 3.99081 12.9463 2.64202 11.3188C1.30844 9.70958 0.6 8.18186 0.6 6.3966C0.6 3.03446 2.91167 0.6 5.89732 0.6C6.96614 0.6 7.94219 0.935773 8.81311 1.60933C9.6579 2.26267 10.2313 3.10532 10.5745 3.73257Z" stroke-width="1.2"/>
-														</svg>
-													</a>
-													<a href="agent-detail.html" class="homec-property__asticky">
-														<img src="https://placehold.co/35x35" alt="#">
-														<h4 class="homec-property__asticky--label">Wade Wirren<span>Agent</span></h4>
-													</a>
-												</div>
-												<!-- End Top Sticky -->
-											</div>
-											<!-- Property Body-->
-											<div class="homec-property__body">
-												<div class="homec-property__topbar">
-													<div class="homec-property__price">$3,976 <span>/month</span></div>
-													<span class="homec-property__salebadge">To Sale</span>
-												</div>
-												<h3 class="homec-property__title"><a href="property-single.html">Brand New Shopping Mall</a></h3>
-												<div class="homec-property__text">
-													<img src="{% static 'img/location-icon.svg' %}" alt="#"><p>Kızılırmak Mahallesi Ufuk Üniversitesi Cad. Kat:11 No:3/54, 
-Ankara, Türkiye</p>
-												</div>
-												<!-- Property List-->
-												<ul class="homec-property__list homec-border-top list-none">
-													<li><img src="{% static 'img/room-icon.svg' %}" alt="#">3 Room</li>
-													<li><img src="{% static 'img/bath-icon.svg' %}" alt="#">2 Bathroom</li>
-													<li><img src="{% static 'img/size-icon.svg' %}" alt="#">5x9 m2</li>
-												</ul>
-											</div>
-										</div>
-										<!-- End Single property-->
-									</div>
-									<div class="col-12 mg-top-30">
-										<!-- Single property-->
-										<div class="homec-property homec-property__list-style">
-											<!-- Property Head-->
-											<div class="homec-property__head">
-												<img src="https://placehold.co/350x220" alt="#">
-												<!-- Top Sticky -->
-												<div class="homec-property__hsticky">
-													<a href="#" class="homec-heart">
-														<svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M10.5745 3.73257L11.1008 4.69447L11.6272 3.73258C11.9704 3.10535 12.5438 2.26267 13.3886 1.60933C14.2595 0.935774 15.2355 0.6 16.3044 0.6C19.29 0.6 21.6017 3.03446 21.6017 6.3966C21.6017 8.18186 20.8932 9.70959 19.5597 11.3187C18.211 12.9462 16.2694 14.6033 13.8617 16.6552L14.2508 17.1119L13.8617 16.6552L13.8611 16.6557C13.0479 17.3487 12.1237 18.1363 11.1625 18.9769L11.1623 18.977C11.1457 18.9916 11.1241 18.9999 11.1008 18.9999C11.0776 18.9999 11.056 18.9916 11.0394 18.9771L11.0391 18.9768C10.0784 18.1367 9.15452 17.3493 8.34203 16.6569L8.34054 16.6556L8.34053 16.6556C5.93251 14.6035 3.99081 12.9463 2.64202 11.3188C1.30844 9.70958 0.6 8.18186 0.6 6.3966C0.6 3.03446 2.91167 0.6 5.89732 0.6C6.96614 0.6 7.94219 0.935773 8.81311 1.60933C9.6579 2.26267 10.2313 3.10532 10.5745 3.73257Z" stroke-width="1.2"/>
-														</svg>
-													</a>
-													<a href="agent-detail.html" class="homec-property__asticky">
-														<img src="https://placehold.co/35x35" alt="#">
-														<h4 class="homec-property__asticky--label">Wade Wirren<span>Agent</span></h4>
-													</a>
-												</div>
-												<!-- End Top Sticky -->
-											</div>
-											<!-- Property Body-->
-											<div class="homec-property__body">
-												<div class="homec-property__topbar">
-													<div class="homec-property__price">$3,976 <span>/month</span></div>
-													<span class="homec-property__salebadge">To Sale</span>
-												</div>
-												<h3 class="homec-property__title"><a href="property-single.html">Affordable Green Villa House</a></h3>
-												<div class="homec-property__text">
-													<img src="{% static 'img/location-icon.svg' %}" alt="#"><p>Kızılırmak Mahallesi Ufuk Üniversitesi Cad. Kat:11 No:3/54, 
-Ankara, Türkiye</p>
-												</div>
-												<!-- Property List-->
-												<ul class="homec-property__list homec-border-top list-none">
-													<li><img src="{% static 'img/room-icon.svg' %}" alt="#">3 Room</li>
-													<li><img src="{% static 'img/bath-icon.svg' %}" alt="#">2 Bathroom</li>
-													<li><img src="{% static 'img/size-icon.svg' %}" alt="#">5x9 m2</li>
-												</ul>
-											</div>
-										</div>
-										<!-- End Single property-->
-									</div>
-									<div class="col-12 mg-top-30">
-										<!-- Single property-->
-										<div class="homec-property homec-property__list-style">
-											<!-- Property Head-->
-											<div class="homec-property__head">
-												<img src="https://placehold.co/350x220" alt="#">
-												<!-- Top Sticky -->
-												<div class="homec-property__hsticky">
-													<a href="#" class="homec-heart">
-														<svg width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M10.5745 3.73257L11.1008 4.69447L11.6272 3.73258C11.9704 3.10535 12.5438 2.26267 13.3886 1.60933C14.2595 0.935774 15.2355 0.6 16.3044 0.6C19.29 0.6 21.6017 3.03446 21.6017 6.3966C21.6017 8.18186 20.8932 9.70959 19.5597 11.3187C18.211 12.9462 16.2694 14.6033 13.8617 16.6552L14.2508 17.1119L13.8617 16.6552L13.8611 16.6557C13.0479 17.3487 12.1237 18.1363 11.1625 18.9769L11.1623 18.977C11.1457 18.9916 11.1241 18.9999 11.1008 18.9999C11.0776 18.9999 11.056 18.9916 11.0394 18.9771L11.0391 18.9768C10.0784 18.1367 9.15452 17.3493 8.34203 16.6569L8.34054 16.6556L8.34053 16.6556C5.93251 14.6035 3.99081 12.9463 2.64202 11.3188C1.30844 9.70958 0.6 8.18186 0.6 6.3966C0.6 3.03446 2.91167 0.6 5.89732 0.6C6.96614 0.6 7.94219 0.935773 8.81311 1.60933C9.6579 2.26267 10.2313 3.10532 10.5745 3.73257Z" stroke-width="1.2"/>
-														</svg>
-													</a>
-													<a href="agent-detail.html" class="homec-property__asticky">
-														<img src="https://placehold.co/35x35" alt="#">
-														<h4 class="homec-property__asticky--label">Wade Wirren<span>Agent</span></h4>
-													</a>
-												</div>
-												<!-- End Top Sticky -->
-											</div>
-											<!-- Property Body-->
-											<div class="homec-property__body">
-												<div class="homec-property__topbar">
-													<div class="homec-property__price">$3,976 <span>/month</span></div>
-													<span class="homec-property__salebadge">To Sale</span>
-												</div>
-												<h3 class="homec-property__title"><a href="property-single.html">Diamond Manco Apartment</a></h3>
-												<div class="homec-property__text">
-													<img src="{% static 'img/location-icon.svg' %}" alt="#"><p>Kızılırmak Mahallesi Ufuk Üniversitesi Cad. Kat:11 No:3/54, 
-Ankara, Türkiye</p>
-												</div>
-												<!-- Property List-->
-												<ul class="homec-property__list homec-border-top list-none">
-													<li><img src="{% static 'img/room-icon.svg' %}" alt="#">3 Room</li>
-													<li><img src="{% static 'img/bath-icon.svg' %}" alt="#">2 Bathroom</li>
-													<li><img src="{% static 'img/size-icon.svg' %}" alt="#">5x9 m2</li>
-												</ul>
-											</div>
-										</div>
-										<!-- End Single property-->
-									</div>
+									{% endfor %}  
 								</div>
 								<div class="row mg-top-40">
 									<div class="homec-pagination">
@@ -708,7 +557,7 @@ Ankara, Türkiye</p>
 													<ul class="f-useful-links-inner list-none">
 														<li><a href="{% url 'home' %}"><i class="fa-solid fa-minus"></i>Ana Sayfa</a></li>
 														<li><a href="{% url 'properties' %}"><i class="fa-solid fa-minus"></i>Projelerimiz</a></li>
-														<li><a href="{% url 'about' %}"><i class="fa-solid fa-minus"></i>Biz Kimiz</a></li>
+														<li><a href="{% url 'about' %}"><i class="fa-solid fa-minus"></i>Hakkımızda</a></li>
 														<li><a href="{% url 'blog' %}"><i class="fa-solid fa-minus"></i>Blog</a></li>
 														<li><a href="{% url 'contact' %}"><i class="fa-solid fa-minus"></i>İletişim</a></li>
 													</ul>
@@ -724,7 +573,7 @@ Ankara, Türkiye</p>
 														<ul class="f-contact-list list-none">
 															<li><img src="{% static 'img/footer-phone.svg' %}" alt="#"><a href="tel:+(323)750-1234">+90 312 220 00 63</a></li>
 															<li><img src="{% static 'img/footer-message.png' %}" alt="#"><a href="mailto:infoyour@gmail.com">info@landinvestgroup.com.tr</a></li>
-															<li><img src="{% static 'img/footer-location.png' %}" alt="#"><p>Kızılırmak Mahallesi Ufuk Üniversitesi Cad. Kat:11 No:3/54, 
+															<li><img src="{% static 'img/footer-location.png' %}" alt="#"><p>Kızılırmak Mahallesi Ufuk Üniversitesi Cad. Kat:11 No:3/54, Çankaya
 																Ankara, Türkiye</p></li>
 														</ul>
 													</div>

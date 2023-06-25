@@ -75,7 +75,7 @@
 							<li ><a href="https://landinvestgroup.sahibinden.com/" target="_blank">Porföylerimiz</a>
 							
 							</li>
-							<li ><a href="{% url 'about' %}">Biz Kimiz?</a>
+							<li ><a href="{% url 'about' %}">Hakkımızda</a>
 						
 							</li>
 							<li ><a href="{% url 'blog' %}">Blog</a>
@@ -104,20 +104,19 @@
 									<li>
 										<a href="mailto:info@landinvestgroup.com.tr">
 											<img src="{% static 'img/email-icon.svg' %}" alt="#">
-											<span>info@landinvestgroup.com.tr</span>
+											<span style="font-size: 13.1px;">info@landinvestgroup.com.tr</span>
 										</a>
 									</li>
 									<li>
 										<a href="tel:+00239040248">
 											<img src="{% static 'img/phone-icon.svg' %}" alt="#">
-											<span> +90 312 220 00 63</span>
+											<span style="font-size: 13.1px;"> +90 312 220 00 63</span>
 										</a>
 									</li>
 									<li>
 										<a href="mailto:info@landinvestgroup.com.tr">
 											<img src="{% static 'img/locations-icon.svg' %}" alt="#">
-											<span>Kızılırmak Mahallesi Ufuk Üniversitesi Cad. Kat:11 No:3/54, 
-Ankara, Türkiye</span>
+											<span style="font-size: 13.1px;">Kızılırmak Mahallesi Ufuk Üniversitesi Cad. Kat:11 No:3/54, Çankaya Ankara, Türkiye</span>
 										</a>
 									</li>
 								</ul>
@@ -184,23 +183,33 @@ Ankara, Türkiye</span>
 											<div class="nav-item">                                      
 												<!-- Main Menu -->
 												<ul class="nav-menu menu navigation list-none">
-													<li><a href="{% url 'home' %}">Ana Sayfa</a>
+														<li><a href="{% url 'home' %}">Ana Sayfa</a>
+									
+														</li>
+														<li class="menu-item-has-children"><a href="{% url 'properties' %}">Projelerimiz</a>
+															<ul class="sub-menu">
+																	<li><a href="projelerimiz/durumu/devam ediyor">Devam eden projeler </a></li>
+																<li><a href="projelerimiz/durumu/planlanan">Planlanan projeler</a></li>
+																<li><a href="projelerimiz/durumu/tamamlandı">Tamamlanan projeler</a></li>
+															</ul>
+														</li>
+													</li>
+													<li ><a href="https://landinvestgroup.sahibinden.com/" target="_blank">Porföylerimiz</a>
 								
 													</li>
-													<li ><a href="{% url 'properties' %}">Projelerimiz</a>
-								
-													</li>
-												</li>
-												<li ><a href="https://landinvestgroup.sahibinden.com/" target="_blank">Porföylerimiz</a>
-							
-												</li>
-													<li ><a href="{% url 'about' %}">Biz Kimiz?</a>
-												
-													</li>
-													<li ><a href="{% url 'blog' %}">Blog</a>
-													</li>
-													<li ><a href="{% url 'contact' %}">İletişim</a>
-													</li>
+														<li ><a href="{% url 'about' %}">Hakkımızda</a>
+													
+														</li>
+														<li ><a href="{% url 'blog' %}">Blog</a>
+														</li>
+														<li ><a href="{% url 'contact' %}">İletişim</a>
+														</li>
+														<li>
+															<select class="selectpicker" data-width="fit">
+																<option data-content='<span class="flag-icon flag-icon-us"></span> English'>Türkçe</option>
+																<option  data-content='<span class="flag-icon flag-icon-mx"></span> Español'>English</option>
+															</select>
+														</li>
 												</ul>
 												<!-- End Main Menu -->
 											</div>
@@ -215,6 +224,13 @@ Ankara, Türkiye</span>
 			</div>
 		</header>
 		<!-- End Header -->
+	<!-- side buttons  Hero -->
+		<div id="mySidenav" class="sidenav">
+		<a href="tel:+903122200063" id="about" ><i class="fa-solid fa-phone"style="margin-left: 0!important;"  ></i></a>
+		<a href="mailto:info@landinvestgroup.com.tr" id="mail"><i class="fa-regular fa-envelope ms-1" style="margin-left: 0!important;" ></i></a>
+		<a href="https://wa.me/+905057376999" target="_blank" id="projects"><i class="fa-brands fa-whatsapp  ms-1" style="margin-left: 0!important;" ></i></a>
+	</div>
+		<!-- end of side buttons  -->
 		{% for a in project_details %}
 		<!-- Breadcrumbs -->
 		<section class="breadcrumbs__content" style="background-color: rgb(112, 112, 112);">
@@ -242,7 +258,7 @@ Ankara, Türkiye</span>
 								<div class="flexslider" id="f1">
 									<ul class="slides">
 										<li>
-											<div class="homec-image-gallery">
+											<div class="homec-image-gallery" style="height: 600px;">
 												<div class="homec-overlay"></div>
 												<img src="{{a.image_ana_foto.url}}" alt="#">
 											</div>
@@ -253,35 +269,16 @@ Ankara, Türkiye</span>
 									<div class="flexslider carousel" id="f2">
 										<ul class="slides">
 											<li>
-												<div class="single-thumbs">
+												<div class="single-thumbs" style="height: 100px;">
 													<img src="{{a.image_alt_foto1.url}}" alt="thumbs">
 												</div>
 											</li>
 											<li>
-												<div class="single-thumbs">
+												<div class="single-thumbs" style="height: 100px;">
 													<img src="{{a.image_alt_foto2.url}}" alt="thumbs">
 												</div>
 											</li>
-											<li>
-												<div class="single-thumbs">
-													<img src="{{a.image_alt_foto3.url}}" alt="thumbs">
-												</div>
-											</li>
-											<li>
-												<div class="single-thumbs">
-													<img src="{{a.image_alt_foto4.url}}" alt="thumbs">
-												</div>
-											</li>
-											<li>
-												<div class="single-thumbs">
-													<img src="{{a.image_alt_foto5.url}}" alt="thumbs">
-												</div>
-											</li>
-											<li>
-												<div class="single-thumbs">
-													<img src="{{a.image_alt_foto6.url}}" alt="thumbs">
-												</div>
-											</li>
+									
 										</ul>
 									</div>
 								</div>
@@ -332,7 +329,7 @@ Ankara, Türkiye</span>
                                                             <img src="{% static 'img/floor-plane-img.png' %}" alt="#">
                                                         </div>
                                                         <div class="floor-plan-content">
-                                                            <p>Plan içeriğiasdasdads</p>
+                                                            <p>Plan içeriği</p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -566,7 +563,7 @@ Ankara, Türkiye</span>
 										<ul class="f-useful-links-inner list-none">
 											<li><a href="{% url 'home' %}"><i class="fa-solid fa-minus"></i>Ana Sayfa</a></li>
 											<li><a href="{% url 'properties' %}"><i class="fa-solid fa-minus"></i>Projelerimiz</a></li>
-											<li><a href="{% url 'about' %}"><i class="fa-solid fa-minus"></i>Biz Kimiz</a></li>
+											<li><a href="{% url 'about' %}"><i class="fa-solid fa-minus"></i>Hakkımızda</a></li>
 											<li><a href="{% url 'blog' %}"><i class="fa-solid fa-minus"></i>Blog</a></li>
 											<li><a href="{% url 'contact' %}"><i class="fa-solid fa-minus"></i>İletişim</a></li>
 										</ul>
@@ -582,7 +579,7 @@ Ankara, Türkiye</span>
 											<ul class="f-contact-list list-none">
 												<li><img src="{% static 'img/footer-phone.svg' %}" alt="#"><a href="tel:+(323)750-1234">+90 312 220 00 63</a></li>
 												<li><img src="{% static 'img/footer-message.png' %}" alt="#"><a href="mailto:infoyour@gmail.com">info@landinvestgroup.com.tr</a></li>
-												<li><img src="{% static 'img/footer-location.png' %}" alt="#"><p>Kızılırmak Mahallesi Ufuk Üniversitesi Cad. Kat:11 No:3/54, 
+												<li><img src="{% static 'img/footer-location.png' %}" alt="#"><p>Kızılırmak Mahallesi Ufuk Üniversitesi Cad. Kat:11 No:3/54, Çankaya
 													Ankara, Türkiye</p></li>
 											</ul>
 										</div>
