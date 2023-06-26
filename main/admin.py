@@ -4,3 +4,4 @@ from .models import *
 admin.site.register(Projeler)
 admin.site.register(Blog)
 admin.site.register(CustomerMessages)
+admin.site.register(resimler)

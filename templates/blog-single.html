@@ -45,7 +45,9 @@
 
 		
 	</head>
-
+	<style>
+		.breadcrumbs__content{background-image:url("{% static 'img/bread-overlay.jpg' %}");}
+	</style>
 	<body>
 
 		<!-- Mobile Menu Modal -->
@@ -247,7 +249,7 @@
 		<!-- End Header -->
 		{% for a in blog_detail %}
 		<!-- Breadcrumbs -->
-		<section class="breadcrumbs__content" style="background-color: rgb(112, 112, 112);">
+		<section class="breadcrumbs__content" >
 			<!-- <div class="homec-overlay"></div> -->
 			<div class="container">
 				<div class="row">

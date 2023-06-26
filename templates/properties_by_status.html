@@ -213,11 +213,10 @@
 														</li>
 														<li class="menu-item-has-children"><a href="{% url 'properties' %}">Projelerimiz</a>
 															<ul class="sub-menu">
-																{% for a in projeler %}
-																<li><a href="{% url 'proje_durumuna_gore' a.status %}">Devam eden projeler </a></li>
-																<li><a href="{% url 'proje_durumuna_gore' a.status %}">Planlanan projeler </a></li>
-																<li><a href="{% url 'proje_durumuna_gore' a.status %}">Tamamlanan projeler </a></li>
-																{% endfor %}
+																
+																<li><a href="/projelerimiz/durumu/devam ediyor">Devam eden projeler </a></li>
+																<li><a href="/projelerimiz/durumu/planlanan">Planlanan projeler</a></li>
+																<li><a href="/projelerimiz/durumu/tamamlandı">Tamamlanan projeler</a></li>
 															</ul>
 														</li>
 													</li>
@@ -258,9 +257,11 @@
 		<a href="https://wa.me/+905057376999" target="_blank" id="projects"><i class="fa-brands fa-whatsapp  ms-1" style="margin-left: 0!important;" ></i></a>
 	</div>
 		<!-- end of side buttons  -->
-
+<style>
+	.breadcrumbs__content{background-image:url("{% static 'img/bread-overlay.jpg' %}");}
+</style>
 		<!-- Breadcrumbs -->
-		<section class="breadcrumbs__content" style="background-image:url('static/img/bread-overlay.jpg');">
+		<section class="breadcrumbs__content" >
 			<!-- <div class="homec-overlay"></div> -->
 			<div class="container">
 				<div class="row">

@@ -1,0 +1,41 @@
+ <!-- Property Single Slider -->
+		<section class="pd-top-80 pd-btm-80">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="homec-property-slides">
+							<div class="homec-property-main">
+								<div class="flexslider" id="f1">
+									<ul class="slides">
+										<li>
+											<div class="homec-image-gallery" style="height: 600px;">
+												<div class="homec-overlay"></div>
+												<img src="{{a.image_ana_foto.url}}" alt="#">
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="homec-property-thumbs mg-top-10">
+									<div class="flexslider carousel" id="f2">
+										
+									<div class="flex-viewport" style="overflow: hidden; position: relative;"><ul class="slides" style="width: 1600%; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+										{% for ha  in resim %}
+											{% if ha.image_ana_foto.url %}	
+										<li class="" style="width: 200px; margin-right: 0px; float: left; display: block;">
+												<div class="single-thumbs">
+													<img src="{{ ha.image_ana_foto.url }}" alt="thumbs" draggable="false">
+												</div>
+											</li>
+											{% else %}
+											{% endif %}
+											{% endfor %}
+										</ul></div><ul class="flex-direction-nav"><li class="flex-nav-prev"><a class="flex-prev" href="#">Previous</a></li><li class="flex-nav-next"><a class="flex-next" href="#">Next</a></li></ul></div>
+								</div>
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Property Single Slider -->

@@ -66,10 +66,11 @@ def property_single(request,pk):
 
     project_detail = get_object_or_404(Projeler, proje_ismi=pk)
     project_details = Projeler.objects.filter(proje_ismi=pk)
-
+    resim = resimler.objects.filter(proje = project_detail)
     context = {
         'project_detail' : project_detail,
         'project_details' :project_details,
+        "resim":resim
     }
 
     return render(request, 'property-single.html', context)
@@ -110,10 +111,10 @@ def send_email(request,isimSoyisim,Email,Telefon,Konu,Mesaj):
          "Mesaj":Mesaj,
       }
     
-    subject, from_email, to = "Order", 'from@example.com', 'to@example.com'
+    subject, from_email, to = "Bize Ulaşından gelenler", 'from@example.com', 'to@example.com'
     text_content = plaintext.render(d)
     html_content = htmly.render(d)
-    msg = EmailMultiAlternatives(subject, text_content, from_email, ["mfkrdmnq@gmail.com"])
+    msg = EmailMultiAlternatives(subject, text_content, from_email, ["mfkrdmn@gmail.com"])
     msg.attach_alternative(html_content, "text/html")
     msg.send()
     

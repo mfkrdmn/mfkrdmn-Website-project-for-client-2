@@ -9,12 +9,6 @@ class Projeler(models.Model):
     Lokasyon_kısa = models.CharField(max_length=150, blank=True)
     lokasyon_bilgileri = models.TextField(max_length=200, blank=True)
     image_ana_foto  = models.ImageField(upload_to='proje_ana_foto/',blank = True,null = True)
-    image_alt_foto1  = models.ImageField(upload_to='proje_alt_foto/',blank = True,null = True)
-    image_alt_foto2  = models.ImageField(upload_to='proje_alt_foto/',blank = True,null = True)
-    image_alt_foto3  = models.ImageField(upload_to='proje_alt_foto/',blank = True,null = True)
-    image_alt_foto4  = models.ImageField(upload_to='proje_alt_foto/',blank = True,null = True)
-    image_alt_foto5  = models.ImageField(upload_to='proje_alt_foto/',blank = True,null = True)
-    image_alt_foto6  = models.ImageField(upload_to='proje_alt_foto/',blank = True,null = True)
     video_link = models.CharField(max_length=150, blank=True)
     map = models.CharField(max_length=500, blank=True)
     status = models.CharField(max_length=50, blank=True)
@@ -24,6 +18,13 @@ class Projeler(models.Model):
 
     def __str__(self) :
         return self.proje_ismi
+
+class resimler(models.Model):
+    proje = models.ForeignKey(Projeler,on_delete=models.CASCADE)
+    image_ana_foto  = models.ImageField(upload_to='altfoto/',blank = True,null = True)
+
+    def __str__(self) :
+        return str(self.proje)
 
 
 class Blog(models.Model):

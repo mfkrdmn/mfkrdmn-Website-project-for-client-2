@@ -48,7 +48,9 @@
 
 		
 	</head>
-
+	<style>
+		.breadcrumbs__content{background-image:url("{% static 'img/bread-overlay.jpg' %}");}
+	</style>
 	<body>
 	
 		
@@ -213,9 +215,9 @@
 														</li>
 														<li class="menu-item-has-children"><a href="{% url 'properties' %}">Projelerimiz</a>
 															<ul class="sub-menu">
-																	<li><a href="projelerimiz/durumu/devam ediyor">Devam eden projeler </a></li>
-																<li><a href="projelerimiz/durumu/planlanan">Planlanan projeler</a></li>
-																<li><a href="projelerimiz/durumu/tamamlandı">Tamamlanan projeler</a></li>
+																	<li><a href="/projelerimiz/durumu/devam ediyor">Devam eden projeler </a></li>
+																<li><a href="/projelerimiz/durumu/planlanan">Planlanan projeler</a></li>
+																<li><a href="/projelerimiz/durumu/tamamlandı">Tamamlanan projeler</a></li>
 															</ul>
 														</li>
 													</li>
@@ -258,7 +260,7 @@
 		<!-- end of side buttons  -->
 
 		<!-- Breadcrumbs -->
-		<section class="breadcrumbs__content" style="background-image:url('static/img/bread-overlay.jpg');">
+		<section class="breadcrumbs__content" >
 			<!-- <div class="homec-overlay"></div> -->
 			<div class="container">
 				<div class="row">

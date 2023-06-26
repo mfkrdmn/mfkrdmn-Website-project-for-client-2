@@ -45,6 +45,9 @@
 
 		
 	</head>
+	<style>
+		.breadcrumbs__content{background-image:url("{% static 'img/bread-overlay.jpg' %}");}
+	</style>
 	<body>
 
 		
@@ -233,7 +236,7 @@
 		<!-- end of side buttons  -->
 		{% for a in project_details %}
 		<!-- Breadcrumbs -->
-		<section class="breadcrumbs__content" style="background-color: rgb(112, 112, 112);">
+		<section class="breadcrumbs__content" >
 			<!-- <div class="homec-overlay"></div> -->
 			<div class="container">
 				<div class="row">
@@ -247,48 +250,69 @@
 			</div>
 		</section>
 		<!-- End breadcrumbs -->
-	
-        <!-- Property Single Slider -->
-		<section class="pd-top-80 pd-btm-80">
-			<div class="container">
-				<div class="row">
-					<div class="col-12">
-						<div class="homec-property-slides">
-							<div class="homec-property-main">
-								<div class="flexslider" id="f1">
-									<ul class="slides">
-										<li>
-											<div class="homec-image-gallery" style="height: 600px;">
-												<div class="homec-overlay"></div>
-												<img src="{{a.image_ana_foto.url}}" alt="#">
-											</div>
-										</li>
-									</ul>
-								</div>
-								<div class="homec-property-thumbs mg-top-10">
-									<div class="flexslider carousel" id="f2">
-										<ul class="slides">
-											<li>
-												<div class="single-thumbs" style="height: 100px;">
-													<img src="{{a.image_alt_foto1.url}}" alt="thumbs">
-												</div>
-											</li>
-											<li>
-												<div class="single-thumbs" style="height: 100px;">
-													<img src="{{a.image_alt_foto2.url}}" alt="thumbs">
-												</div>
-											</li>
-									
-										</ul>
+ <!-- Property Single Slider -->
+ <section class="pd-top-80 pd-btm-80">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<div class="homec-property-slides">
+					<div class="homec-property-main">
+						<div class="flexslider" id="f1">
+							<ul class="slides">
+								<li>
+									<div class="homec-image-gallery">
+										
+										<div class="homec-overlay"></div>
+										<img src="{{a.image_ana_foto.url}}" alt="#">
 									</div>
-								</div>
+								</li>
+								{% for ha  in resim %}
+											{% if ha.image_ana_foto.url %}	
+										
+											
+								<li>
+									<div class="homec-image-gallery">
+										
+										<div class="homec-overlay"></div>
+										<img src="{{ ha.image_ana_foto.url }}" alt="#">
+										
+									</div>
+								</li>
+								{% else %}
+											{% endif %}
+											{% endfor %}
+								
+							</ul>
+						</div>
+						<div class="homec-property-thumbs mg-top-10">
+							<div class="flexslider carousel" id="f2">
+								<ul class="slides">
+									{% for ha  in resim %}
+											{% if ha.image_ana_foto.url %}	
+										
+											
+								<li>
+									<div class="single-thumbs">
+										<img src="{{ ha.image_ana_foto.url }}" alt="thumbs">
+									</div>
+									
+								</li>
+								{% else %}
+											{% endif %}
+											{% endfor %}
+								
+									
+								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</section>
-		<!-- End Property Single Slider -->
+		</div>
+	</div>
+</section>
+<!-- End Property Single Slider -->
+       
 
 		<!-- Proterty Details -->
         <section class="pd-top-0 homec-bg-third-color pd-btm-80 homec-bg-cover" style="background-image: url('img/property-single-bg.svg');">
@@ -628,29 +652,29 @@
 		<script src="{% static 'js/active.js' %}"></script>
 		<script>
 			$(window).load(function(){
-			$('#f1').flexslider({
-			animation: "fade",
-				controlNav: false, 
-				directionNav: false,    
-			start: function(slider){
-			$('body').removeClass('loading');
-			}
-			});
-			$('#f2').flexslider({
-			animation: "slide",
-			animationLoop: true,
-			itemWidth: 200,
-			itemMargin: 0, 
-			pausePlay: false,
-			mousewheel: true,
-			asNavFor:'.flexslider',
-			controlNav: false, 
-			move: 1, 
-			pauseOnAction: false,
-			slideshow: false, 
-			manualControls: true
-			});
-			});
+				  $('#f1').flexslider({
+				    animation: "fade",
+					controlNav: false, 
+					directionNav: false,    
+				    start: function(slider){
+				      $('body').removeClass('loading');
+				    }
+				  });
+				 $('#f2').flexslider({
+				    animation: "slide",
+				    animationLoop: true,
+				    itemWidth: 200,
+					itemMargin: 0, 
+				    pausePlay: false,
+				    mousewheel: true,
+				    asNavFor:'.flexslider',
+					controlNav: false, 
+					move: 1, 
+					pauseOnAction: false,
+					slideshow: false, 
+					manualControls: true
+				  });
+				});
 		</script>
 	</body>
 </html>
