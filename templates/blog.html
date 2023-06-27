@@ -250,7 +250,7 @@
 			<div class="blog-bg-pattern">
 				<div class="container">
 					<div class="row">
-						{% for a in blog %}
+						{% for a in project %}
 						<div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
 							<!-- Single Blog -->
 							<div class="homec-blog">
@@ -285,25 +285,39 @@
 						</div>	
 						{% endfor %} 
 			
-						<div class="row mg-top-40">
-							<div class="homec-pagination">
-								<ul class="homec-pagination__list list-none">
-									<li class="homec-pagination__button">
-										{% if blog.has_previous %}
-											<a href="?page={{ blog.previous_page_number }}">Önceki</a>
-										{% endif %}
-									</li>
-				
-									<li class="active"><a href="#">{{ blog.number }}</a></li>
+						<ul class="pagination pagination-lg justify-content-center mt-5">
 
-									<li class="homec-pagination__button">
-										{% if blog.has_next %}
-											<a href="?page={{ blog.next_page_number }}">Sonraki</a>
-										{% endif %}
-									</li>
-								</ul>
-							</div>
-						</div>
+							{% if project.has_previous %}
+							  <li class="page-item"><a class="page-link" href="?page={{ project.previous_page_number }}">« Önceki Sayfa</a></li>
+							
+							  {% if project.number > 3 %}
+							
+								<li class="page-item"><a class="page-link" href="?page=1{{ project.previous_page_number }}">1</a></li>
+								{% if project.number > 4 %}
+								  <li class="page-item"><span class="page-link">...</span></li>
+								{% endif %}
+							  {% endif %}
+							{% endif %}
+							
+							{% for num in project.paginator.page_range %}
+							  {% if project.number == num %}
+								<li class="page-item"><a class="page-link " style="color:black;" href="?page={{ num }}">{{ num }}</a></li>
+							  {% elif num > project.number|add:'-3' and num < project.number|add:'3' %}
+								<li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+							  {% endif %}
+							{% endfor %}
+							
+							{% if project.has_next %}
+							  {% if project.number < project.paginator.num_pages|add:'-3' %}
+								<li class="page-item"><span class="page-link">...</span></li>
+								<li class="page-item"><a class="page-link" href="?page={{ project.paginator.num_pages }}">{{ project.paginator.num_pages }}</a></li>
+							  {% elif project.number < project.paginator.num_pages|add:'-2' %}
+								<li class="page-item"><a class="page-link" href="?page={{ project.paginator.num_pages }}">{{ project.paginator.num_pages }}</a></li>
+							  {% endif %}
+							
+							  <li class="page-item"><a class="page-link" href="?page={{ project.next_page_number }}">Sonraki Sayfa »</a></li>
+							{% endif %}
+						</ul>
 				</div>
 			</div>
 		</section>

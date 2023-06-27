@@ -44,10 +44,22 @@ def properties(request):
 
 def sehre_gore_projeler(request, sehir):
     sehre_gore = Projeler.objects.filter(sehir=sehir)
+
+    paginator = Paginator(sehre_gore, 4) # Show 25 project per page
     
+    page = request.GET.get('page')
+    try:
+        project = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        project = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        project = paginator.page(paginator.num_pages)
 
     context = {
         'sehre_gore' : sehre_gore,
+        'project' : project
      
     }
     return render(request, 'properties_by_city.html', context)
@@ -55,10 +67,23 @@ def sehre_gore_projeler(request, sehir):
 def proje_durumuna_gore(request, status):
     durumuna_gore = Projeler.objects.filter(status=status)
     projeler = Projeler.objects.all()
+
+    paginator = Paginator(durumuna_gore, 4) # Show 25 project per page
+    
+    page = request.GET.get('page')
+    try:
+        project = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        project = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        project = paginator.page(paginator.num_pages)
     
     context = {
         'durumuna_gore' : durumuna_gore,
-        'projeler' :projeler
+        'projeler' :projeler,
+        'project' : project
     }
     return render(request, 'properties_by_status.html', context)
 
@@ -127,17 +152,17 @@ def blog(request):
 
     page = request.GET.get('page')
     try:
-        blog = paginator.page(page)
+        project = paginator.page(page)
     except PageNotAnInteger:
         # If page is not an integer, deliver first page.
-        blog = paginator.page(1)
+        project = paginator.page(1)
     except EmptyPage:
         # If page is out of range (e.g. 9999), deliver last page of results.
-        blog = paginator.page(paginator.num_pages)
+        project = paginator.page(paginator.num_pages)
 
     context = {
         'blog_yazıları' : blog_yazıları,
-        'blog' :blog
+        'project' :project,
     }
 
     return render(request, 'blog.html', context)

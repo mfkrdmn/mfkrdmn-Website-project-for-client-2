@@ -356,7 +356,7 @@
 							<!-- Grid Tab -->
 							<div class="tab-pane fade show active" id="homec-grid" role="tabpanel">
 								<div class="row">
-									{% for a in durumuna_gore %}
+									{% for a in project %}
 									<div class="col-md-6 col-12 mg-top-30" >
 										<!-- Single property-->
 									
@@ -383,22 +383,41 @@
 									{% endfor %}  
 								
 								</div>
-								<div class="row mg-top-40">
-									<div class="homec-pagination">
-										<ul class="homec-pagination__list list-none">
-											<li class="homec-pagination__button"><a href="#">Prev</a></li>
-											<li><a href="#">01</a></li>
-											<li class="active"><a href="#">02</a></li>
-											<li><a href="#">03</a></li>
-											<li><a href="#">04</a></li>
-											<li><a href="#">05</a></li>
-											<li><a href="#">...</a></li>
-											<li><a href="#">24</a></li>
-											<li class="homec-pagination__button"><a href="#">Next</a></li>
-										</ul>
-									</div>
-								</div>
+						
 							</div>
+							<ul class="pagination pagination-lg justify-content-center mt-5">
+
+								{% if project.has_previous %}
+								  <li class="page-item"><a class="page-link" href="?page={{ project.previous_page_number }}">« Önceki Sayfa</a></li>
+								
+								  {% if project.number > 3 %}
+								
+									<li class="page-item"><a class="page-link" href="?page=1{{ project.previous_page_number }}">1</a></li>
+									{% if project.number > 4 %}
+									  <li class="page-item"><span class="page-link">...</span></li>
+									{% endif %}
+								  {% endif %}
+								{% endif %}
+								
+								{% for num in project.paginator.page_range %}
+								  {% if project.number == num %}
+									<li class="page-item"><a class="page-link " style="color:black;" href="?page={{ num }}">{{ num }}</a></li>
+								  {% elif num > project.number|add:'-3' and num < project.number|add:'3' %}
+									<li class="page-item"><a class="page-link" href="?page={{ num }}">{{ num }}</a></li>
+								  {% endif %}
+								{% endfor %}
+								
+								{% if project.has_next %}
+								  {% if project.number < project.paginator.num_pages|add:'-3' %}
+									<li class="page-item"><span class="page-link">...</span></li>
+									<li class="page-item"><a class="page-link" href="?page={{ project.paginator.num_pages }}">{{ project.paginator.num_pages }}</a></li>
+								  {% elif project.number < project.paginator.num_pages|add:'-2' %}
+									<li class="page-item"><a class="page-link" href="?page={{ project.paginator.num_pages }}">{{ project.paginator.num_pages }}</a></li>
+								  {% endif %}
+								
+								  <li class="page-item"><a class="page-link" href="?page={{ project.next_page_number }}">Sonraki Sayfa »</a></li>
+								{% endif %}
+							</ul>
 							<!-- End Grid Tab -->
 							<!-- List Tab -->
 							<div class="tab-pane fade" id="homec-list" role="tabpanel">
@@ -428,21 +447,7 @@
 									</div>
 									{% endfor %}  
 								</div>
-								<div class="row mg-top-40">
-									<div class="homec-pagination">
-										<ul class="homec-pagination__list list-none">
-											<li class="homec-pagination__button"><a href="#">Prev</a></li>
-											<li><a href="#">01</a></li>
-											<li class="active"><a href="#">02</a></li>
-											<li><a href="#">03</a></li>
-											<li><a href="#">04</a></li>
-											<li><a href="#">05</a></li>
-											<li><a href="#">...</a></li>
-											<li><a href="#">24</a></li>
-											<li class="homec-pagination__button"><a href="#">Next</a></li>
-										</ul>
-									</div>
-								</div>
+				
 							</div>
 							<!-- End List Tab -->
 						</div>

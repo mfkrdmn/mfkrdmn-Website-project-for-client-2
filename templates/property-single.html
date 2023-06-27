@@ -262,44 +262,49 @@
 								<li>
 									<div class="homec-image-gallery">
 										
-										<div class="homec-overlay"></div>
-										<img src="{{a.image_ana_foto.url}}" alt="#">
+										<img src="{{a.image_ana_foto.url}}" alt="#" style="height: 700px; width: 1800px;   object-fit: cover;">
+
 									</div>
 								</li>
+								
 								{% for ha  in resim %}
-											{% if ha.image_ana_foto.url %}	
+								{% if ha.image_ana_foto.url %}	
 										
 											
 								<li>
 									<div class="homec-image-gallery">
 										
-										<div class="homec-overlay"></div>
-										<img src="{{ ha.image_ana_foto.url }}" alt="#">
+								
+										<img src="{{ ha.image_ana_foto.url }}" alt="#" style="height: 700px; width: 1800px;   object-fit: cover;">
 										
 									</div>
 								</li>
+
+
 								{% else %}
-											{% endif %}
-											{% endfor %}
+								{% endif %}
+								{% endfor %}
 								
 							</ul>
 						</div>
 						<div class="homec-property-thumbs mg-top-10">
 							<div class="flexslider carousel" id="f2">
 								<ul class="slides">
-									{% for ha  in resim %}
-											{% if ha.image_ana_foto.url %}	
+								{% for ha  in resim %}
+								{% if ha.image_ana_foto.url %}	
 										
 											
 								<li>
 									<div class="single-thumbs">
-										<img src="{{ ha.image_ana_foto.url }}" alt="thumbs">
+										<img src="{{ ha.image_ana_foto.url }}" alt="thumbs" style="height: 140px; width: 210px;  object-fit: cover;">
 									</div>
 									
 								</li>
+
+
 								{% else %}
-											{% endif %}
-											{% endfor %}
+								{% endif %}
+								{% endfor %}
 								
 									
 								</ul>
