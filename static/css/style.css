@@ -7466,3 +7466,10 @@ div.ck-editor.ck-rounded-corners {
 	End Global
 ========================================*/
 
+.projects_col{
+	height: 400px;
+}
+
+.blog_col{
+	height: 530px;
+}
