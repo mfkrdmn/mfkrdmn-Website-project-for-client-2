@@ -22,8 +22,7 @@ def properties(request):
     projeler = Projeler.objects.all().order_by('-updated_at')
     isting_count = Projeler.objects.count()
 
-    project_list = Projeler.objects.all()
-    paginator = Paginator(project_list, 4) # Show 25 project per page
+    paginator = Paginator(projeler, 4) # Show 25 project per page
 
     page = request.GET.get('page')
     try:
@@ -35,11 +34,19 @@ def properties(request):
         # If page is out of range (e.g. 9999), deliver last page of results.
         project = paginator.page(paginator.num_pages)
 
+        #__contains =
+    # if request.GET:
+    #     key = request.GET.get("key")
+    #     if key:
+    #         projects_searched = projeler.objects.filter(qty__gt=0,ac_type__contains = key)
+
     context = {
         'projeler' : projeler,
         'isting_count' : isting_count,
-        'project' : project
+        'project' : project,
+        # 'projects_searched' : projects_searched,
     }
+
     return render(request, 'properties.html', context)
 
 def sehre_gore_projeler(request, sehir):
