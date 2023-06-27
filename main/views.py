@@ -18,6 +18,8 @@ def home(request):
     }
     return render(request, 'home.html', context)
 
+
+
 def properties(request):
     projeler = Projeler.objects.all().order_by('-updated_at')
     isting_count = Projeler.objects.count()
@@ -34,18 +36,25 @@ def properties(request):
         # If page is out of range (e.g. 9999), deliver last page of results.
         project = paginator.page(paginator.num_pages)
 
-        #__contains =
-    # if request.GET:
-    #     key = request.GET.get("key")
-    #     if key:
-    #         projects_searched = projeler.objects.filter(qty__gt=0,ac_type__contains = key)
-
     context = {
         'projeler' : projeler,
         'isting_count' : isting_count,
         'project' : project,
-        # 'projects_searched' : projects_searched,
     }
+
+    projects_searched = None  
+
+ 
+    if request.GET:
+        key = request.GET.get("key")
+        if key:
+            key_upper = key.upper()  
+            projects_searched = Projeler.objects.filter(proje_ismi__icontains=key_upper)
+            context["project"] = projects_searched
+        else:
+            context["project"] = projeler  # Tüm içeriği göster
+    else:
+        context["project"] = projeler  # Tüm içeriği göster
 
     return render(request, 'properties.html', context)
 
@@ -69,6 +78,18 @@ def sehre_gore_projeler(request, sehir):
         'project' : project
      
     }
+
+    if request.GET:
+        key = request.GET.get("key")
+        if key:
+            key_upper = key.upper()  
+            projects_searched = Projeler.objects.filter(proje_ismi__icontains=key_upper)
+            context["project"] = projects_searched
+        else:
+            context["project"] = sehre_gore  # Tüm içeriği göster
+    else:
+        context["project"] = sehre_gore  # Tüm içeriği göster
+
     return render(request, 'properties_by_city.html', context)
 
 def proje_durumuna_gore(request, status):

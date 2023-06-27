@@ -279,8 +279,8 @@
 						<!-- Proeprty Bar -->
 						<div class="homec-property-bar">
 							<div class="homec-property-bar__single">
-								<form class="homec-form__form homec-form__form--bar">
-									<input type="email" name="Email" placeholder="Proje ara..." required="">
+								<form method="get" action="{% url 'properties' %}" class="homec-form__form homec-form__form--bar">
+									<input type="text" name="key" placeholder="Proje ara..." >
 									<button type="submit" class="homec-btn"><span>Ara</span></button>
 								</form>
 								<!-- Show Results -->
@@ -359,7 +359,7 @@
 										<div class="homec-property projects_col" >
 											<!-- Property Head-->
 											<div class="homec-property__head projects_col" style="height: 220px;">
-												<img src="{{a.image_ana_foto.url}}" alt="#">
+												<img src="{{a.image_ana_foto.url}}" alt="#" style="height: 220px; object-fit: cover;">
 											</div>
 											<!-- Property Body-->
 										

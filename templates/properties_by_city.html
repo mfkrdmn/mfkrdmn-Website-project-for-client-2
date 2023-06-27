@@ -281,8 +281,8 @@
 						<!-- Proeprty Bar -->
 						<div class="homec-property-bar">
 							<div class="homec-property-bar__single">
-								<form class="homec-form__form homec-form__form--bar">
-									<input type="email" name="Email" placeholder="Proje ara..." required="">
+								<form method="get" action="{% url 'properties' %}" class="homec-form__form homec-form__form--bar">
+									<input type="text" name="key" placeholder="Proje ara..." >
 									<button type="submit" class="homec-btn"><span>Ara</span></button>
 								</form>
 								<!-- Show Results -->
