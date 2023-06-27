@@ -436,7 +436,7 @@
 												<div class="homec-property__topbar">
 													<span class="homec-property__salebadge">{{a.status}}</span>
 												</div>
-												<h3 class="homec-property__title"><a href="property-single.html">{{a.proje_ismi}}</a></h3>
+												<h3 class="homec-property__title"><a href="{% url 'property_single' a.proje_ismi %}">{{a.proje_ismi}}</a></h3>
 												<div class="homec-property__text">
 													<img src="{% static 'img/location-icon.svg' %}" alt="#"><p>{{a.Lokasyon_kısa}}</p>
 												</div>
