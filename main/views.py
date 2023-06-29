@@ -5,7 +5,18 @@ from django.shortcuts import render
 from django.utils.translation  import gettext as _
 from django.template.loader import get_template
 from django.core.mail import EmailMultiAlternatives
+from django.shortcuts import render
+from django.utils.translation  import gettext as _
+from django.utils.translation import get_language, activate, gettext
+def translate(language):
+    cur_language = get_language()
+    try:
+        activate(language)
+        text = gettext('Hello')
 
+    finally:
+        activate(cur_language)
+    return text
 # Create your views here.
 
 def home(request):
