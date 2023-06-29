@@ -5,6 +5,7 @@ from django.shortcuts import render
 from django.utils.translation  import gettext as _
 from django.template.loader import get_template
 from django.core.mail import EmailMultiAlternatives
+
 # Create your views here.
 
 def home(request):

@@ -272,7 +272,6 @@
 								<li>
 									<div class="homec-image-gallery">
 										
-								
 										<img src="{{ ha.image_ana_foto.url }}" alt="#" style="height: 600px; width: 1800px;   object-fit: cover;">
 										
 									</div>
@@ -288,6 +287,12 @@
 						<div class="homec-property-thumbs mg-top-10">
 							<div class="flexslider carousel" id="f2">
 								<ul class="slides">
+									<li>
+										<div class="single-thumbs">
+											<img src="{{ a.image_ana_foto.url }}" alt="thumbs" style="height: 140px; width: 210px;  object-fit: cover;">
+										</div>
+										
+									</li>
 								{% for ha  in resim %}
 								{% if ha.image_ana_foto.url %}	
 										
