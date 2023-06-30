@@ -1,5 +1,6 @@
 
 {% load static %}
+{% load i18n %}
 
 
 <!DOCTYPE html>
@@ -350,7 +351,7 @@ html, body {
 					<nav id="offcanvas-menu" class="offcanvas-menu">
 						<!-- Main Menu -->
 						<ul class="nav-menu menu navigation list-none">
-							<li><a href="#">Ana Sayfa</a>
+							<li><a href="#">{% translate "Ana Sayfa" %}</a>
 							</li>
 							<li ><a href="#">Properties</a>
 								<ul class="sub-menu">
@@ -488,25 +489,29 @@ html, body {
 											<div class="nav-item">                                      
 												<!-- Main Menu -->
 												<ul class="nav-menu menu navigation list-none">
-														<li><a href="{% url 'home' %}">Ana Sayfa</a>
+														<li><a href="{% url 'home' %}">{% translate "Ana Sayfa" %}</a>
 									
 														</li>
-														<li class="menu-item-has-children"><a href="{% url 'properties' %}">Projelerimiz</a>
+														<li class="menu-item-has-children"><a href="{% url 'properties' %}">{% translate "Projelerimiz" %}</a>
+													
 															<ul class="sub-menu">
-																	<li><a href="projelerimiz/durumu/devam ediyor">Devam eden projeler </a></li>
-																<li><a href="projelerimiz/durumu/planlanan">Planlanan projeler</a></li>
-																<li><a href="projelerimiz/durumu/tamamlandı">Tamamlanan projeler</a></li>
+																	<li><a href="projelerimiz/durumu/devam ediyor">{% translate "Devam eden projeler" %} </a></li>
+																	
+																<li><a href="projelerimiz/durumu/planlanan">{% translate "Planlanan projeler" %}</a></li>
+															
+																<li><a href="projelerimiz/durumu/tamamlandı">{% translate "Tamamlanan projeler" %}</a></li>
+																
 															</ul>
 														</li>
 													</li>
 											
 													</li>
-														<li ><a href="{% url 'about' %}">Hakkımızda</a>
+														<li ><a href="{% url 'about' %}">{% translate "Hakkımızda" %}</a>
 													
 														</li>
-														<li ><a href="{% url 'blog' %}">Blog</a>
+														<li ><a href="{% url 'blog' %}">{% translate "Blog" %}</a>
 														</li>
-														<li ><a href="{% url 'contact' %}">İletişim</a>
+														<li ><a href="{% url 'contact' %}">{% translate "İletişim" %}</a>
 														</li>
 														<li>
 															<select class="selectpicker" data-width="fit">
@@ -548,10 +553,13 @@ html, body {
 					<path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
 				  </svg>
 				  <div class="slide__text">
-					<h2 class="slide__text-heading" style="font-size: 55px;">MARMARA EVLERİ KONUT YAPI KOOPERATİFİ</h2>
+					<h2 class="slide__text-heading" style="font-size: 55px;">{% translate "MARMARA EVLERİ KONUT YAPI KOOPERATİFİ" %}</h2>
 					<p class="slide__text-desc">					
-						Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede, deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol imzalamıştır.</p>
-					<a class="slide__text-link" href="MARMARA%20EVLERİ%20KONUT%20YAPI%20KOOPERATİFİ" target="_blank">Projeyi Görüntüle</a>
+						{% translate "Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede, deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol imzalamıştır." %}</p>
+						
+					<a class="slide__text-link" href="MARMARA%20EVLERİ%20KONUT%20YAPI%20KOOPERATİFİ" target="_blank">{% translate "{% translate "Projeyi Görüntüle" %}
+" %}</a>
+					
 				  </div>
 				</div>
 			  </div>
@@ -562,9 +570,12 @@ html, body {
 					<path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
 				  </svg>
 				  <div class="slide__text">
-					<h2 class="slide__text-heading">GERDER PROJESİ</h2>
-					<p class="slide__text-desc">  ( 4.600 m2 ) dönüm hazine arazisinde toplu konut veya Üniversite kampüslari tasarlanıyor. Bunların her ikisi'de yapılaşmayı hızlandıracaktır.</p>
-					<a class="slide__text-link" href="GERDER%20PROJESİ" target="_blank">Projeyi Görüntüle</a>
+					<h2 class="slide__text-heading">	{% translate "GERDER PROJESİ" %}</h2>
+				
+					<p class="slide__text-desc"> {% translate "( 4.600 m2 ) dönüm hazine arazisinde toplu konut veya Üniversite kampüslari tasarlanıyor. Bunların her ikisi'de yapılaşmayı hızlandıracaktır." %} </p>
+	
+					<a class="slide__text-link" href="GERDER%20PROJESİ" target="_blank">{% translate "Projeyi Görüntüle" %}
+</a>
 				  </div>
 				</div>
 			  </div>
@@ -575,9 +586,12 @@ html, body {
 					<path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
 				  </svg>
 				  <div class="slide__text">
-					<h2 class="slide__text-heading">Kanal İstanbul Projesi</h2>
-					<p class="slide__text-desc">Kanal-İstanbul Projesi, İstanbul Avrupa Yakası'nın kuzeyinde Karadeniz'e kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde yer almaktadır.</p>
-					<a class="slide__text-link" href="KANAL-İSTANBUL%20PROJESİ" target="_blank" >Projeyi Görüntüle</a>
+					<h2 class="slide__text-heading">{% translate "Kanal İstanbul Projesi" %}</h2>
+					
+					<p class="slide__text-desc">{% translate "Kanal-İstanbul Projesi, İstanbul Avrupa Yakası'nın kuzeyinde Karadeniz'e kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde yer almaktadır." %}</p>
+					
+					<a class="slide__text-link" href="KANAL-İSTANBUL%20PROJESİ" target="_blank" >{% translate "Projeyi Görüntüle" %}
+</a>
 				  </div>
 				</div>
 			  </div>
@@ -588,11 +602,12 @@ html, body {
 					<path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
 				  </svg>
 				  <div class="slide__text">
-					<h2 class="slide__text-heading">Kanal Ankara Projesi</h2>
-					<p class="slide__text-desc">Eymir Gölü'nden İmrahor Viyadüküne kadar olan 11   km lik alanda en dar yeri 22 mt olan kanal yapılacaktır.
-
-						Kanalda gondollar ile gezinti yapılabilecek,kanalın bazı kısımlarında göletler oluşturulacak. Ayrıca kanalın üzerinde köprüler olacak.</p>
-					<a class="slide__text-link" href="KANAL-ANKARA%20PROJESİ" target="_blank">Projeyi Görüntüle</a>
+					<h2 class="slide__text-heading">{% translate "Kanal Ankara Projesi" %}</h2>
+					
+					<p class="slide__text-desc">{% translate "Eymir Gölü'nden İmrahor Viyadüküne kadar olan 11   km lik alanda en dar yeri 22 mt olan kanal yapılacaktır.
+						Kanalda gondollar ile gezinti yapılabilecek,kanalın bazı kısımlarında göletler oluşturulacak. Ayrıca kanalın üzerinde köprüler olacak." %}</p>
+					<a class="slide__text-link" href="KANAL-ANKARA%20PROJESİ" target="_blank">{% translate "Projeyi Görüntüle" %}
+</a>
 				  </div>
 				</div>
 			  </div>
@@ -606,7 +621,9 @@ html, body {
 					<div class="col-12">
 						<!-- Section TItle -->
 						<div class="homec-section__head text-center mg-btm-60">
-							<h2 class="homec-section__title"  data-aos="fade-in" data-aos-delay="400">Projelerimizi İnceleyin</h2>
+							<h2 class="homec-section__title"  data-aos="fade-in" data-aos-delay="400">{% translate "Projelerimizi İnceleyin" %}</h2>
+							
+
 						</div>
 					</div>
 				</div>
@@ -681,14 +698,17 @@ html, body {
 							<!-- Section Title -->
 							<div class="homec-section__head">
 								<div class="homec-section__shape">
-									<span class="homec-section__badge homec-section__badge--shape" style="background-image:url('/static/img/shape-2.svg')" data-aos="fade-down" data-aos-delay="300">Hakkımızda</span>
+									<span class="homec-section__badge homec-section__badge--shape" style="background-image:url('/static/img/shape-2.svg')" data-aos="fade-down" data-aos-delay="300">{% translate "Hakkımızda" %}</span>
 								</div>
-								<h2 class="homec-section__title" data-aos="fade-in" data-aos-delay="400">Geleceğe Değer Katmak İçin Buradayız</h2>
+								<h2 class="homec-section__title" data-aos="fade-in" data-aos-delay="400">{% translate "Geleceğe Değer Katmak İçin Buradayız" %}</h2>
+								
 							</div>
 							<div class="homec-about-content__inner mg-top-20" data-aos="fade-in" data-aos-delay="500">
-								<p class="homec-about-content__text">Gayrimenkuldeki uzmanlığımız ve müşteri odaklı yaklaşımımızla Land Invest Gayrimenkul olarak, sektörde önde gelen bir gayrimenkul şirketiyiz. Misyonumuz, müşterilerimize kaliteli gayrimenkul hizmetleri sunarken, onların ihtiyaçlarını ve beklentilerini aşmaktır.</p>
+								<p class="homec-about-content__text">{% translate "Gayrimenkuldeki uzmanlığımız ve müşteri odaklı yaklaşımımızla Land Invest Gayrimenkul olarak, sektörde önde gelen bir gayrimenkul şirketiyiz. Misyonumuz, müşterilerimize kaliteli gayrimenkul hizmetleri sunarken, onların ihtiyaçlarını ve beklentilerini aşmaktır." %}</p>
+								
 								<div class="homec-focus-content homec-focus-content--v2 homec-border mg-top-20">
-									<p>Land Invest Gayrimenkul olarak, sektördeki liderliğimizi sürdürmek ve müşterilerimize en iyi hizmeti sunmak için sürekli olarak kendimizi geliştiriyoruz</p>
+									<p>{% translate "Land Invest Gayrimenkul olarak, sektördeki liderliğimizi sürdürmek ve müşterilerimize en iyi hizmeti sunmak için sürekli olarak kendimizi geliştiriyoruz" %}</p>
+									
 								</div>
 			
 							</div>
@@ -708,8 +728,8 @@ html, body {
 				<div class="row">
 					<div class="col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-12 mg-btm-40">
 						<div class="homec-section__head section-white text-center">
-							<p class="text-white"  data-aos="fade-in" data-aos-delay="300">4 aşamada</p>
-							<h2 class="homec-section__title"  data-aos="fade-in" data-aos-delay="400">Neden Biz?</h2>
+							<p class="text-white"  data-aos="fade-in" data-aos-delay="300">{% translate "4 Aşamada" %}</p>
+							<h2 class="homec-section__title"  data-aos="fade-in" data-aos-delay="400">{% translate "Neden Biz?" %}</h2>
 						</div>
 					</div>
 				</div>
@@ -730,8 +750,9 @@ html, body {
 									</div>
 								</div>
 								<div class="homec-features-list__body">
-									<h4 class="homec-features-list__title">Geniş Portföy </h4>
-									<p class="homec-features-list__text">Geniş bir portföy sunuyoruz.</p>
+									<h4 class="homec-features-list__title">{% translate "Geniş Portföy" %} </h4>
+									<p class="homec-features-list__text">{% translate "Geniş bir portföy sunuyoruz." %}</p>
+									
 								</div>
 							</div>
 							<!-- End Features Single -->
@@ -749,8 +770,10 @@ html, body {
 									</div>
 								</div>
 								<div class="homec-features-list__body">
-									<h4 class="homec-features-list__title">Uzmanlık ve Deneyim</h4>
-									<p class="homec-features-list__text">Sektörde uzman ve deneyimli bir ekibiz.</p>
+									<h4 class="homec-features-list__title">{% translate "Uzmanlık ve Deneyim" %}</h4>
+									
+									<p class="homec-features-list__text">{% translate "Sektörde uzman ve deneyimli bir ekibiz." %}</p>
+									
 								</div>
 							</div>
 							<!-- End Features Single -->
@@ -768,8 +791,10 @@ html, body {
 									</div>
 								</div>
 								<div class="homec-features-list__body">
-									<h4 class="homec-features-list__title">Müşteri Memnuniyet</h4>
-									<p class="homec-features-list__text">Sizler bizim önceliğimizsiniz</p>
+									<h4 class="homec-features-list__title">{% translate "Müşteri Memnuniyet" %}</h4>
+									
+									<p class="homec-features-list__text">{% translate "Sizler bizim önceliğimizsiniz" %}</p>
+									
 								</div>
 							</div>
 							<!-- End Features Single -->
@@ -784,8 +809,8 @@ html, body {
 									</div>
 								</div>
 								<div class="homec-features-list__body">
-									<h4 class="homec-features-list__title">Etkili İletişim</h4>
-									<p class="homec-features-list__text">Doğru iletişim önceliğimizdir</p>
+									<h4 class="homec-features-list__title">{% translate "Etkili İletişim" %}</h4>
+									<p class="homec-features-list__text">{% translate "Doğru iletişim önceliğimizdir" %}</p>
 								</div>
 							</div>
 							<!-- End Features Single -->
@@ -804,18 +829,19 @@ html, body {
 					<div class="col-lg-6 col-md-6 col-12 mg-top-30" data-aos="fade-up" data-aos-delay="400">
 						<div class="homec-section__head">
 							<div class="homec-section__shape">
-								<span class="homec-section__badge homec-section__badge--shape homec-section__badge--shape--v2" style="background-image:url('img/shape-3.svg')">SSS</span>
+								<span class="homec-section__badge homec-section__badge--shape homec-section__badge--shape--v2" style="background-image:url('img/shape-3.svg')">{% translate "SSS" %}</span>
 							</div>
-							<h2 class="homec-section__title">Sık Sorulan Sorular</h2>
+							<h2 class="homec-section__title">{% translate "Sık Sorulan Sorular" %}</h2>
 						</div>
 						<div class="homec-accordion accordion accordion-flush" id="homec-accordion">
 							<!-- End Single Accordion -->
 							<div class="accordion-item homec-accordion__single mg-top-30">
 								<h2 class="accordion-header" id="homect-1">
-									<button class="accordion-button collapsed homec-accordion__heading" type="button" data-bs-toggle="collapse" data-bs-target="#ac-collapse1">Sizinle çalışmanın avantajları nelerdir?</button>
+									<button class="accordion-button collapsed homec-accordion__heading" type="button" data-bs-toggle="collapse" data-bs-target="#ac-collapse1">{% translate "Sizinle çalışmanın avantajları nelerdir?" %}</button>
+									
 								</h2>
 								<div id="ac-collapse1" class="accordion-collapse collapse"  data-bs-parent="#homec-accordion">
-									<div class="accordion-body homec-accordion__body" style="font-size: 15px;">Uzmanlık, deneyim, geniş portföy, müşteri memnuniyeti odaklı hizmetler ve profesyonel iletişim gibi avantajlarımız bulunmaktadır.</div>
+									<div class="accordion-body homec-accordion__body" style="font-size: 15px;">{% translate "Uzmanlık, deneyim, geniş portföy, müşteri memnuniyeti odaklı hizmetler ve profesyonel iletişim gibi avantajlarımız bulunmaktadır." %}</div>
 								</div>
 							</div>
 							<!-- End Single Accordion -->
@@ -823,10 +849,12 @@ html, body {
 							<!-- Single Accordion -->
 							<div class="accordion-item homec-accordion__single active mg-top-30">
 								<h2 class="accordion-header" id="homect-3">
-									<button class="accordion-button   homec-accordion__heading" type="button" data-bs-toggle="collapse" data-bs-target="#ac-collapse2" >Referanslarınızı paylaşabilir misiniz?</button>
+									<button class="accordion-button   homec-accordion__heading" type="button" data-bs-toggle="collapse" data-bs-target="#ac-collapse2" >{% translate "Referanslarınızı paylaşabilir misiniz?" %}</button>
+						
 								</h2>
 								<div id="ac-collapse2" class="accordion-collapse collapse show"  data-bs-parent="#homec-accordion">
-									<div class="accordion-body homec-accordion__body" style="font-size: 15px;">Tabiki! Bir telefon kadar yakınız.</div>
+									<div class="accordion-body homec-accordion__body" style="font-size: 15px;">{% translate "Tabiki! Bir telefon kadar yakınız." %}</div>
+									
 								</div>
 							</div>
 							<!-- End Single Accordion -->
@@ -834,20 +862,22 @@ html, body {
 							<!-- Single Accordion -->
 							<div class="accordion-item homec-accordion__single mg-top-30">
 								<h2 class="accordion-header" id="homect-2">
-									<button class="accordion-button collapsed  homec-accordion__heading" type="button" data-bs-toggle="collapse" data-bs-target="#ac-collapse3" aria-expanded="false">Emlak danışmanlarınızın uzmanlık alanları nelerdir?</button>
+									<button class="accordion-button collapsed  homec-accordion__heading" type="button" data-bs-toggle="collapse" data-bs-target="#ac-collapse3" aria-expanded="false">{% translate "Emlak danışmanlarınızın uzmanlık alanları nelerdir?" %}</button>
+									
 								</h2>
 								<div id="ac-collapse3" class="accordion-collapse collapse" data-bs-parent="#homec-accordion">
-									<div class="accordion-body homec-accordion__body" style="font-size: 15px;">Emlak danışmanlarımız farklı uzmanlık alanlarına sahip olup, konut, ticari mülkler veya yatırım fırsatları gibi alanlarda uzmanlaşmışlardır.</div>
+									<div class="accordion-body homec-accordion__body" style="font-size: 15px;">{% translate "Emlak danışmanlarımız farklı uzmanlık alanlarına sahip olup, konut, ticari mülkler veya yatırım fırsatları gibi alanlarda uzmanlaşmışlardır." %}</div>
+									
 								</div>
 							</div>
 							<!-- End Single Accordion -->
 							<!-- Single Accordion -->
 							<div class="accordion-item homec-accordion__single mg-top-30">
 								<h2 class="accordion-header" id="homect-4">
-									<button class="accordion-button collapsed homec-accordion__heading" type="button" data-bs-toggle="collapse" data-bs-target="#ac-collapse4" >Sizden hizmet almanın güvencesi nedir?</button>
+									<button class="accordion-button collapsed homec-accordion__heading" type="button" data-bs-toggle="collapse" data-bs-target="#ac-collapse4" >{% translate "Sizden hizmet almanın güvencesi nedir?" %}</button>
 								</h2>
 								<div id="ac-collapse4" class="accordion-collapse collapse" data-bs-parent="#homec-accordion">
-									<div class="accordion-body homec-accordion__body" style="font-size: 15px;">Firmamız, sektördeki deneyimi, müşteri memnuniyetine verdiği önem ve uzman kadrosuyla size güvenilir bir hizmet sunmanın garantisini vermektedir.</div>
+									<div class="accordion-body homec-accordion__body" style="font-size: 15px;">{% translate "Firmamız, sektördeki deneyimi, müşteri memnuniyetine verdiği önem ve uzman kadrosuyla size güvenilir bir hizmet sunmanın garantisini vermektedir." %}</div>
 								</div>
 							</div>
 							<!-- End Single Accordion -->
@@ -859,7 +889,8 @@ html, body {
 							<img src="{% static 'img/support-img.png' %}" alt="#">
 							<div class="homec-support-img__content">
 								<img src="{% static 'img/support-icon-white.svg' %}" alt="#">
-								<h4 class="homec-support-img__title">Sizin İçin Buradayız
+								<h4 class="homec-support-img__title">
+									{% translate "Sizin İçin Buradayız" %}
 								</h4>
 							</div>
 						</div>
@@ -877,7 +908,8 @@ html, body {
 					<div class="row">
 						<div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-12">
 							<div class="homec-section__head text-center mg-btm-30">
-								<h2 class="homec-section__title" data-aos="fade-in" data-aos-delay="400">Son yazılarımız</h2>
+								<h2 class="homec-section__title" data-aos="fade-in" data-aos-delay="400">{% translate "Son yazılarımız" %}</h2>
+								
 							</div>
 						</div>
 					</div>
@@ -934,12 +966,14 @@ html, body {
 							<!-- Subscribe Form -->
 							<div class="homec-form mg-top-100">
 								<div class="homec-form__content">
-									<span class="homec-form__label">Sizin İçin Buradayız</span>
-									<h3 class="homec-form__title">Bültenimize Kaydol</h3>
+									<span class="homec-form__label">{% translate "Sizin İçin Buradayız" %}</span>
+									
+									<h3 class="homec-form__title">{% translate "Bültenimize Kaydol" %}</h3>
+									
 								</div>
 								<form class="homec-form__form">
 									<input type="email" name="Email" placeholder="E-mailiniz" required="">
-									<button type="submit" class="homec-btn"><span>Kaydol</span></button>
+									<button type="submit" class="homec-btn"><span>{% translate "Kaydol" %}</span></button>
 								</form>
 							</div>
 							<!-- End Subscribe Form -->
@@ -955,7 +989,8 @@ html, body {
 											<div class="footer-logo homec-header__logo">
 												<img src="{% static 'img/logo.png' %}" alt="#">
 											</div>
-											<p class="footer-about-text">Gayrimenkulde Uzmanlık, Müşteri Memnuniyeti İlkesiyle</p>
+											<p class="footer-about-text">{% translate "Gayrimenkulde Uzmanlık, Müşteri Memnuniyeti İlkesiyle" %}</p>
+											
 											<!-- Social -->
 											<ul class="homec-social homec-social__v2">
 												<li>
@@ -1005,13 +1040,13 @@ html, body {
 											<div class="col-lg-4 col-md-4 col-12">
 												<!-- Footer Widget -->
 												<div class="single-widget footer-useful-links">
-													<h3 class="widget-title">Sayfalar</h3>
+													<h3 class="widget-title">{% translate "Sayfalar" %}</h3>
 													<ul class="f-useful-links-inner list-none">
-														<li><a href="{% url 'home' %}"><i class="fa-solid fa-minus"></i>Ana Sayfa</a></li>
-														<li><a href="{% url 'properties' %}"><i class="fa-solid fa-minus"></i>Projelerimiz</a></li>
-														<li><a href="{% url 'about' %}"><i class="fa-solid fa-minus"></i>Hakkımızda</a></li>
-														<li><a href="{% url 'blog' %}"><i class="fa-solid fa-minus"></i>Blog</a></li>
-														<li><a href="{% url 'contact' %}"><i class="fa-solid fa-minus"></i>İletişim</a></li>
+														<li><a href="{% url 'home' %}"><i class="fa-solid fa-minus"></i>{% translate "Ana Sayfa" %}</a></li>
+														<li><a href="{% url 'properties' %}"><i class="fa-solid fa-minus"></i>{% translate "Projelerimiz" %}</a></li>
+														<li><a href="{% url 'about' %}"><i class="fa-solid fa-minus"></i>{% translate "Hakkımızda" %}</a></li>
+														<li><a href="{% url 'blog' %}"><i class="fa-solid fa-minus"></i>{% translate "Blog" %}</a></li>
+														<li><a href="{% url 'contact' %}"><i class="fa-solid fa-minus"></i>{% translate "İletişim" %}</a></li>
 													</ul>
 												</div>
 												<!-- End Footer Widget -->
@@ -1020,7 +1055,7 @@ html, body {
 											<div class="col-lg-4 col-md-4 col-12">
 												<!-- Footer Widget -->
 												<div class="single-widget footer-contact">
-													<h3 class="widget-title">İletişime Geç</h3>
+													<h3 class="widget-title">{% translate "İletişime Geç!" %}</h3>
 													<div class="f-contact__form-top">
 														<ul class="f-contact-list list-none">
 															<li><img src="{% static 'img/footer-phone.svg' %}" alt="#"><a href="tel:+(323)750-1234">+90 312 220 00 63</a></li>
@@ -1044,7 +1079,7 @@ html, body {
 			<!-- End Footer -->	
 	
 			<!-- Scrool Top -->
-			<a href="#" class="scrollToTop">başa dön<i class="fa-solid fa-angle-right"></i></a>
+			<a href="#" class="scrollToTop">{% translate "Başa Dön" %}i class="fa-solid fa-angle-right"></i></a>
 			src="{% static 'js/custom.js' %}"
 			<!-- Jquery JS -->
 			<script src="{% static 'js/jquery.min.js' %}"></script>

@@ -1,5 +1,6 @@
 
 {% load static %}
+{% load i18n %}
 
 
 <!DOCTYPE html>
@@ -208,25 +209,27 @@
 											<div class="nav-item">                                      
 												<!-- Main Menu -->
 												<ul class="nav-menu menu navigation list-none">
-														<li><a href="{% url 'home' %}">Ana Sayfa</a>
+															<li><a href="{% url 'home' %}">{% translate "Ana Sayfa" %}</a>
 									
 														</li>
-														<li class="menu-item-has-children"><a href="{% url 'properties' %}">Projelerimiz</a>
+														<li class="menu-item-has-children"><a href="{% url 'properties' %}">{% translate "Projelerimiz" %}</a>
 															<ul class="sub-menu">
 																
-																<li><a href="/projelerimiz/durumu/devam ediyor">Devam eden projeler </a></li>
-																<li><a href="/projelerimiz/durumu/planlanan">Planlanan projeler</a></li>
-																<li><a href="/projelerimiz/durumu/tamamlandı">Tamamlanan projeler</a></li>
+																	<li><a href="projelerimiz/durumu/devam ediyor">{% translate "Devam eden projeler" %} </a></li>
+																	
+																<li><a href="projelerimiz/durumu/planlanan">{% translate "Planlanan projeler" %}</a></li>
+															
+																<li><a href="projelerimiz/durumu/tamamlandı">{% translate "Tamamlanan projeler" %}</a></li>
 															</ul>
 														</li>
 													</li>
 											
-														<li ><a href="{% url 'about' %}">Hakkımızda</a>
+														<li ><a href="{% url 'about' %}">{% translate "Hakkımızda" %}</a>
 													
 														</li>
-														<li ><a href="{% url 'blog' %}">Blog</a>
+														<li ><a href="{% url 'blog' %}">{% translate "Blog" %}</a>
 														</li>
-														<li ><a href="{% url 'contact' %}">İletişim</a>
+														<li ><a href="{% url 'contact' %}">{% translate "İletişim" %}</a>
 														</li>
 														<li>
 															<select class="selectpicker" data-width="fit">
@@ -266,7 +269,7 @@
 					<!-- Breadcrumb-Content -->
 					<div class="col-12">
 						<div class="breadcrumb-content">
-							<h2 class="breadcrumb__title m-0">Projelerimiz</h2>
+							<h2 class="breadcrumb__title m-0">{% translate "Projelerimiz" %}</h2>
 						</div>	
 					</div>
 				</div>
@@ -284,11 +287,11 @@
 							<div class="homec-property-bar__single">
 								<form class="homec-form__form homec-form__form--bar">
 									<input type="email" name="Email" placeholder="Proje ara..." required="">
-									<button type="submit" class="homec-btn"><span>Ara</span></button>
+									<button type="submit" class="homec-btn"><span>{% translate "Ara" %}</span></button>
 								</form>
 								<!-- Show Results -->
 								<div class="hoemc-showing-results">
-									<p class="hoemc-showing-results__text"><span>{{isting_count}}</span> proje</p>
+									<p class="hoemc-showing-results__text"><span>{{isting_count}}</span> {% translate "Proje" %}</p>
 								</div>
 								<!-- End Show Results -->
 							</div>
@@ -321,7 +324,7 @@
 							<!-- Single Sidebar -->
 							<div class="property-sidebar__single">
 								<div class="property-sidebar__filters">
-									<h4 class="property-sidebar__title">Ülke</h4>
+									<h4 class="property-sidebar__title">{% translate "Ülke" %}</h4>
 									<div class="form-group">
 										<select class="property-sidebar__group homec-border">
 											<option data-display="Bangladesh">Türkiye</option>
@@ -333,7 +336,7 @@
 							<!-- Single Sidebar -->
 							<div class="property-sidebar__single mg-top-20">
 								<div class="property-sidebar__filters">
-									<h4 class="property-sidebar__title">Şehir</h4>
+									<h4 class="property-sidebar__title">{% translate "Şehir" %}</h4>
 									<div class="form-group">
 										<select class="property-sidebar__group homec-border">
 											<option data-display="İstanbul">İstanbul</option>
@@ -468,12 +471,14 @@
 							<!-- Subscribe Form -->
 							<div class="homec-form mg-top-100">
 								<div class="homec-form__content">
-									<span class="homec-form__label">Sizin İçin Buradayız</span>
-									<h3 class="homec-form__title">Bültenimize Kaydol</h3>
+									<span class="homec-form__label">{% translate "Sizin İçin Buradayız" %}</span>
+									
+									<h3 class="homec-form__title">{% translate "Bültenimize Kaydol" %}</h3>
+									
 								</div>
 								<form class="homec-form__form">
 									<input type="email" name="Email" placeholder="E-mailiniz" required="">
-									<button type="submit" class="homec-btn"><span>Kaydol</span></button>
+									<button type="submit" class="homec-btn"><span>{% translate "Kaydol" %}</span></button>
 								</form>
 							</div>
 							<!-- End Subscribe Form -->
@@ -489,7 +494,8 @@
 											<div class="footer-logo homec-header__logo">
 												<img src="{% static 'img/logo.png' %}" alt="#">
 											</div>
-											<p class="footer-about-text">Gayrimenkulde Uzmanlık, Müşteri Memnuniyeti İlkesiyle</p>
+											<p class="footer-about-text">{% translate "Gayrimenkulde Uzmanlık, Müşteri Memnuniyeti İlkesiyle" %}</p>
+											
 											<!-- Social -->
 											<ul class="homec-social homec-social__v2">
 												<li>
@@ -539,13 +545,13 @@
 											<div class="col-lg-4 col-md-4 col-12">
 												<!-- Footer Widget -->
 												<div class="single-widget footer-useful-links">
-													<h3 class="widget-title">Sayfalar</h3>
+													<h3 class="widget-title">{% translate "Sayfalar" %}</h3>
 													<ul class="f-useful-links-inner list-none">
-														<li><a href="{% url 'home' %}"><i class="fa-solid fa-minus"></i>Ana Sayfa</a></li>
-														<li><a href="{% url 'properties' %}"><i class="fa-solid fa-minus"></i>Projelerimiz</a></li>
-														<li><a href="{% url 'about' %}"><i class="fa-solid fa-minus"></i>Hakkımızda</a></li>
-														<li><a href="{% url 'blog' %}"><i class="fa-solid fa-minus"></i>Blog</a></li>
-														<li><a href="{% url 'contact' %}"><i class="fa-solid fa-minus"></i>İletişim</a></li>
+														<li><a href="{% url 'home' %}"><i class="fa-solid fa-minus"></i>{% translate "Ana Sayfa" %}</a></li>
+														<li><a href="{% url 'properties' %}"><i class="fa-solid fa-minus"></i>{% translate "Projelerimiz" %}</a></li>
+														<li><a href="{% url 'about' %}"><i class="fa-solid fa-minus"></i>{% translate "Hakkımızda" %}</a></li>
+														<li><a href="{% url 'blog' %}"><i class="fa-solid fa-minus"></i>{% translate "Blog" %}</a></li>
+														<li><a href="{% url 'contact' %}"><i class="fa-solid fa-minus"></i>{% translate "İletişim" %}</a></li>
 													</ul>
 												</div>
 												<!-- End Footer Widget -->
@@ -554,7 +560,7 @@
 											<div class="col-lg-4 col-md-4 col-12">
 												<!-- Footer Widget -->
 												<div class="single-widget footer-contact">
-													<h3 class="widget-title">İletişime Geç</h3>
+													<h3 class="widget-title">{% translate "İletişime Geç!" %}</h3>
 													<div class="f-contact__form-top">
 														<ul class="f-contact-list list-none">
 															<li><img src="{% static 'img/footer-phone.svg' %}" alt="#"><a href="tel:+(323)750-1234">+90 312 220 00 63</a></li>
@@ -578,7 +584,7 @@
 			<!-- End Footer -->	
 	
 			<!-- Scrool Top -->
-			<a href="#" class="scrollToTop">başa dön<i class="fa-solid fa-angle-right"></i></a>
+			<a href="#" class="scrollToTop">{% translate "Başa Dön" %}<i class="fa-solid fa-angle-right"></i></a>
 			src="{% static 'js/custom.js' %}"
 			<!-- Jquery JS -->
 			<script src="{% static 'js/jquery.min.js' %}"></script>
