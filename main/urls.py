@@ -3,7 +3,7 @@ from . import views
 app_name = "main"
 
 urlpatterns = [
-    path('', views.home, name='home'),
+    path('anasayfa', views.home, name='home'),
     path('projelerimiz', views.properties, name='properties'),
     path('projelerimiz/<str:sehir>/', views.sehre_gore_projeler, name='sehre_gore_projeler'),
     path('projelerimiz/durumu/<str:status>/', views.proje_durumuna_gore, name='proje_durumuna_gore'),

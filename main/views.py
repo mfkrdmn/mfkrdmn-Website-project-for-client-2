@@ -8,6 +8,8 @@ from django.core.mail import EmailMultiAlternatives
 from django.shortcuts import render
 from django.utils.translation  import gettext as _
 from django.utils.translation import get_language, activate, gettext
+def dil_bilgisi():
+    return get_language()
 def translate(language):
     cur_language = get_language()
     try:
@@ -22,8 +24,8 @@ def translate(language):
 def home(request):
     projeler = Projeler.objects.all()[:2]
     blog_yazıları = Blog.objects.all()[:4]
-
-    context = {
+    trans = translate(language='tr')
+    context = {"trans":trans,"dil":dil_bilgisi(),
         'projeler' : projeler,
         'blog_yazıları' : blog_yazıları,
         # 'sehre_gore_projeler' : sehre_gore_projeler
@@ -35,7 +37,7 @@ def home(request):
 def properties(request):
     projeler = Projeler.objects.all().order_by('-updated_at')
     isting_count = Projeler.objects.count()
-
+    trans = translate(language='tr')    
     paginator = Paginator(projeler, 4) # Show 25 project per page
 
     page = request.GET.get('page')
@@ -49,6 +51,7 @@ def properties(request):
         project = paginator.page(paginator.num_pages)
 
     context = {
+        "trans":trans,"dil":dil_bilgisi(),
         'projeler' : projeler,
         'isting_count' : isting_count,
         'project' : project,
@@ -72,7 +75,7 @@ def properties(request):
 
 def sehre_gore_projeler(request, sehir):
     sehre_gore = Projeler.objects.filter(sehir=sehir)
-
+    trans = translate(language='tr')   
     paginator = Paginator(sehre_gore, 4) # Show 25 project per page
     
     page = request.GET.get('page')
@@ -86,6 +89,7 @@ def sehre_gore_projeler(request, sehir):
         project = paginator.page(paginator.num_pages)
 
     context = {
+        "trans":trans,"dil":dil_bilgisi(),
         'sehre_gore' : sehre_gore,
         'project' : project
      
@@ -107,7 +111,7 @@ def sehre_gore_projeler(request, sehir):
 def proje_durumuna_gore(request, status):
     durumuna_gore = Projeler.objects.filter(status=status)
     projeler = Projeler.objects.all()
-
+    trans = translate(language='tr')   
     paginator = Paginator(durumuna_gore, 4) # Show 25 project per page
     
     page = request.GET.get('page')
@@ -121,6 +125,7 @@ def proje_durumuna_gore(request, status):
         project = paginator.page(paginator.num_pages)
     
     context = {
+        "trans":trans,"dil":dil_bilgisi(),
         'durumuna_gore' : durumuna_gore,
         'projeler' :projeler,
         'project' : project
@@ -128,11 +133,12 @@ def proje_durumuna_gore(request, status):
     return render(request, 'properties_by_status.html', context)
 
 def property_single(request,pk):
-
+    trans = translate(language='tr')   
     project_detail = get_object_or_404(Projeler, proje_ismi=pk)
     project_details = Projeler.objects.filter(proje_ismi=pk)
     resim = resimler.objects.filter(proje = project_detail)
     context = {
+        "trans":trans,"dil":dil_bilgisi(),
         'project_detail' : project_detail,
         'project_details' :project_details,
         "resim":resim
@@ -142,13 +148,16 @@ def property_single(request,pk):
 
 def about(request):
     blog_yazıları = Blog.objects.all()[:3]
+    trans = translate(language='tr')   
 
     context = {
+        "trans":trans,"dil":dil_bilgisi(),
         'blog_yazıları' : blog_yazıları
     }
     return render(request, 'about.html', context)
 
 def contact(request):
+    trans = translate(language='tr')   
     if request.method == "POST":
         isimSoyisim = request.POST['isimSoyisim']
         Email = request.POST['Email']
@@ -163,11 +172,16 @@ def contact(request):
             newMessage.save()
             return redirect('/')
         
-    return render(request, 'contact.html')
+    context = {
+        "trans":trans,"dil":dil_bilgisi(),
+    }
+        
+    return render(request, 'contact.html', context)
 
 def send_email(request,isimSoyisim,Email,Telefon,Konu,Mesaj):
     plaintext = get_template('email_temp.txt')
     htmly= get_template('email_temp.html')
+    
     
     d = {"isimSoyisim":isimSoyisim,
          "Email":Email,
@@ -189,6 +203,7 @@ def blog(request):
     blog_yazıları = Blog.objects.all()
 
     paginator = Paginator(blog_yazıları, 9) 
+    trans = translate(language='tr')  
 
     page = request.GET.get('page')
     try:
@@ -203,6 +218,7 @@ def blog(request):
     context = {
         'blog_yazıları' : blog_yazıları,
         'project' :project,
+        "trans":trans,"dil":dil_bilgisi(),
     }
 
     return render(request, 'blog.html', context)
@@ -211,11 +227,12 @@ def blog_single(request, blog_basligi):
 
     blog_detail = Blog.objects.filter(blog_basligi=blog_basligi)
     blog_yazıları = Blog.objects.all()[:3]
-
+    trans = translate(language='tr')  
 
     context = {
         'blog_detail' : blog_detail,
         'blog_yazıları' : blog_yazıları,
+        "trans":trans,"dil":dil_bilgisi(),
     }
 
     return render(request, 'blog-single.html', context)
