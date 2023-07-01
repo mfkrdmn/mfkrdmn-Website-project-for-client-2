@@ -53,12 +53,13 @@ def properties(request):
     except EmptyPage:
         # If page is out of range (e.g. 9999), deliver last page of results.
         project = paginator.page(paginator.num_pages)
-
+    link = "projelerimiz"
     context = {
         "trans":trans,"dil":dil_bilgisi(),
         'projeler' : projeler,
         'isting_count' : isting_count,
         'project' : project,
+        'link' : link
     }
 
     projects_searched = None  
