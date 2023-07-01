@@ -42,6 +42,11 @@ Version:	1.0
 /*======================================
     Header Area
 ========================================*/
+
+			.breadcrumbs__content{
+				background-image:url("{% static 'img/bread-overlay.jpg' %}");
+			}
+
 .homec-header{
 	z-index: 10000;
 }

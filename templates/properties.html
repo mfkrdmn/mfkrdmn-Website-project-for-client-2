@@ -255,9 +255,13 @@
 		<a href="https://wa.me/+905057376999" target="_blank" id="projects"><i class="fa-brands fa-whatsapp  ms-1" style="margin-left: 0!important;" ></i></a>
 	</div>
 		<!-- end of side buttons  -->
-
+		<style>
+			.breadcrumbs__content{
+				background-image:url("{% static 'img/bread-overlay.jpg' %}");
+			}
+		</style>
 		<!-- Breadcrumbs -->
-		<section class="breadcrumbs__content" style="background-image:url('static/img/bread-overlay.jpg');">
+		<section class="breadcrumbs__content " >
 			<!-- <div class="homec-overlay"></div> -->
 			<div class="container">
 				<div class="row">
@@ -584,7 +588,7 @@
 	
 			<!-- Scrool Top -->
 			<a href="#" class="scrollToTop">başa dön<i class="fa-solid fa-angle-right"></i></a>
-			src="{% static 'js/custom.js' %}"
+			<script src="{% static 'js/custom.js' %}"></script>
 			<!-- Jquery JS -->
 			<script src="{% static 'js/jquery.min.js' %}"></script>
 			<script src="{% static 'js/jquery-migrate.js' %}"></script>
