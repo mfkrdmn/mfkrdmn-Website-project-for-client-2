@@ -64,7 +64,7 @@
 					<!-- offcanvas-logo-start -->
 					 <div class="offcanvas-logo">
 						<div class="homec-header__logo">
-					<a href="/{{dil}}{% url 'main:home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
+					<a href="/{{dil}}{% url 'land:home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
 						</div>
 					</div>
 					<!-- offcanvas-logo-end -->
@@ -208,17 +208,17 @@
 							<div class="homec-header__inside">
 								<div class="homec-header__group">
 									<div class="homec-header__logo">
-								<a href="/{{dil}}{% url 'main:home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
+								<a href="/{{dil}}{% url 'land:home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
 									</div>
 									<div class="homec-header__menu">
 										<div class="navbar">
 											<div class="nav-item">                                      
 												<!-- Main Menu -->
 													<ul class="nav-menu menu navigation list-none">
-															<li><a href="/{{dil}}{% url 'main:home' %}">{% translate "Ana Sayfa" %}</a>
+															<li><a href="/{{dil}}{% url 'land:home' %}">{% translate "Ana Sayfa" %}</a>
 									
 														</li>
-														<li class="menu-item-has-children"><a href="/{{dil}}{% url 'main:properties' %}">{% translate "Projelerimiz" %}</a>
+														<li class="menu-item-has-children"><a href="/{{dil}}{% url 'land:properties' %}">{% translate "Projelerimiz" %}</a>
 															<ul class="sub-menu">
 																<li><a href="projelerimiz/durumu/devam ediyor">{% translate "Devam eden projeler" %} </a></li>
 																<li><a href="projelerimiz/durumu/planlanan">{% translate "Planlanan projeler" %}</a></li>
@@ -227,12 +227,12 @@
 														</li>
 													</li>
 											
-														<li ><a href="/{{dil}}{% url 'main:about' %}">{% translate "Hakkımızda" %}</a>
+														<li ><a href="/{{dil}}{% url 'land:about' %}">{% translate "Hakkımızda" %}</a>
 													
 														</li>
-														<li ><a href="/{{dil}}{% url 'main:blog' %}">{% translate "Blog" %}</a>
+														<li ><a href="/{{dil}}{% url 'land:blog' %}">{% translate "Blog" %}</a>
 														</li>
-														<li ><a href="/{{dil}}{% url 'main:contact' %}">{% translate "İletişim" %}</a>
+														<li ><a href="/{{dil}}{% url 'land:contact' %}">{% translate "İletişim" %}</a>
 														</li>
 														<li>
 															<select class="selectpicker" data-width="fit">
@@ -349,7 +349,7 @@
 								<div class="homec-sidebar__post">
 									<div class="homec-sidebar__img"><img src="{{a.blog_ana_foto.url}}" alt="#"></div>
                                     <div class="homec-sidebar__content">
-                                        <h5 class="homec-sidebar__content--title"><a href="/{{dil}}{% url 'main:blog_single' a.blog_basligi %}">{{a.blog_basligi}}</a></h5>
+                                        <h5 class="homec-sidebar__content--title"><a href="/{{dil}}{% url 'land:blog_single' a.blog_basligi %}">{{a.blog_basligi}}</a></h5>
                                     </div>
 							    </div>
                           
@@ -431,7 +431,7 @@
 										</ul>
 										<!-- Homec Button -->
 										<div class="homec-btn__main mg-top-40"  data-aos="fade-up" data-aos-delay="500">
-											<a href="/{{dil}}{% url 'main:contact' %}" class="homec-btn"><span>{% translate "İletişime Geç!" %}</span></a>
+											<a href="/{{dil}}{% url 'land:contact' %}" class="homec-btn"><span>{% translate "İletişime Geç!" %}</span></a>
 										</div>
 										
 									</div>
@@ -587,11 +587,11 @@
 												<div class="single-widget footer-useful-links">
 													<h3 class="widget-title">{% translate "Sayfalar" %}</h3>
 													<ul class="f-useful-links-inner list-none">
-														<li><a href="/{{dil}}{% url 'main:home' %}"><i class="fa-solid fa-minus"></i>{% translate "Ana Sayfa" %}</a></li>
-														<li><a href="/{{dil}}{% url 'main:properties' %}"><i class="fa-solid fa-minus"></i>{% translate "Projelerimiz" %}</a></li>
-														<li><a href="/{{dil}}{% url 'main:about' %}"><i class="fa-solid fa-minus"></i>{% translate "Hakkımızda" %}</a></li>
-														<li><a href="/{{dil}}{% url 'main:blog' %}"><i class="fa-solid fa-minus"></i>{% translate "Blog" %}</a></li>
-														<li><a href="/{{dil}}{% url 'main:contact' %}"><i class="fa-solid fa-minus"></i>{% translate "İletişim" %}</a></li>
+														<li><a href="/{{dil}}{% url 'land:home' %}"><i class="fa-solid fa-minus"></i>{% translate "Ana Sayfa" %}</a></li>
+														<li><a href="/{{dil}}{% url 'land:properties' %}"><i class="fa-solid fa-minus"></i>{% translate "Projelerimiz" %}</a></li>
+														<li><a href="/{{dil}}{% url 'land:about' %}"><i class="fa-solid fa-minus"></i>{% translate "Hakkımızda" %}</a></li>
+														<li><a href="/{{dil}}{% url 'land:blog' %}"><i class="fa-solid fa-minus"></i>{% translate "Blog" %}</a></li>
+														<li><a href="/{{dil}}{% url 'land:contact' %}"><i class="fa-solid fa-minus"></i>{% translate "İletişim" %}</a></li>
 													</ul>
 												</div>
 												<!-- End Footer Widget -->

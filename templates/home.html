@@ -171,7 +171,7 @@ html, body {
 }
  .slide:nth-child(1) .slide__bg {
 	 left: 0;
-	 background-image: url('static/img/ist.jpg');
+	 background-image: url("{% static 'img/ist.jpg' %}");
 }
  .slide:nth-child(1) .slide__overlay-path {
 	 fill: #95B6EB
@@ -186,7 +186,7 @@ html, body {
 }
  .slide:nth-child(2) .slide__bg {
 	 left: -50%;
-	 background-image: url('static/img/ins.jpg');
+	 background-image: url("{% static 'img/ins.jpg' %}");
 }
  .slide:nth-child(2) .slide__overlay-path {
 	 fill: #e1ccae;
@@ -201,7 +201,7 @@ html, body {
 }
  .slide:nth-child(3) .slide__bg {
 	 left: -100%;
-	 background-image: url('static/img/kanalist.jpg');
+	 background-image: url("{% static 'img/kanalist.jpg' %}");
 }
  .slide:nth-child(3) .slide__overlay-path {
 	 fill: #E0D3DA
@@ -216,7 +216,7 @@ html, body {
 }
  .slide:nth-child(4) .slide__bg {
 	 left: -150%;
-	 background-image: url('static/img/atakule.jpg');
+	 background-image: url("{% static 'img/atakule.jpg' %}");
 }
  .slide:nth-child(4) .slide__overlay-path {
 	 fill: #DED4ED
@@ -344,7 +344,7 @@ html, body {
 					<!-- offcanvas-logo-start -->
 					 <div class="offcanvas-logo">
 						<div class="homec-header__logo">
-							<a href="/{{dil}}{% url 'main:home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
+							<a href="/{{dil}}{% url 'land:home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
 						</div>
 					</div>
 					<!-- offcanvas-logo-end -->
@@ -483,17 +483,17 @@ html, body {
 							<div class="homec-header__inside">
 								<div class="homec-header__group">
 									<div class="homec-header__logo">
-										<a href="/{{dil}}{% url 'main:home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
+										<a href="/{{dil}}{% url 'land:home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
 									</div>
 									<div class="homec-header__menu">
 										<div class="navbar">
 											<div class="nav-item">                                      
 												<!-- Main Menu -->
 												<ul class="nav-menu menu navigation list-none">
-														<li><a href="/{{dil}}{% url 'main:home' %}">{% translate "Ana Sayfa" %}</a>
+														<li><a href="/{{dil}}{% url 'land:home' %}">{% translate "Ana Sayfa" %}</a>
 									
 														</li>
-														<li class="menu-item-has-children"><a href="/{{dil}}{% url 'main:properties' %}">{% translate "Projelerimiz" %}</a>
+														<li class="menu-item-has-children"><a href="/{{dil}}{% url 'land:properties' %}">{% translate "Projelerimiz" %}</a>
 													
 															<ul class="sub-menu">
 																	<li><a href="projelerimiz/durumu/devam ediyor">{% translate "Devam eden projeler" %} </a></li>
@@ -507,12 +507,12 @@ html, body {
 													</li>
 											
 													</li>
-														<li ><a href="/{{dil}}{% url 'main:about' %}">{% translate "Hakkımızda" %}</a>
+														<li ><a href="/{{dil}}{% url 'land:about' %}">{% translate "Hakkımızda" %}</a>
 													
 														</li>
-														<li ><a href="/{{dil}}{% url 'main:blog' %}">{% translate "Blog" %}</a>
+														<li ><a href="/{{dil}}{% url 'land:blog' %}">{% translate "Blog" %}</a>
 														</li>
-														<li ><a href="/{{dil}}{% url 'main:contact' %}">{% translate "İletişim" %}</a>
+														<li ><a href="/{{dil}}{% url 'land:contact' %}">{% translate "İletişim" %}</a>
 														</li>
 														<li>
 															<select class="selectpicker" data-width="fit">
@@ -920,7 +920,7 @@ html, body {
 							<div class="homec-blog" style="height: 550px;">
 								<div class="homec-blog__head">
 									<div class="homec-overlay homec-blog__overlay"></div>
-									<a href="/{{dil}}{% url 'main:blog_single' a.blog_basligi %}"><img src="{{a.blog_ana_foto.url}}" alt="#"></a>
+									<a href="/{{dil}}{% url 'land:blog_single' a.blog_basligi %}"><img src="{{a.blog_ana_foto.url}}" alt="#"></a>
 									<!-- Blog Content -->
 									<div class="homec-blog__content">
 										<ul class="homec-blog__meta list-none">
@@ -932,9 +932,9 @@ html, body {
 												<a href="#" style="font-size: 15px;">{{a.yazar}}</a>
 											</li>
 										</ul>
-										<h3 class="homec-blog__title"><a href="/{{dil}}{% url 'main:blog_single' a.blog_basligi %}">{{a.blog_basligi}}</a></h3>
+										<h3 class="homec-blog__title"><a href="/{{dil}}{% url 'land:blog_single' a.blog_basligi %}">{{a.blog_basligi}}</a></h3>
 										<div class="home-blog__button homec-border-top">
-											<a href="/{{dil}}{% url 'main:blog_single' a.blog_basligi %}" class="homec-blog__btn">Devamını oku
+											<a href="/{{dil}}{% url 'land:blog_single' a.blog_basligi %}" class="homec-blog__btn">Devamını oku
 												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path d="M12 8L16 12M16 12L12 16M16 12H2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 												<path d="M9 18.2454C10.3696 19.3433 12.1081 20 14 20C18.4183 20 22 16.4183 22 12C22 7.58172 18.4183 4 14 4C12.1081 4 10.3696 4.65672 9 5.75462" stroke-width="1.5" stroke-linecap="round"/>
@@ -1042,11 +1042,11 @@ html, body {
 												<div class="single-widget footer-useful-links">
 													<h3 class="widget-title">{% translate "Sayfalar" %}</h3>
 													<ul class="f-useful-links-inner list-none">
-														<li><a href="/{{dil}}{% url 'main:home' %}"><i class="fa-solid fa-minus"></i>{% translate "Ana Sayfa" %}</a></li>
-														<li><a href="/{{dil}}{% url 'main:properties' %}"><i class="fa-solid fa-minus"></i>{% translate "Projelerimiz" %}</a></li>
-														<li><a href="/{{dil}}{% url 'main:about' %}"><i class="fa-solid fa-minus"></i>{% translate "Hakkımızda" %}</a></li>
-														<li><a href="/{{dil}}{% url 'main:blog' %}"><i class="fa-solid fa-minus"></i>{% translate "Blog" %}</a></li>
-														<li><a href="/{{dil}}{% url 'main:contact' %}"><i class="fa-solid fa-minus"></i>{% translate "İletişim" %}</a></li>
+														<li><a href="/{{dil}}{% url 'land:home' %}"><i class="fa-solid fa-minus"></i>{% translate "Ana Sayfa" %}</a></li>
+														<li><a href="/{{dil}}{% url 'land:properties' %}"><i class="fa-solid fa-minus"></i>{% translate "Projelerimiz" %}</a></li>
+														<li><a href="/{{dil}}{% url 'land:about' %}"><i class="fa-solid fa-minus"></i>{% translate "Hakkımızda" %}</a></li>
+														<li><a href="/{{dil}}{% url 'land:blog' %}"><i class="fa-solid fa-minus"></i>{% translate "Blog" %}</a></li>
+														<li><a href="/{{dil}}{% url 'land:contact' %}"><i class="fa-solid fa-minus"></i>{% translate "İletişim" %}</a></li>
 													</ul>
 												</div>
 												<!-- End Footer Widget -->

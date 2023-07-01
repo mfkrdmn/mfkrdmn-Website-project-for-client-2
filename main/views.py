@@ -8,6 +8,12 @@ from django.core.mail import EmailMultiAlternatives
 from django.shortcuts import render
 from django.utils.translation  import gettext as _
 from django.utils.translation import get_language, activate, gettext
+from django.shortcuts import render,get_object_or_404,redirect
+from django.http import HttpResponse
+from django.shortcuts import render
+from django.utils.translation  import gettext as _
+from django.utils.translation import get_language, activate, gettext
+
 def dil_bilgisi():
     return get_language()
 def translate(language):
@@ -19,12 +25,10 @@ def translate(language):
     finally:
         activate(cur_language)
     return text
-# Create your views here.
-
 def home(request):
     projeler = Projeler.objects.all()[:2]
     blog_yazıları = Blog.objects.all()[:4]
-    trans = translate(language='tr')
+    trans = translate(language='en')
     context = {"trans":trans,"dil":dil_bilgisi(),
         'projeler' : projeler,
         'blog_yazıları' : blog_yazıları,
@@ -37,7 +41,7 @@ def home(request):
 def properties(request):
     projeler = Projeler.objects.all().order_by('-updated_at')
     isting_count = Projeler.objects.count()
-    trans = translate(language='tr')    
+    trans = translate(language='en')    
     paginator = Paginator(projeler, 4) # Show 25 project per page
 
     page = request.GET.get('page')
@@ -75,7 +79,7 @@ def properties(request):
 
 def sehre_gore_projeler(request, sehir):
     sehre_gore = Projeler.objects.filter(sehir=sehir)
-    trans = translate(language='tr')   
+    trans = translate(language='en')   
     paginator = Paginator(sehre_gore, 4) # Show 25 project per page
     
     page = request.GET.get('page')
@@ -111,7 +115,7 @@ def sehre_gore_projeler(request, sehir):
 def proje_durumuna_gore(request, status):
     durumuna_gore = Projeler.objects.filter(status=status)
     projeler = Projeler.objects.all()
-    trans = translate(language='tr')   
+    trans = translate(language='en')   
     paginator = Paginator(durumuna_gore, 4) # Show 25 project per page
     
     page = request.GET.get('page')
@@ -133,7 +137,7 @@ def proje_durumuna_gore(request, status):
     return render(request, 'properties_by_status.html', context)
 
 def property_single(request,pk):
-    trans = translate(language='tr')   
+    trans = translate(language='en')   
     project_detail = get_object_or_404(Projeler, proje_ismi=pk)
     project_details = Projeler.objects.filter(proje_ismi=pk)
     resim = resimler.objects.filter(proje = project_detail)
@@ -148,7 +152,7 @@ def property_single(request,pk):
 
 def about(request):
     blog_yazıları = Blog.objects.all()[:3]
-    trans = translate(language='tr')   
+    trans = translate(language='en')   
 
     context = {
         "trans":trans,"dil":dil_bilgisi(),
@@ -157,7 +161,7 @@ def about(request):
     return render(request, 'about.html', context)
 
 def contact(request):
-    trans = translate(language='tr')   
+    trans = translate(language='en')   
     if request.method == "POST":
         isimSoyisim = request.POST['isimSoyisim']
         Email = request.POST['Email']
@@ -203,7 +207,7 @@ def blog(request):
     blog_yazıları = Blog.objects.all()
 
     paginator = Paginator(blog_yazıları, 9) 
-    trans = translate(language='tr')  
+    trans = translate(language='en')  
 
     page = request.GET.get('page')
     try:
@@ -227,7 +231,7 @@ def blog_single(request, blog_basligi):
 
     blog_detail = Blog.objects.filter(blog_basligi=blog_basligi)
     blog_yazıları = Blog.objects.all()[:3]
-    trans = translate(language='tr')  
+    trans = translate(language='en')  
 
     context = {
         'blog_detail' : blog_detail,
