@@ -365,7 +365,7 @@
 									<h4 class="property-sidebar__title">{% translate "Ülke" %}</h4>
 									<div class="form-group">
 										<select class="property-sidebar__group homec-border">
-											<option data-display="Bangladesh">Türkiye</option>
+											<option data-display="Türkiye">Türkiye</option>
 										</select>
 									</div>
 								</div>
@@ -376,10 +376,10 @@
 								<div class="property-sidebar__filters">
 									<h4 class="property-sidebar__title">{% translate "Şehir" %}</h4>
 									<div class="form-group">
-										<select class="property-sidebar__group homec-border">
-											<option >Şehir Seç <i class="fa-solid fa-arrow-down"></i> </option>
-											<option >İstanbul</option>
-											<option > Ankara</option>
+										<select class="property-sidebar__group homec-border" onchange="redirect()">
+											<option>Şehir Seç <i class="fa-solid fa-arrow-down"></i></option>
+											<option value="/projelerimiz/istanbul/">İstanbul</option>
+											<option value="/projelerimiz/ankara/">Ankara</option>
 										</select>
 									</div>
 								</div>
@@ -680,7 +680,13 @@
 					},
 					slidesPerView: "1",
 				});	
-	
+				function redirect() {
+					var selectBox = document.querySelector('.property-sidebar__group');
+					var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+					if (selectedValue !== "") {
+						window.location.href = selectedValue;
+					}
+				}
 			 </script>
 		</body>
 	</html>
