@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-02 23:01+0300\n"
-"PO-Revision-Date: 2023-07-02 22:48+0000\n"
+"PO-Revision-Date: 2023-07-02 23:06+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -37,12 +37,12 @@ msgstr "arabic"
 
 #: .\templates\about.html:218 .\templates\about.html:629
 #: .\templates\blog-single.html:210 .\templates\blog-single.html:542
-#: .\templates\blog.html:76 .\templates\blog.html:190 .\templates\blog.html:527
-#: .\templates\contact.html:81 .\templates\contact.html:198
-#: .\templates\contact.html:496 .\templates\home.html:355
-#: .\templates\home.html:493 .\templates\home.html:1082
-#: .\templates\properties.html:212 .\templates\properties.html:592
-#: .\templates\properties_by_city.html:214
+#: .\templates\blog.html:76 .\templates\blog.html:190
+#: .\templates\blog.html:527 .\templates\contact.html:81
+#: .\templates\contact.html:198 .\templates\contact.html:496
+#: .\templates\home.html:355 .\templates\home.html:493
+#: .\templates\home.html:1082 .\templates\properties.html:212
+#: .\templates\properties.html:592 .\templates\properties_by_city.html:214
 #: .\templates\properties_by_city.html:588
 #: .\templates\properties_by_status.html:212
 #: .\templates\properties_by_status.html:590
@@ -65,7 +65,7 @@ msgstr "Home Page"
 #: .\templates\properties_by_status.html:591
 #: .\templates\property-single.html:193 .\templates\property-single.html:649
 msgid "Projelerimiz"
-msgstr "Our Projects"
+msgstr "Project"
 
 #: .\templates\about.html:223 .\templates\blog-single.html:215
 #: .\templates\blog.html:195 .\templates\contact.html:203
@@ -160,8 +160,8 @@ msgstr ""
 
 #: .\templates\about.html:354
 msgid ""
-"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek "
-"kadar azdır."
+"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek"
+" kadar azdır."
 msgstr ""
 "Housing and business have a cost. The cost of land and land is almost "
 "negligible."
@@ -327,8 +327,8 @@ msgstr "MARMARA HOUSES HOUSING BUILDING COOPERATIVE"
 
 #: .\templates\home.html:596
 msgid ""
-"Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede, "
-"deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol "
+"Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede,"
+" deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol "
 "imzalamıştır."
 msgstr ""
 "Our cooperative signed a protocol for the purchase of a 16.106 m2 land in "
@@ -359,16 +359,16 @@ msgstr "Canal Istanbul Project"
 #: .\templates\home.html:628
 msgid ""
 "Kanal-İstanbul Projesi, İstanbul Avrupa Yakası'nın kuzeyinde Karadeniz'e "
-"kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer "
-"alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir "
-"alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde "
-"yer almaktadır."
+"kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer"
+" alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir "
+"alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde"
+" yer almaktadır."
 msgstr ""
 "Kanal-Istanbul Project is a real estate project located on the 3rd Bridge "
 "(Yavuz Sultan Selim Bridge) connection road, which has a coast to the Black "
 "Sea, in the north of the European Side of Istanbul. The project is located "
-"on a large area of ​​approximately 450,000 m² and is located in its neighbors "
-"Çatalca, Esenyurt and Başakşehir."
+"on a large area of ​​approximately 450,000 m² and is located in its "
+"neighbors Çatalca, Esenyurt and Başakşehir."
 
 #: .\templates\home.html:642
 msgid "Kanal Ankara Projesi"
@@ -399,8 +399,8 @@ msgid ""
 msgstr ""
 "As Land Invest Real Estate, we are a leading real estate company in the "
 "sector, with our expertise in real estate and our customer-oriented "
-"approach. Our mission is to exceed our clients' needs and expectations while "
-"providing quality real estate services."
+"approach. Our mission is to exceed our clients' needs and expectations while"
+" providing quality real estate services."
 
 #: .\templates\home.html:747
 msgid ""
@@ -409,8 +409,8 @@ msgid ""
 "geliştiriyoruz"
 msgstr ""
 "As Land Invest Real Estate, we are constantly improving ourselves to "
-"maintain our leadership in the sector and to provide the best service to our "
-"customers."
+"maintain our leadership in the sector and to provide the best service to our"
+" customers."
 
 #: .\templates\home.html:768
 msgid "4 Aşamada"
@@ -490,7 +490,8 @@ msgid ""
 "mülkler veya yatırım fırsatları gibi alanlarda uzmanlaşmışlardır."
 msgstr ""
 "Our real estate agents have different areas of expertise and specialize in "
-"areas such as residential, commercial properties or investment opportunities."
+"areas such as residential, commercial properties or investment "
+"opportunities."
 
 #: .\templates\home.html:914
 msgid "Sizden hizmet almanın güvencesi nedir?"
@@ -521,7 +522,7 @@ msgstr "City"
 
 #: .\templates\properties_by_city.html:308
 msgid "aa"
-msgstr ""
+msgstr "Our"
 
 #: .\templates\properties_by_city.html:326
 #: .\templates\properties_by_status.html:329

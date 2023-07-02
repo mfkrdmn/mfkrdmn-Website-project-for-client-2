@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-02 23:01+0300\n"
-"PO-Revision-Date: 2023-07-02 22:49+0000\n"
+"PO-Revision-Date: 2023-07-02 23:07+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -37,12 +37,12 @@ msgstr "Arapça"
 
 #: .\templates\about.html:218 .\templates\about.html:629
 #: .\templates\blog-single.html:210 .\templates\blog-single.html:542
-#: .\templates\blog.html:76 .\templates\blog.html:190 .\templates\blog.html:527
-#: .\templates\contact.html:81 .\templates\contact.html:198
-#: .\templates\contact.html:496 .\templates\home.html:355
-#: .\templates\home.html:493 .\templates\home.html:1082
-#: .\templates\properties.html:212 .\templates\properties.html:592
-#: .\templates\properties_by_city.html:214
+#: .\templates\blog.html:76 .\templates\blog.html:190
+#: .\templates\blog.html:527 .\templates\contact.html:81
+#: .\templates\contact.html:198 .\templates\contact.html:496
+#: .\templates\home.html:355 .\templates\home.html:493
+#: .\templates\home.html:1082 .\templates\properties.html:212
+#: .\templates\properties.html:592 .\templates\properties_by_city.html:214
 #: .\templates\properties_by_city.html:588
 #: .\templates\properties_by_status.html:212
 #: .\templates\properties_by_status.html:590
@@ -160,11 +160,11 @@ msgstr ""
 
 #: .\templates\about.html:354
 msgid ""
-"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek "
-"kadar azdır."
+"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek"
+" kadar azdır."
 msgstr ""
-"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek "
-"kadar azdır."
+"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek"
+" kadar azdır."
 
 #: .\templates\about.html:356
 msgid ""
@@ -326,12 +326,12 @@ msgstr "MARMARA EVLERİ KONUT YAPI KOOPERATİFİ"
 
 #: .\templates\home.html:596
 msgid ""
-"Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede, "
-"deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol "
+"Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede,"
+" deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol "
 "imzalamıştır."
 msgstr ""
-"Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede, "
-"deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol "
+"Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede,"
+" deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol "
 "imzalamıştır."
 
 #: .\templates\home.html:598 .\templates\home.html:614
@@ -358,16 +358,16 @@ msgstr "Kanal İstanbul Projesi"
 #: .\templates\home.html:628
 msgid ""
 "Kanal-İstanbul Projesi, İstanbul Avrupa Yakası'nın kuzeyinde Karadeniz'e "
-"kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer "
-"alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir "
-"alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde "
-"yer almaktadır."
+"kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer"
+" alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir "
+"alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde"
+" yer almaktadır."
 msgstr ""
 "Kanal-İstanbul Projesi, İstanbul Avrupa Yakası'nın kuzeyinde Karadeniz'e "
-"kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer "
-"alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir "
-"alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde "
-"yer almaktadır."
+"kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer"
+" alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir "
+"alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde"
+" yer almaktadır."
 
 #: .\templates\home.html:642
 msgid "Kanal Ankara Projesi"
@@ -519,7 +519,7 @@ msgstr "Ülke"
 
 #: .\templates\properties_by_city.html:308
 msgid "aa"
-msgstr ""
+msgstr " "
 
 #: .\templates\properties_by_city.html:326
 #: .\templates\properties_by_status.html:329
