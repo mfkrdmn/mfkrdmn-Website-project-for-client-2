@@ -312,7 +312,8 @@
 								<li><img src="{% static 'img/user-icon.svg' %}" alt="#"> <a href="#">{{a.yazar}}</a></li>
                             </ul>
                         </div>
-                        <div class="homec-blog-content">
+						{% if dil == "tr" %}
+						<div class="homec-blog-content">
                             <h1 class="homec-blog-content__title">{{a.blog_basligi}}</h1>
                             <p>{{a.yazi_icerigi| safe}}</p>
                             <img src="{{a.blog_ana_foto.url}}" alt="#">
@@ -327,6 +328,40 @@
                                 </div>
                             </div>
                         </div>
+						{% elif dil == "en" %}
+						<div class="homec-blog-content">
+                            <h1 class="homec-blog-content__title">{{a.blog_basligi_en}}</h1>
+                            <p>{{a.yazi_icerigi_en| safe}}</p>
+                            <img src="{{a.blog_ana_foto.url}}" alt="#">
+                            <p>The internet has changed our ways of accessing knowledge as well as information and art. Before, you would have had to go to a library, bookstore, magazine stand, or something similar. You wouldn’t find as many titles as you find online and you’d normally have to pay for them or borrow them for a few days. Nowadays, you’re lucky. You just need Google to find thousands of ways to read about your favorite subjects. You can choose as many as you want and even keep a library.</p>
+                            <blockquote>{{a.quote_en}}</p>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <img src="{{a.blog_alt_foto1.url}}" alt="#">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <img src="{{a.blog_alt_foto2.url}}" alt="#">
+                                </div>
+                            </div>
+                        </div>
+						{% else %}
+						<div class="homec-blog-content">
+                            <h1 class="homec-blog-content__title">{{a.blog_basligi_ar}}</h1>
+                            <p>{{a.yazi_icerigi_ar| safe}}</p>
+                            <img src="{{a.blog_ana_foto.url}}" alt="#">
+                            <p>The internet has changed our ways of accessing knowledge as well as information and art. Before, you would have had to go to a library, bookstore, magazine stand, or something similar. You wouldn’t find as many titles as you find online and you’d normally have to pay for them or borrow them for a few days. Nowadays, you’re lucky. You just need Google to find thousands of ways to read about your favorite subjects. You can choose as many as you want and even keep a library.</p>
+                            <blockquote>{{a.quote_ar}}</p>
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <img src="{{a.blog_alt_foto1.url}}" alt="#">
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-12">
+                                    <img src="{{a.blog_alt_foto2.url}}" alt="#">
+                                </div>
+                            </div>
+                        </div>
+						{% endif %}
+                        
                      
 					</div>
 					<div class="col-lg-4 col-12 mt-5">
@@ -338,13 +373,30 @@
 								<h3 class="homec-sidebar__title">{% translate "Son Yazılarımız" %}</h3>
                                 <!-- Sidebar Post -->
 								{% for a in blog_yazıları %}
-
+								{% if dil == "tr" %}
 								<div class="homec-sidebar__post">
 									<div class="homec-sidebar__img"><img src="{{a.blog_ana_foto.url}}" alt="#"></div>
                                     <div class="homec-sidebar__content">
                                         <h5 class="homec-sidebar__content--title"><a href="/{{dil}}{% url 'land:blog_single' a.blog_basligi %}">{{a.blog_basligi}}</a></h5>
                                     </div>
 							    </div>
+						{% elif dil == "en" %}
+						<div class="homec-sidebar__post">
+							<div class="homec-sidebar__img"><img src="{{a.blog_ana_foto.url}}" alt="#"></div>
+							<div class="homec-sidebar__content">
+								<h5 class="homec-sidebar__content--title"><a href="/{{dil}}{% url 'land:blog_single' a.blog_basligi %}">{{a.blog_basligi_en}}</a></h5>
+							</div>
+						</div>
+						{% else %}
+						<div class="homec-sidebar__post">
+							<div class="homec-sidebar__img"><img src="{{a.blog_ana_foto.url}}" alt="#"></div>
+							<div class="homec-sidebar__content">
+								<h5 class="homec-sidebar__content--title"><a href="/{{dil}}{% url 'land:blog_single' a.blog_basligi %}">{{a.blog_basligi_ar}}</a></h5>
+							</div>
+						</div>
+						
+						{% endif %}
+								
                           
 								{% endfor %} 
 						   </div>
