@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-02 22:30+0300\n"
+"POT-Creation-Date: 2023-07-02 23:01+0300\n"
 "PO-Revision-Date: 2023-07-02 22:49+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,13 +36,13 @@ msgid "arabic"
 msgstr "Arapça"
 
 #: .\templates\about.html:218 .\templates\about.html:629
-#: .\templates\blog-single.html:210 .\templates\blog-single.html:490
-#: .\templates\blog.html:76 .\templates\blog.html:190
-#: .\templates\blog.html:457 .\templates\contact.html:81
-#: .\templates\contact.html:198 .\templates\contact.html:458
-#: .\templates\home.html:355 .\templates\home.html:493
-#: .\templates\home.html:1082 .\templates\properties.html:212
-#: .\templates\properties.html:592 .\templates\properties_by_city.html:214
+#: .\templates\blog-single.html:210 .\templates\blog-single.html:542
+#: .\templates\blog.html:76 .\templates\blog.html:190 .\templates\blog.html:527
+#: .\templates\contact.html:81 .\templates\contact.html:198
+#: .\templates\contact.html:496 .\templates\home.html:355
+#: .\templates\home.html:493 .\templates\home.html:1082
+#: .\templates\properties.html:212 .\templates\properties.html:592
+#: .\templates\properties_by_city.html:214
 #: .\templates\properties_by_city.html:588
 #: .\templates\properties_by_status.html:212
 #: .\templates\properties_by_status.html:590
@@ -52,9 +52,9 @@ msgid "Ana Sayfa"
 msgstr "Ana Sayfa"
 
 #: .\templates\about.html:221 .\templates\about.html:630
-#: .\templates\blog-single.html:213 .\templates\blog-single.html:491
-#: .\templates\blog.html:193 .\templates\blog.html:458
-#: .\templates\contact.html:201 .\templates\contact.html:459
+#: .\templates\blog-single.html:213 .\templates\blog-single.html:543
+#: .\templates\blog.html:193 .\templates\blog.html:528
+#: .\templates\contact.html:201 .\templates\contact.html:497
 #: .\templates\home.html:496 .\templates\home.html:1083
 #: .\templates\properties.html:215 .\templates\properties.html:310
 #: .\templates\properties.html:593 .\templates\properties_by_city.html:217
@@ -96,9 +96,9 @@ msgstr "Tamamlanan projeler"
 
 #: .\templates\about.html:230 .\templates\about.html:312
 #: .\templates\about.html:631 .\templates\blog-single.html:222
-#: .\templates\blog-single.html:492 .\templates\blog.html:202
-#: .\templates\blog.html:459 .\templates\contact.html:211
-#: .\templates\contact.html:460 .\templates\home.html:508
+#: .\templates\blog-single.html:544 .\templates\blog.html:202
+#: .\templates\blog.html:529 .\templates\contact.html:211
+#: .\templates\contact.html:498 .\templates\home.html:508
 #: .\templates\home.html:738 .\templates\home.html:1084
 #: .\templates\properties.html:224 .\templates\properties.html:594
 #: .\templates\properties_by_city.html:226
@@ -110,9 +110,9 @@ msgid "Hakkımızda"
 msgstr "Hakkımızda"
 
 #: .\templates\about.html:233 .\templates\about.html:632
-#: .\templates\blog-single.html:225 .\templates\blog-single.html:493
-#: .\templates\blog.html:205 .\templates\blog.html:460
-#: .\templates\contact.html:214 .\templates\contact.html:461
+#: .\templates\blog-single.html:225 .\templates\blog-single.html:545
+#: .\templates\blog.html:205 .\templates\blog.html:530
+#: .\templates\contact.html:214 .\templates\contact.html:499
 #: .\templates\home.html:511 .\templates\home.html:1085
 #: .\templates\properties.html:227 .\templates\properties.html:595
 #: .\templates\properties_by_city.html:229
@@ -124,10 +124,10 @@ msgid "Blog"
 msgstr "Blog"
 
 #: .\templates\about.html:235 .\templates\about.html:633
-#: .\templates\blog-single.html:227 .\templates\blog-single.html:494
-#: .\templates\blog.html:207 .\templates\blog.html:461
-#: .\templates\contact.html:216 .\templates\contact.html:256
-#: .\templates\contact.html:312 .\templates\contact.html:462
+#: .\templates\blog-single.html:227 .\templates\blog-single.html:546
+#: .\templates\blog.html:207 .\templates\blog.html:531
+#: .\templates\contact.html:216 .\templates\contact.html:294
+#: .\templates\contact.html:350 .\templates\contact.html:500
 #: .\templates\home.html:513 .\templates\home.html:1086
 #: .\templates\properties.html:229 .\templates\properties.html:596
 #: .\templates\properties_by_city.html:231
@@ -160,11 +160,11 @@ msgstr ""
 
 #: .\templates\about.html:354
 msgid ""
-"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek"
-" kadar azdır."
+"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek "
+"kadar azdır."
 msgstr ""
-"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek"
-" kadar azdır."
+"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek "
+"kadar azdır."
 
 #: .\templates\about.html:356
 msgid ""
@@ -182,7 +182,7 @@ msgstr ""
 "yüksektir. Aldığınız arazinin, arsaya dönüşmesi, yani imar uygulaması bile "
 "başlı başına bir beklentidir."
 
-#: .\templates\about.html:383 .\templates\blog-single.html:338
+#: .\templates\about.html:383 .\templates\blog-single.html:373
 msgid "Son Yazılarımız"
 msgstr "Son Yazılarımız"
 
@@ -215,8 +215,8 @@ msgid "Müşteri Memnuniyeti"
 msgstr "Müşteri Memnuniyeti"
 
 #: .\templates\about.html:473 .\templates\about.html:642
-#: .\templates\blog-single.html:503 .\templates\blog.html:470
-#: .\templates\contact.html:269 .\templates\contact.html:471
+#: .\templates\blog-single.html:555 .\templates\blog.html:540
+#: .\templates\contact.html:307 .\templates\contact.html:509
 #: .\templates\home.html:1095 .\templates\properties.html:605
 #: .\templates\properties_by_city.html:601
 #: .\templates\properties_by_status.html:603
@@ -240,8 +240,8 @@ msgstr "Yıllık tecrübe"
 msgid "Satış ve Kiralama"
 msgstr "Satış ve Kiralama"
 
-#: .\templates\about.html:553 .\templates\blog-single.html:414
-#: .\templates\blog.html:381 .\templates\contact.html:382
+#: .\templates\about.html:553 .\templates\blog-single.html:466
+#: .\templates\blog.html:451 .\templates\contact.html:420
 #: .\templates\home.html:930 .\templates\home.html:1006
 #: .\templates\properties.html:516 .\templates\properties_by_city.html:512
 #: .\templates\properties_by_status.html:514
@@ -249,8 +249,8 @@ msgstr "Satış ve Kiralama"
 msgid "Sizin İçin Buradayız"
 msgstr "Sizin İçin Buradayız"
 
-#: .\templates\about.html:555 .\templates\blog-single.html:416
-#: .\templates\blog.html:383 .\templates\contact.html:384
+#: .\templates\about.html:555 .\templates\blog-single.html:468
+#: .\templates\blog.html:453 .\templates\contact.html:422
 #: .\templates\home.html:1008 .\templates\properties.html:518
 #: .\templates\properties_by_city.html:514
 #: .\templates\properties_by_status.html:516
@@ -258,8 +258,8 @@ msgstr "Sizin İçin Buradayız"
 msgid "Bültenimize Kaydol"
 msgstr "Bültenimize Kaydol"
 
-#: .\templates\about.html:560 .\templates\blog-single.html:421
-#: .\templates\blog.html:388 .\templates\contact.html:389
+#: .\templates\about.html:560 .\templates\blog-single.html:473
+#: .\templates\blog.html:458 .\templates\contact.html:427
 #: .\templates\home.html:1013 .\templates\properties.html:523
 #: .\templates\properties_by_city.html:519
 #: .\templates\properties_by_status.html:521
@@ -267,8 +267,8 @@ msgstr "Bültenimize Kaydol"
 msgid "Kaydol"
 msgstr "Kaydol"
 
-#: .\templates\about.html:576 .\templates\blog-single.html:437
-#: .\templates\blog.html:404 .\templates\contact.html:405
+#: .\templates\about.html:576 .\templates\blog-single.html:489
+#: .\templates\blog.html:474 .\templates\contact.html:443
 #: .\templates\home.html:1029 .\templates\properties.html:539
 #: .\templates\properties_by_city.html:535
 #: .\templates\properties_by_status.html:537
@@ -276,8 +276,8 @@ msgstr "Kaydol"
 msgid "Gayrimenkulde Uzmanlık, Müşteri Memnuniyeti İlkesiyle"
 msgstr "Gayrimenkulde Uzmanlık, Müşteri Memnuniyeti İlkesiyle"
 
-#: .\templates\about.html:627 .\templates\blog-single.html:488
-#: .\templates\blog.html:455 .\templates\contact.html:456
+#: .\templates\about.html:627 .\templates\blog-single.html:540
+#: .\templates\blog.html:525 .\templates\contact.html:494
 #: .\templates\home.html:1080 .\templates\properties.html:590
 #: .\templates\properties_by_city.html:586
 #: .\templates\properties_by_status.html:588
@@ -289,33 +289,34 @@ msgstr "Sayfalar"
 msgid "Blog Yazılarımız"
 msgstr "Blog Yazılarımız"
 
-#: .\templates\blog.html:317
+#: .\templates\blog.html:318 .\templates\blog.html:351
+#: .\templates\blog.html:384
 msgid "Devamını Oku"
 msgstr "Devamını Oku"
 
-#: .\templates\blog.html:334
+#: .\templates\blog.html:404
 msgid "Önceki Sayfa"
 msgstr "Devamını Oku"
 
-#: .\templates\blog.html:361
+#: .\templates\blog.html:431
 msgid "Sonraki Sayfa"
 msgstr "Sonraki Sayfa"
 
-#: .\templates\blog.html:494 .\templates\home.html:1119
+#: .\templates\blog.html:564 .\templates\home.html:1119
 #: .\templates\properties_by_city.html:625
 #: .\templates\properties_by_status.html:627
 msgid "Başa Dön"
 msgstr "Başa Dön"
 
-#: .\templates\contact.html:288
+#: .\templates\contact.html:326
 msgid "Bize Yazın!"
 msgstr "Bize Yazın!"
 
-#: .\templates\contact.html:326
+#: .\templates\contact.html:364
 msgid "Konum"
 msgstr "Konum"
 
-#: .\templates\contact.html:348
+#: .\templates\contact.html:386
 msgid "Email"
 msgstr "Email"
 
@@ -325,12 +326,12 @@ msgstr "MARMARA EVLERİ KONUT YAPI KOOPERATİFİ"
 
 #: .\templates\home.html:596
 msgid ""
-"Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede,"
-" deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol "
+"Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede, "
+"deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol "
 "imzalamıştır."
 msgstr ""
-"Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede,"
-" deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol "
+"Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede, "
+"deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol "
 "imzalamıştır."
 
 #: .\templates\home.html:598 .\templates\home.html:614
@@ -357,16 +358,16 @@ msgstr "Kanal İstanbul Projesi"
 #: .\templates\home.html:628
 msgid ""
 "Kanal-İstanbul Projesi, İstanbul Avrupa Yakası'nın kuzeyinde Karadeniz'e "
-"kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer"
-" alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir "
-"alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde"
-" yer almaktadır."
+"kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer "
+"alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir "
+"alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde "
+"yer almaktadır."
 msgstr ""
 "Kanal-İstanbul Projesi, İstanbul Avrupa Yakası'nın kuzeyinde Karadeniz'e "
-"kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer"
-" alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir "
-"alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde"
-" yer almaktadır."
+"kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer "
+"alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir "
+"alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde "
+"yer almaktadır."
 
 #: .\templates\home.html:642
 msgid "Kanal Ankara Projesi"
@@ -515,6 +516,10 @@ msgstr "Ülke"
 #: .\templates\properties_by_status.html:378
 msgid "Şehir"
 msgstr "Ülke"
+
+#: .\templates\properties_by_city.html:308
+msgid "aa"
+msgstr ""
 
 #: .\templates\properties_by_city.html:326
 #: .\templates\properties_by_status.html:329
