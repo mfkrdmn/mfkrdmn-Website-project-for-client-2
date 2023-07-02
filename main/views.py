@@ -80,6 +80,7 @@ def properties(request):
 
 def sehre_gore_projeler(request, sehir):
     sehre_gore = Projeler.objects.filter(sehir=sehir)
+    sehir = sehir
     trans = translate(language='en')   
     paginator = Paginator(sehre_gore, 4) # Show 25 project per page
     
@@ -96,7 +97,8 @@ def sehre_gore_projeler(request, sehir):
     context = {
         "trans":trans,"dil":dil_bilgisi(),
         'sehre_gore' : sehre_gore,
-        'project' : project
+        'project' : project,
+        'sehir' : sehir
      
     }
 
@@ -116,6 +118,7 @@ def sehre_gore_projeler(request, sehir):
 def proje_durumuna_gore(request, status):
     durumuna_gore = Projeler.objects.filter(status=status)
     projeler = Projeler.objects.all()
+    status = status
     trans = translate(language='en')   
     paginator = Paginator(durumuna_gore, 4) # Show 25 project per page
     
@@ -133,7 +136,8 @@ def proje_durumuna_gore(request, status):
         "trans":trans,"dil":dil_bilgisi(),
         'durumuna_gore' : durumuna_gore,
         'projeler' :projeler,
-        'project' : project
+        'project' : project,
+        'status' : status
     }
     return render(request, 'properties_by_status.html', context)
 

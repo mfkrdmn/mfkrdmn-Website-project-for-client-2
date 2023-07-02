@@ -63,7 +63,7 @@
 					<!-- offcanvas-logo-start -->
 					 <div class="offcanvas-logo">
 						<div class="homec-header__logo">
-							<a href="{% url 'land:home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
+							<a href="/{{dil}}{% url 'land:home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
 						</div>
 					</div>
 					<!-- offcanvas-logo-end -->
@@ -202,35 +202,35 @@
 							<div class="homec-header__inside">
 								<div class="homec-header__group">
 									<div class="homec-header__logo">
-										<a href="{% url 'land:home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
+										<a href="/{{dil}}{% url 'land:home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
 									</div>
 									<div class="homec-header__menu">
 										<div class="navbar">
 											<div class="nav-item">                                      
 												<!-- Main Menu -->
 												<ul class="nav-menu menu navigation list-none">
-															<li><a href="{% url 'land:home' %}">{% translate "Ana Sayfa" %}</a>
+															<li><a href="/{{dil}}{% url 'land:home' %}">{% translate "Ana Sayfa" %}</a>
 									
 														</li>
-														<li class="menu-item-has-children"><a href="{% url 'land:properties' %}">{% translate "Projelerimiz" %}</a>
+														<li class="menu-item-has-children"><a href="/{{dil}}{% url 'land:properties' %}">{% translate "Projelerimiz" %}</a>
 															<ul class="sub-menu">
 																
-																	<li><a href="/projelerimiz/durumu/devam ediyor">{% translate "Devam eden projeler" %} </a></li>
+																<li><a href="/{{dil}}/projelerimiz/durumu/devam ediyor">{% translate "Devam eden projeler" %} </a></li>
 																	
-																<li><a href="/projelerimiz/durumu/planlanan">{% translate "Planlanan projeler" %}</a></li>
+																<li><a href="/{{dil}}/projelerimiz/durumu/planlanan">{% translate "Planlanan projeler" %}</a></li>
 															
-																<li><a href="/projelerimiz/durumu/tamamlandı">{% translate "Tamamlanan projeler" %}</a></li>
+																<li><a href="/{{dil}}/projelerimiz/durumu/tamamlandı">{% translate "Tamamlanan projeler" %}</a></li>
 															</ul>
 														</li>
 													</li>
 											
-														<li ><a href="{% url 'land:about' %}">{% translate "Hakkımızda" %}</a>
+													<li ><a href="/{{dil}}{% url 'land:about' %}">{% translate "Hakkımızda" %}</a>
 													
-														</li>
-														<li ><a href="{% url 'land:blog' %}">{% translate "Blog" %}</a>
-														</li>
-														<li ><a href="{% url 'land:contact' %}">{% translate "İletişim" %}</a>
-														</li>
+													</li>
+													<li ><a href="/{{dil}}{% url 'land:blog' %}">{% translate "Blog" %}</a>
+													</li>
+													<li ><a href="/{{dil}}{% url 'land:contact' %}">{% translate "İletişim" %}</a>
+													</li>
 													<li>
 															<select onchange="window.location.href=this.value;" class="selectpicker" data-width="fit"
                   >
@@ -377,9 +377,10 @@
 								<div class="property-sidebar__filters">
 									<h4 class="property-sidebar__title">{% translate "Şehir" %}</h4>
 									<div class="form-group">
-										<select class="property-sidebar__group homec-border">
-											<option data-display="İstanbul">İstanbul</option>
-											<option value="2"> Ankara</option>
+										<select class="property-sidebar__group homec-border selectahref" onchange="redirect()">
+											<option>Şehir Seç <i class="fa-solid fa-arrow-down"></i></option>
+											<option value="/projelerimiz/istanbul/">İstanbul</option>
+											<option value="/projelerimiz/ankara/">Ankara</option>
 										</select>
 									</div>
 								</div>
@@ -411,7 +412,7 @@
 												<div class="homec-property__topbar">
 													<span class="homec-property__salebadge">{{a.status}}</span>
 												</div>
-												<h3 class="homec-property__title"><a href="{% url 'land:property_single' a.proje_ismi %}">{{a.proje_ismi}}</a></h3>
+												<h3 class="homec-property__title"><a href="/{{dil}}{% url 'land:property_single' a.proje_ismi %}">{{a.proje_ismi}}</a></h3>
 												<div class="homec-property__text">
 													<p>{{a.Lokasyon_kısa}}</p>
 												</div>
@@ -477,7 +478,7 @@
 												<div class="homec-property__topbar">
 													<span class="homec-property__salebadge">{{a.status}}</span>
 												</div>
-												<h3 class="homec-property__title"><a href="{% url 'land:property_single' a.proje_ismi %}">{{a.proje_ismi}}</a></h3>
+												<h3 class="homec-property__title"><a href="/{{dil}}{% url 'land:property_single' a.proje_ismi %}">{{a.proje_ismi}}</a></h3>
 												<div class="homec-property__text">
 													<img src="{% static 'img/location-icon.svg' %}" alt="#"><p>{{a.Lokasyon_kısa}}</p>
 												</div>
@@ -586,11 +587,11 @@
 												<div class="single-widget footer-useful-links">
 													<h3 class="widget-title">{% translate "Sayfalar" %}</h3>
 													<ul class="f-useful-links-inner list-none">
-														<li><a href="{% url 'land:home' %}"><i class="fa-solid fa-minus"></i>{% translate "Ana Sayfa" %}</a></li>
-														<li><a href="{% url 'land:properties' %}"><i class="fa-solid fa-minus"></i>{% translate "Projelerimiz" %}</a></li>
-														<li><a href="{% url 'land:about' %}"><i class="fa-solid fa-minus"></i>{% translate "Hakkımızda" %}</a></li>
-														<li><a href="{% url 'land:blog' %}"><i class="fa-solid fa-minus"></i>{% translate "Blog" %}</a></li>
-														<li><a href="{% url 'land:contact' %}"><i class="fa-solid fa-minus"></i>{% translate "İletişim" %}</a></li>
+														<li><a href="/{{dil}}{% url 'land:home' %}"><i class="fa-solid fa-minus"></i>{% translate "Ana Sayfa" %}</a></li>
+														<li><a href="/{{dil}}{% url 'land:properties' %}"><i class="fa-solid fa-minus"></i>{% translate "Projelerimiz" %}</a></li>
+														<li><a href="/{{dil}}{% url 'land:about' %}"><i class="fa-solid fa-minus"></i>{% translate "Hakkımızda" %}</a></li>
+														<li><a href="/{{dil}}{% url 'land:blog' %}"><i class="fa-solid fa-minus"></i>{% translate "Blog" %}</a></li>
+														<li><a href="/{{dil}}{% url 'land:contact' %}"><i class="fa-solid fa-minus"></i>{% translate "İletişim" %}</a></li>
 													</ul>
 												</div>
 												<!-- End Footer Widget -->
@@ -678,6 +679,13 @@
 					},
 					slidesPerView: "1",
 				});	
+				function redirect() {
+					var selectBox = document.querySelector('.selectahref');
+					var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+					if (selectedValue !== "") {
+						window.location.href = selectedValue;
+					}
+				}
 	
 			 </script>
 		</body>
