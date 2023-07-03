@@ -397,9 +397,10 @@
 							<div class="tab-pane fade show active" id="homec-grid" role="tabpanel">
 								<div class="row">
 									{% for a in project %}
+									{% if dil == "tr" %}
 									<div class="col-md-6 col-12 mg-top-30 projects_col">
 										<!-- Single property-->
-									
+										
 										<div class="homec-property projects_col" >
 											<!-- Property Head-->
 											<div class="homec-property__head projects_col" style="height: 220px;">
@@ -417,9 +418,49 @@
 												</div>
 											</div>
 										</div>
-										 
+									</div>
+										{% elif dil == "en" %}
+									<div class="col-md-6 col-12 mg-top-30 projects_col">
+										<div class="homec-property projects_col" >
+											<!-- Property Head-->
+											<div class="homec-property__head projects_col" style="height: 220px;">
+												<img src="{{a.image_ana_foto.url}}" alt="#" style="height: 220px; object-fit: cover;">
+											</div>
+											<!-- Property Body-->
+										
+											<div class="homec-property__body">
+												<div class="homec-property__topbar">
+													<span class="homec-property__salebadge">{{a.status}}</span>
+												</div>
+												<h3 class="homec-property__title"><a href="/{{dil}}{% url 'land:property_single' a.proje_ismi %}">{{a.proje_ismi_en}}</a></h3>
+												<div class="homec-property__text">
+													<p>{{a.Lokasyon_kısa}}</p>
+												</div>
+											</div>
+										</div>
+									</div>
+										{% else %}
+									<div class="col-md-6 col-12 mg-top-30 projects_col">
+										<div class="homec-property projects_col" >
+											<!-- Property Head-->
+											<div class="homec-property__head projects_col" style="height: 220px;">
+												<img src="{{a.image_ana_foto.url}}" alt="#" style="height: 220px; object-fit: cover;">
+											</div>
+											<!-- Property Body-->
+										
+											<div class="homec-property__body">
+												<div class="homec-property__topbar">
+													<span class="homec-property__salebadge">{{a.status}}</span>
+												</div>
+												<h3 class="homec-property__title"><a href="/{{dil}}{% url 'land:property_single' a.proje_ismi %}">{{a.proje_ismi_ar}}</a></h3>
+												<div class="homec-property__text">
+													<p>{{a.Lokasyon_kısa}}</p>
+												</div>
+											</div>
+										</div>
 										<!-- End Single property-->
 									</div>
+									{% endif %}
 									{% endfor %}  
 								
 								</div>

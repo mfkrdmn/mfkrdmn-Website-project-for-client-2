@@ -132,13 +132,14 @@ def proje_durumuna_gore(request, status):
     except EmptyPage:
         # If page is out of range (e.g. 9999), deliver last page of results.
         project = paginator.page(paginator.num_pages)
-    
+    link = "projelerimiz/"+str(status)
     context = {
         "trans":trans,"dil":dil_bilgisi(),
         'durumuna_gore' : durumuna_gore,
         'projeler' :projeler,
         'project' : project,
-        'status' : status
+        'status' : status,
+        'link' : link
     }
     return render(request, 'properties_by_status.html', context)
 
@@ -159,10 +160,11 @@ def property_single(request,pk):
 def about(request):
     blog_yazıları = Blog.objects.all()[:3]
     trans = translate(language='en')   
-
+    link = "about"
     context = {
         "trans":trans,"dil":dil_bilgisi(),
-        'blog_yazıları' : blog_yazıları
+        'blog_yazıları' : blog_yazıları,
+        'link' : link
     }
     return render(request, 'about.html', context)
 
@@ -214,7 +216,7 @@ def blog(request):
 
     paginator = Paginator(blog_yazıları, 9) 
     trans = translate(language='en')  
-
+    link = "blog"
     page = request.GET.get('page')
     try:
         project = paginator.page(page)
@@ -229,6 +231,7 @@ def blog(request):
         'blog_yazıları' : blog_yazıları,
         'project' :project,
         "trans":trans,"dil":dil_bilgisi(),
+        'link' :link
     }
 
     return render(request, 'blog.html', context)
@@ -238,11 +241,12 @@ def blog_single(request, blog_basligi):
     blog_detail = Blog.objects.filter(blog_basligi=blog_basligi)
     blog_yazıları = Blog.objects.all()[:3]
     trans = translate(language='en')  
-
+    link = "blog/"+str(blog_basligi)
     context = {
         'blog_detail' : blog_detail,
         'blog_yazıları' : blog_yazıları,
         "trans":trans,"dil":dil_bilgisi(),
+        'link' : link,
     }
 
     return render(request, 'blog-single.html', context)
