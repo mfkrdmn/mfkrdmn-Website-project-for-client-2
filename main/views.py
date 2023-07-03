@@ -68,8 +68,10 @@ def properties(request):
     if request.GET:
         key = request.GET.get("key")
         if key:
-            key_upper = key.upper()  
+            key_upper = str(key).capitalize().replace("I","İ")
             projects_searched = Projeler.objects.filter(proje_ismi__icontains=key_upper)
+            print(projects_searched,key_upper)
+
             context["project"] = projects_searched
         else:
             context["project"] = projeler  # Tüm içeriği göster

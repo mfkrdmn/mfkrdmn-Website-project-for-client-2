@@ -126,7 +126,7 @@ USE_I18N = True
 
 USE_TZ = True
 
-LANGUAGE_CODE = 'en'
+LANGUAGE_CODE = 'tr-tr'
 from django.utils.translation import gettext_lazy as _
 LANGUAGES = (
     ('en', _('English')),
