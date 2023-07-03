@@ -241,7 +241,7 @@ def blog_single(request, blog_basligi):
     blog_detail = Blog.objects.filter(blog_basligi=blog_basligi)
     blog_yazıları = Blog.objects.all()[:3]
     trans = translate(language='en')  
-    link = "blog/"+str(blog_basligi)
+    link = "blog/"+str(blog_basligi)+"/"
     context = {
         'blog_detail' : blog_detail,
         'blog_yazıları' : blog_yazıları,
@@ -250,5 +250,3 @@ def blog_single(request, blog_basligi):
     }
 
     return render(request, 'blog-single.html', context)
-
-
