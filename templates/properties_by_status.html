@@ -391,6 +391,7 @@
 						</div>
 		
 					</div>
+				
 					<div class="col-lg-8 col-12">
 						<div class="tab-content" id="nav-tabContent">
 							<!-- Grid Tab -->
@@ -461,13 +462,28 @@
 										<!-- End Single property-->
 									</div>
 									{% endif %}
+									{% empty %}
+									<!-- Proje yoksa gösterilecek mesaj -->
+
+								
+									<div class="col-lg-12 col-12 mg-top-30 d-flex justify-content-center align-items-center">
+										<div class="property-sidebar">
+											<div class="property-sidebar__single">
+												<div class="property-sidebar__filters">
+													<h4 style="color: #7166F0;">Görüşmeler Devam Ediyor...</h4>
+												</div>
+											</div>
+										</div>
+						
+									</div>
+									
 									{% endfor %}  
 								
 								</div>
 						
 							</div>
 							<ul class="pagination pagination-lg justify-content-center mt-5">
-
+								{% if project.has_other_pages %}
 								{% if project.has_previous %}
 								  <li class="page-item"><a class="page-link" href="?page={{ project.previous_page_number }}">« Önceki Sayfa</a></li>
 								
@@ -497,6 +513,7 @@
 								  {% endif %}
 								
 								  <li class="page-item"><a class="page-link" href="?page={{ project.next_page_number }}">Sonraki Sayfa »</a></li>
+								{% endif %}
 								{% endif %}
 							</ul>
 							<!-- End Grid Tab -->
