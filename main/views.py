@@ -85,6 +85,7 @@ def sehre_gore_projeler(request, sehir):
     sehir = sehir
     trans = translate(language='en')   
     paginator = Paginator(sehre_gore, 4) # Show 25 project per page
+    isting_count = sehre_gore.count()
     
     page = request.GET.get('page')
     try:
@@ -101,7 +102,8 @@ def sehre_gore_projeler(request, sehir):
         'sehre_gore' : sehre_gore,
         'project' : project,
         'sehir' : sehir,
-        'link' : link
+        'link' : link,
+        'isting_count' : isting_count
      
     }
 
@@ -121,6 +123,7 @@ def sehre_gore_projeler(request, sehir):
 def proje_durumuna_gore(request, status):
     durumuna_gore = Projeler.objects.filter(status=status)
     projeler = Projeler.objects.all()
+    isting_count = durumuna_gore.count()
     status = status
     trans = translate(language='en')   
     paginator = Paginator(durumuna_gore, 4) # Show 25 project per page
@@ -141,7 +144,8 @@ def proje_durumuna_gore(request, status):
         'projeler' :projeler,
         'project' : project,
         'status' : status,
-        'link' : link
+        'link' : link,
+        'isting_count' : isting_count
     }
     return render(request, 'properties_by_status.html', context)
 
@@ -150,11 +154,28 @@ def property_single(request,pk):
     project_detail = get_object_or_404(Projeler, proje_ismi=pk)
     project_details = Projeler.objects.filter(proje_ismi=pk)
     resim = resimler.objects.filter(proje = project_detail)
+
+    if request.method == "POST":
+        isimSoyisim = request.POST['isimSoyisim']
+        Email = request.POST['Email']
+        Telefon = request.POST['Telefon']
+        Konu = request.POST['Konu']
+        Mesaj = request.POST['Mesaj']
+        send_email(request,isimSoyisim,Email,Telefon,Konu,Mesaj)
+        if request.method == "POST":
+
+            newMessage = CustomerMessages.objects.create(isimSoyisim=isimSoyisim, Email=Email, 
+            Telefon=Telefon,Konu=Konu,Mesaj=Mesaj)
+            newMessage.save()
+            return redirect('/')
+    link = "propertysingle/"+str(pk)
+
     context = {
         "trans":trans,"dil":dil_bilgisi(),
         'project_detail' : project_detail,
         'project_details' :project_details,
-        "resim":resim
+        "resim":resim,
+        "link" : link
     }
 
     return render(request, 'property-single.html', context)

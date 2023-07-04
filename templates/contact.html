@@ -198,11 +198,13 @@
 														<li><a href="/{{dil}}{% url 'land:home' %}">{% translate "Ana Sayfa" %}</a>
 								
 													</li>
-											<li class="menu-item-has-children"><a href="/{{dil}}{% url 'land:properties' %}">{% translate "Projelerimiz" %}</a>
+										<li class="menu-item-has-children"><a>{% translate "Projelerimiz" %}</a>
 														<ul class="sub-menu">
 															<li><a href="/{{dil}}/projelerimiz/durumu/devam ediyor">{% translate "Devam eden projeler" %}</a></li>
 																<li><a href="/{{dil}}/projelerimiz/durumu/planlanan">{% translate "Planlanan projeler" %}</a></li>
 																<li><a href="/{{dil}}/projelerimiz/durumu/tamamlandı">{% translate "Tamamlanan projeler" %}</a></li>
+																<li><a href="/{{dil}}/projelerimiz">{% translate "Tüm projeler" %}</a></li>
+																<li><a href="/{{dil}}/projelerimiz">{% translate "Tüm projeler" %}</a></li>
 														</ul>
 													</li>
 												</li>
@@ -323,7 +325,7 @@
 								<div class="form-group">
 									<textarea name="Mesaj" placeholder="Mesaj" required="required"></textarea>
 								</div>
-								<button class="homec-btn homec-btn__second homec-property-ag__button" value="Submit"><span>{% translate "Bize Yazın!" %}</span></button>
+								<button value="Submit" class="homec-btn homec-btn__second homec-property-ag__button"><span>{% translate "Gönder" %}</span></button>
 							</form>
 						</div>
 					</div>

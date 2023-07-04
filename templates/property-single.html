@@ -190,13 +190,12 @@
 															<li><a href="/{{dil}}{% url 'land:home' %}">{% translate "Ana Sayfa" %}</a>
 									
 														</li>
-														<li class="menu-item-has-children"><a href="/{{dil}}{% url 'land:properties' %}">{% translate "Projelerimiz" %}</a>
+													<li class="menu-item-has-children"><a>{% translate "Projelerimiz" %}</a>
 															<ul class="sub-menu">
-																		<li><a href="projelerimiz/durumu/devam ediyor">{% translate "Devam eden projeler" %} </a></li>
-																	
+																<li><a href="projelerimiz/durumu/devam ediyor">{% translate "Devam eden projeler" %} </a></li>
 																<li><a href="projelerimiz/durumu/planlanan">{% translate "Planlanan projeler" %}</a></li>
-															
 																<li><a href="projelerimiz/durumu/tamamlandı">{% translate "Tamamlanan projeler" %}</a></li>
+																<li><a href="/{{dil}}/projelerimiz">{% translate "Tüm projeler" %}</a></li>
 															</ul>
 														</li>
 													</li>
@@ -283,7 +282,7 @@
 					<!-- Breadcrumb-Content -->
 					<div class="col-12">
 						<div class="breadcrumb-content">
-							<h2 class="breadcrumb__title m-0">{{a.proje_ismi}}</h2>
+							<h class="breadcrumb__title m-0">{{a.proje_ismi}}</h>
 						</div>	
 					</div>
 				</div>
@@ -386,6 +385,7 @@
                         <div class="homec-pdetails-tab">
                             <div class="tab-content" id="nav-tabContent">
                                 <!--  Property Details -->
+								{% if dil == "tr" %}
                                 <div class="tab-pane fade show active" id="homec-pd-tab1" role="tabpanel">
                                     <div class="homec-pdetails-tab__inner">
 										
@@ -394,6 +394,25 @@
                                         <!-- Homec Features -->
                                     </div>
                                 </div>
+								{% elif dil == "en" %}
+								<div class="tab-pane fade show active" id="homec-pd-tab1" role="tabpanel">
+                                    <div class="homec-pdetails-tab__inner">
+										
+                                        <p>{{a.Açıklama_en | safe}} </p> 
+                                       
+                                        <!-- Homec Features -->
+                                    </div>
+                                </div>
+								{% else %}
+								<div class="tab-pane fade show active" id="homec-pd-tab1" role="tabpanel">
+                                    <div class="homec-pdetails-tab__inner">
+										
+                                        <p>{{a.Açıklama_ar | safe}} </p> 
+                                       
+                                        <!-- Homec Features -->
+                                    </div>
+                                </div>
+								{% endif %}
                                 <!--  End Property Details -->
                                 <!--  Floor Plans -->
                                 <div class="tab-pane fade" id="homec-pd-tab2" role="tabpanel">
@@ -512,11 +531,25 @@
 													<p  class="homec-location-card__desc">{{a.Lokasyon}}</p>
 												</div>
 											</div>
+											{% if dil == "tr" %}
 											<div class="col-lg-6 col-md-6 col-12">
 												<div class="homec-location-card mg-top-20">
-													<p  class="homec-location-card__text">{{a.lokasyon_bilgileri}}</p>
+													<p  class="homec-location-card__text">{{a.lokasyon_bilgileri | safe}}</p>
 												</div>
 											</div>
+											{% elif dil == "en" %}
+											<div class="col-lg-6 col-md-6 col-12">
+												<div class="homec-location-card mg-top-20">
+													<p  class="homec-location-card__text">{{a.lokasyon_bilgileri_en | safe}}</p>
+												</div>
+											</div>
+											{% else %}
+											<div class="col-lg-6 col-md-6 col-12">
+												<div class="homec-location-card mg-top-20">
+													<p  class="homec-location-card__text">{{a.lokasyon_bilgileri_ar | safe}}</p>
+												</div>
+											</div>
+											{% endif %}
 										</div>
                                        <div class="homec-gmap-canvas mg-top-30">
                                             <iframe id="homec-gmap-canvas"  class="homec-gmap-iframe" src="{{a.map}}"></iframe>
@@ -532,24 +565,29 @@
                     <div class="col-lg-4 col-12">
                         <!-- Property Agent Card -->
                         <div class="homec-property-ag homec-property-ag--side homec-bg-cover" style="background-image: url('img/property-ag-bg.svg');">
-                            <h3 class="homec-property-ag__title">{% translate "İletişime Geçin" %}</h3>
+                            <h3 class="homec-property-ag__title">{% translate "Bilgi Alın" %}</h3>
                             <!-- Property Profile -->
                             <!-- End Property Profile -->
-                            <form action="#" class="homec-property-ag__form">
-                                <div class="form-group">
-                                    <input type="text" name="first_name" placeholder="isim">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" name="last_name" placeholder="Soyisim">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" name="fullname" placeholder="Email">
-                                </div>
-                                <div class="form-group">
-                                    <textarea name="Message" placeholder="Mesajınız" required="required"></textarea>
-                                </div>
-                                <button type="submit" class="homec-btn homec-btn__second homec-property-ag__button"><span>{% translate "Gönder" %}</span></button>
-                            </form>
+             
+							<form action="" class="homec-property-ag__form" method="POST">
+								{% csrf_token %}
+								<div class="form-group">
+									<input type="text" name="isimSoyisim" placeholder="İsim Soyisim">
+								</div>
+								<div class="form-group">
+									<input type="email" name="Email" placeholder="Email">
+								</div>
+								<div class="form-group">
+									<input type="text" name="Telefon" placeholder="telefon">
+								</div>
+								<div class="form-group">
+									<input type="text" name="Konu" placeholder="Konu">
+								</div>
+								<div class="form-group">
+									<textarea name="Mesaj" placeholder="Mesaj" required="required"></textarea>
+								</div>
+								<button value="Submit" class="homec-btn homec-btn__second homec-property-ag__button"><span>{% translate "Gönder" %}</span></button>
+							</form>
                         </div>
                         <!-- End Property Agent Card -->
                     </div>

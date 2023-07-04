@@ -493,12 +493,13 @@ html, body {
 														<li><a href="/{{dil}}{% url 'land:home' %}">{% translate "Ana Sayfa" %}</a>
 									
 														</li>
-														<li class="menu-item-has-children"><a href="/{{dil}}{% url 'land:properties' %}">{% translate "Projelerimiz" %}</a>
+													<li class="menu-item-has-children"><a>{% translate "Projelerimiz" %}</a>
 													
 															<ul class="sub-menu">
 																<li><a href="/{{dil}}/projelerimiz/durumu/devam ediyor">{% translate "Devam eden projeler" %}</a></li>
 																<li><a href="/{{dil}}/projelerimiz/durumu/planlanan">{% translate "Planlanan projeler" %}</a></li>
 																<li><a href="/{{dil}}/projelerimiz/durumu/tamamlandı">{% translate "Tamamlanan projeler" %}</a></li>
+																<li><a href="/{{dil}}/projelerimiz">{% translate "Tüm projeler" %}</a></li>
 																
 															</ul>
 														</li>
@@ -724,7 +725,7 @@ html, body {
 									<img src="{% static 'img/building.jpg' %}">
 								</div>
 								<div class="homec-experiences">
-									<h4 class="homec-experiences__title">{% translate "12 Yılı aşkın" %} <span>{% translate "Tecrübe" %}</span></h4>
+									<h4 class="homec-experiences__title">{% translate "10 Yılı aşkın" %} <span>{% translate "Tecrübe" %}</span></h4>
 								</div>
 							</div>
 						</div>
