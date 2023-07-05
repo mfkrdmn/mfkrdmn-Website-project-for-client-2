@@ -514,48 +514,47 @@ html, body {
 														<li ><a href="/{{dil}}{% url 'land:contact' %}">{% translate "İletişim" %}</a>
 														</li>
 														<li>
-															<select onchange="window.location.href=this.value;" class="selectpicker" data-width="fit"
-                  >
-                  {% get_current_language as LANGUAGE_CODE %}
-                  {% get_available_languages as LANGUAGES %}
-                  {% get_language_info_list for LANGUAGES as languages %}
-                    <!-- <option value="/{{ lang.code }}/">{{dil}}</option> -->
-                    {% if  dil == "tr" %}
-                  <option value="/{{ lang.code }}/{{link}}" style="color: white;">
-                    Türkçe
-                  </option>
+															<select onchange="window.location.href=this.value;"  data-width="fit">
+																
+																{% get_current_language as LANGUAGE_CODE %}
+																{% get_available_languages as LANGUAGES %}
+																{% get_language_info_list for LANGUAGES as languages %}
+																	<!-- <option value="/{{ lang.code }}/">{{dil}}</option> -->
+																	{% if  dil == "tr" %}
+																<option value="/{{ lang.code }}/{{link}}" style="color: rgb(0, 0, 0);">
+																	Türkçe
+																</option>
 
-                  {% elif dil == "en" %}
-                  <option value="/{{ lang.code }}/{{link}}" style="color: white;">
-                  English
-              </option>
-                  {% elif dil == "ar" %}
-                  <option value="/{{ lang.code }}/{{link}}" style="color: white;">
-                    عربي
-              </option>
-                  {% else %}
-                  <option value="/{{ lang.code }}/{{link}}" style="color: white;">
-                  Deutsch
-              </option>
-                  {% endif %}
-                  {% for lang in languages %}
-                  {% if lang.code == dil %}
-                      
-                  {% else %}
-                <option value="/{{ lang.code }}/{{link}}" style="color: white;">
+																{% elif dil == "en" %}
+																<option value="/{{ lang.code }}/{{link}}" >
+																English
+																</option>
+																{% elif dil == "ar" %}
+																<option value="/{{ lang.code }}/{{link}}" >
+																	عربي
+																</option>
+																{% else %}
+																<option value="/{{ lang.code }}/{{link}}" >
+																Deutsch
+																</option>
+																{% endif %}
+																{% for lang in languages %}
+																{% if lang.code == dil %}
+																	
+																{% else %}
+																<option value="/{{ lang.code }}/{{link}}" >
 
-                  <a class="dropdown-item" href="/{{ lang.code }}/{{link}}">
-                    
-                    {{ lang.name_local }}
-                    
-                    
-                  </a>
-                </option>
-              {% endif %}
+																<a class="dropdown-item" href="/{{ lang.code }}/{{link}}">
+																	
+																	{{ lang.name_local }}
+																	
+																</a>
+																</option>
+																{% endif %}
 
-                  {% endfor %}
+																{% endfor %}
 
-                </select>
+															</select>
 															
 														</li>
 												</ul>
