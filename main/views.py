@@ -137,7 +137,7 @@ def proje_durumuna_gore(request, status):
     except EmptyPage:
         # If page is out of range (e.g. 9999), deliver last page of results.
         project = paginator.page(paginator.num_pages)
-    link = "projelerimiz/"+str(status)
+    link = "projelerimiz/durumu/"+str(status)
     context = {
         "trans":trans,"dil":dil_bilgisi(),
         'durumuna_gore' : durumuna_gore,
