@@ -490,6 +490,7 @@
 								<div class="row">
 								
 									{% for a in project %}
+									{% if dil == "tr" %}
 									<div class="col-12 mg-top-30">
 										<!-- Single property-->
 										<div class="homec-property homec-property__list-style">
@@ -510,6 +511,49 @@
 										</div>
 										<!-- End Single property-->
 									</div>
+									{% elif dil == "en" %}
+									<div class="col-12 mg-top-30">
+										<!-- Single property-->
+										<div class="homec-property homec-property__list-style">
+											<!-- Property Head-->
+											<div class="homec-property__head">
+												<img src="{{a.image_ana_foto.url}}" alt="#">
+											</div>
+											<!-- Property Body-->
+											<div class="homec-property__body">
+												<div class="homec-property__topbar">
+													<span class="homec-property__salebadge">{{a.status_en}}</span>
+												</div>
+												<h3 class="homec-property__title"><a href="/{{dil}}{% url 'land:property_single' a.proje_ismi %}">{{a.proje_ismi_en}}</a></h3>
+												<div class="homec-property__text">
+													<img src="{% static 'img/location-icon.svg' %}" alt="#"><p>{{a.Lokasyon_kısa}}</p>
+												</div>
+											</div>
+										</div>
+										<!-- End Single property-->
+									</div>
+									{% else %}
+									<div class="col-12 mg-top-30">
+										<!-- Single property-->
+										<div class="homec-property homec-property__list-style">
+											<!-- Property Head-->
+											<div class="homec-property__head">
+												<img src="{{a.image_ana_foto.url}}" alt="#">
+											</div>
+											<!-- Property Body-->
+											<div class="homec-property__body">
+												<div class="homec-property__topbar">
+													<span class="homec-property__salebadge">{{a.status_ar}}</span>
+												</div>
+												<h3 class="homec-property__title"><a href="/{{dil}}{% url 'land:property_single' a.proje_ismi %}">{{a.proje_ismi_ar}}</a></h3>
+												<div class="homec-property__text">
+													<img src="{% static 'img/location-icon.svg' %}" alt="#"><p>{{a.Lokasyon_kısa}}</p>
+												</div>
+											</div>
+										</div>
+										<!-- End Single property-->
+									</div>
+									{% endif %}
 									{% endfor %}  
 								</div>
 							
