@@ -201,7 +201,7 @@
 				<div class="container">
 					<div class="row align-items-center">
 						<div class="col-12">
-							<div class="homec-header__inside">
+						<div class="homec-header__inside justify-content-center align-items-center">
 								<div class="homec-header__group">
 									<div class="homec-header__logo">
 										<a href="/{{dil}}{% url 'land:home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
@@ -511,8 +511,8 @@
 										<!-- Single property-->
 										<div class="homec-property homec-property__list-style">
 											<!-- Property Head-->
-											<div class="homec-property__head">
-												<img src="{{a.image_ana_foto.url}}" alt="#">
+											<div class="homec-property__head" style="height: 190px !important; width: 270px;">
+												<img src="{{a.image_ana_foto.url}}" alt="#" style="height: 190px; object-fit: cover;width: 270px; ">
 											</div>
 											<!-- Property Body-->
 											<div class="homec-property__body">
@@ -532,8 +532,8 @@
 										<!-- Single property-->
 										<div class="homec-property homec-property__list-style">
 											<!-- Property Head-->
-											<div class="homec-property__head">
-												<img src="{{a.image_ana_foto.url}}" alt="#">
+										<div class="homec-property__head" style="height: 190px !important; width: 270px;">
+												<img src="{{a.image_ana_foto.url}}" alt="#" style="height: 190px; object-fit: cover;width: 270px; ">
 											</div>
 											<!-- Property Body-->
 											<div class="homec-property__body">
@@ -553,8 +553,8 @@
 										<!-- Single property-->
 										<div class="homec-property homec-property__list-style">
 											<!-- Property Head-->
-											<div class="homec-property__head">
-												<img src="{{a.image_ana_foto.url}}" alt="#">
+										<div class="homec-property__head" style="height: 190px !important; width: 270px;">
+												<img src="{{a.image_ana_foto.url}}" alt="#" style="height: 190px; object-fit: cover;width: 270px; ">
 											</div>
 											<!-- Property Body-->
 											<div class="homec-property__body">
@@ -570,7 +570,6 @@
 										<!-- End Single property-->
 									</div>
 									{% endif %}
-									{% endfor %}  
 									{% endfor %}    
 								</div>
 								<ul class="pagination pagination-lg justify-content-center mt-5">

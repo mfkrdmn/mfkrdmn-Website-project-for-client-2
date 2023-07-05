@@ -95,6 +95,8 @@ Version:	1.0
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin: auto;
+	width: 83% !important;
 }
 .homec-header__group {
 	display: flex;
