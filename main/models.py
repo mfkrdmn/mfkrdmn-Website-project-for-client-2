@@ -65,3 +65,6 @@ class CustomerMessages(models.Model):
 
     def __str__(self) :
         return self.Konu
+    
+
+
