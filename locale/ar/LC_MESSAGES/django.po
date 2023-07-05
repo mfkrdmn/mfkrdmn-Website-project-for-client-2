@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-05 16:54+0300\n"
+"POT-Creation-Date: 2023-07-05 17:09+0300\n"
 "PO-Revision-Date: 2023-07-05 16:34+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,11 +42,11 @@ msgstr "Arabic"
 #: .\templates\contact.html:81 .\templates\contact.html:198
 #: .\templates\contact.html:498 .\templates\home.html:355
 #: .\templates\home.html:493 .\templates\home.html:1148
-#: .\templates\properties.html:212 .\templates\properties.html:634
+#: .\templates\properties.html:212 .\templates\properties.html:666
 #: .\templates\properties_by_city.html:214
-#: .\templates\properties_by_city.html:630
+#: .\templates\properties_by_city.html:662
 #: .\templates\properties_by_status.html:212
-#: .\templates\properties_by_status.html:647
+#: .\templates\properties_by_status.html:651
 #: .\templates\property-single.html:73 .\templates\property-single.html:187
 #: .\templates\property-single.html:683
 msgid "Ana Sayfa"
@@ -58,12 +58,12 @@ msgstr "الصفحة الرئيسية"
 #: .\templates\contact.html:201 .\templates\contact.html:499
 #: .\templates\home.html:496 .\templates\home.html:1149
 #: .\templates\properties.html:215 .\templates\properties.html:311
-#: .\templates\properties.html:635 .\templates\properties_by_city.html:217
+#: .\templates\properties.html:667 .\templates\properties_by_city.html:217
 #: .\templates\properties_by_city.html:309
-#: .\templates\properties_by_city.html:631
+#: .\templates\properties_by_city.html:663
 #: .\templates\properties_by_status.html:215
 #: .\templates\properties_by_status.html:310
-#: .\templates\properties_by_status.html:648
+#: .\templates\properties_by_status.html:652
 #: .\templates\property-single.html:190 .\templates\property-single.html:684
 msgid "Projelerimiz"
 msgstr "مشاريعنا"
@@ -112,11 +112,11 @@ msgstr "المشاريع المنجزة"
 #: .\templates\blog.html:530 .\templates\contact.html:213
 #: .\templates\contact.html:500 .\templates\home.html:509
 #: .\templates\home.html:738 .\templates\home.html:1150
-#: .\templates\properties.html:225 .\templates\properties.html:636
+#: .\templates\properties.html:225 .\templates\properties.html:668
 #: .\templates\properties_by_city.html:227
-#: .\templates\properties_by_city.html:632
+#: .\templates\properties_by_city.html:664
 #: .\templates\properties_by_status.html:226
-#: .\templates\properties_by_status.html:649
+#: .\templates\properties_by_status.html:653
 #: .\templates\property-single.html:200 .\templates\property-single.html:685
 msgid "Hakkımızda"
 msgstr "معلومات عنا"
@@ -126,11 +126,11 @@ msgstr "معلومات عنا"
 #: .\templates\blog.html:206 .\templates\blog.html:531
 #: .\templates\contact.html:216 .\templates\contact.html:501
 #: .\templates\home.html:512 .\templates\home.html:1151
-#: .\templates\properties.html:228 .\templates\properties.html:637
+#: .\templates\properties.html:228 .\templates\properties.html:669
 #: .\templates\properties_by_city.html:230
-#: .\templates\properties_by_city.html:633
+#: .\templates\properties_by_city.html:665
 #: .\templates\properties_by_status.html:229
-#: .\templates\properties_by_status.html:650
+#: .\templates\properties_by_status.html:654
 #: .\templates\property-single.html:203 .\templates\property-single.html:686
 msgid "Blog"
 msgstr "مدونة"
@@ -141,11 +141,11 @@ msgstr "مدونة"
 #: .\templates\contact.html:218 .\templates\contact.html:296
 #: .\templates\contact.html:352 .\templates\contact.html:502
 #: .\templates\home.html:514 .\templates\home.html:1152
-#: .\templates\properties.html:230 .\templates\properties.html:638
+#: .\templates\properties.html:230 .\templates\properties.html:670
 #: .\templates\properties_by_city.html:232
-#: .\templates\properties_by_city.html:634
+#: .\templates\properties_by_city.html:666
 #: .\templates\properties_by_status.html:231
-#: .\templates\properties_by_status.html:651
+#: .\templates\properties_by_status.html:655
 #: .\templates\property-single.html:205 .\templates\property-single.html:687
 msgid "İletişim"
 msgstr "تواصل"
@@ -264,9 +264,9 @@ msgstr "إسعاد المتعاملين"
 #: .\templates\about.html:466 .\templates\about.html:635
 #: .\templates\blog-single.html:556 .\templates\blog.html:541
 #: .\templates\contact.html:309 .\templates\contact.html:511
-#: .\templates\home.html:1161 .\templates\properties.html:647
-#: .\templates\properties_by_city.html:643
-#: .\templates\properties_by_status.html:660
+#: .\templates\home.html:1161 .\templates\properties.html:679
+#: .\templates\properties_by_city.html:675
+#: .\templates\properties_by_status.html:664
 #: .\templates\property-single.html:696
 msgid "İletişime Geç!"
 msgstr "اتصل بنا!"
@@ -290,26 +290,26 @@ msgstr "المبيعات والإيجارات"
 #: .\templates\about.html:546 .\templates\blog-single.html:467
 #: .\templates\blog.html:452 .\templates\contact.html:422
 #: .\templates\home.html:930 .\templates\home.html:1072
-#: .\templates\properties.html:558 .\templates\properties_by_city.html:554
-#: .\templates\properties_by_status.html:571
+#: .\templates\properties.html:590 .\templates\properties_by_city.html:586
+#: .\templates\properties_by_status.html:575
 #: .\templates\property-single.html:607
 msgid "Sizin İçin Buradayız"
 msgstr "نحن هنا من أجلك"
 
 #: .\templates\about.html:548 .\templates\blog-single.html:469
 #: .\templates\blog.html:454 .\templates\contact.html:424
-#: .\templates\home.html:1074 .\templates\properties.html:560
-#: .\templates\properties_by_city.html:556
-#: .\templates\properties_by_status.html:573
+#: .\templates\home.html:1074 .\templates\properties.html:592
+#: .\templates\properties_by_city.html:588
+#: .\templates\properties_by_status.html:577
 #: .\templates\property-single.html:609
 msgid "Bültenimize Kaydol"
 msgstr "اشترك في نشرتنا الإخبارية"
 
 #: .\templates\about.html:552 .\templates\blog-single.html:473
 #: .\templates\blog.html:458 .\templates\contact.html:428
-#: .\templates\home.html:1078 .\templates\properties.html:564
-#: .\templates\properties_by_city.html:560
-#: .\templates\properties_by_status.html:577
+#: .\templates\home.html:1078 .\templates\properties.html:596
+#: .\templates\properties_by_city.html:592
+#: .\templates\properties_by_status.html:581
 #: .\templates\property-single.html:613
 #, fuzzy
 #| msgid "Email"
@@ -318,27 +318,27 @@ msgstr "بريد إلكتروني"
 
 #: .\templates\about.html:553 .\templates\blog-single.html:474
 #: .\templates\blog.html:459 .\templates\contact.html:429
-#: .\templates\home.html:1079 .\templates\properties.html:565
-#: .\templates\properties_by_city.html:561
-#: .\templates\properties_by_status.html:578
+#: .\templates\home.html:1079 .\templates\properties.html:597
+#: .\templates\properties_by_city.html:593
+#: .\templates\properties_by_status.html:582
 #: .\templates\property-single.html:614
 msgid "Kaydol"
 msgstr "يسجل"
 
 #: .\templates\about.html:569 .\templates\blog-single.html:490
 #: .\templates\blog.html:475 .\templates\contact.html:445
-#: .\templates\home.html:1095 .\templates\properties.html:581
-#: .\templates\properties_by_city.html:577
-#: .\templates\properties_by_status.html:594
+#: .\templates\home.html:1095 .\templates\properties.html:613
+#: .\templates\properties_by_city.html:609
+#: .\templates\properties_by_status.html:598
 #: .\templates\property-single.html:630
 msgid "Gayrimenkulde Uzmanlık, Müşteri Memnuniyeti İlkesiyle"
 msgstr "خبرة في العقارات ، مع مبدأ إرضاء العميل"
 
 #: .\templates\about.html:620 .\templates\blog-single.html:541
 #: .\templates\blog.html:526 .\templates\contact.html:496
-#: .\templates\home.html:1146 .\templates\properties.html:632
-#: .\templates\properties_by_city.html:628
-#: .\templates\properties_by_status.html:645
+#: .\templates\home.html:1146 .\templates\properties.html:664
+#: .\templates\properties_by_city.html:660
+#: .\templates\properties_by_status.html:649
 #: .\templates\property-single.html:681
 msgid "Sayfalar"
 msgstr "الصفحات"
@@ -361,10 +361,14 @@ msgid "Sonraki Sayfa"
 msgstr "الصفحة التالية"
 
 #: .\templates\blog.html:565 .\templates\home.html:1185
-#: .\templates\properties_by_city.html:667
-#: .\templates\properties_by_status.html:684
+#: .\templates\properties_by_city.html:699
+#: .\templates\properties_by_status.html:688
 msgid "Başa Dön"
 msgstr "العودة إلى الأعلى"
+
+#: .\templates\contact.html:314
+msgid "İsim Soyisim"
+msgstr ""
 
 #: .\templates\contact.html:317 .\templates\contact.html:388
 msgid "Email"
