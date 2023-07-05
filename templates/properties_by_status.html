@@ -324,7 +324,7 @@
 						<div class="homec-property-bar">
 							<div class="homec-property-bar__single">
 								<form class="homec-form__form homec-form__form--bar">
-									<input type="email" name="Email" placeholder="Proje ara..." required="">
+									<input type="email" name="Email" placeholder="{% translate 'Proje ara...' %}" required="">
 									<button type="submit" class="homec-btn"><span>{% translate "Ara" %}</span></button>
 								</form>
 								<!-- Show Results -->
@@ -431,7 +431,7 @@
 										
 											<div class="homec-property__body">
 												<div class="homec-property__topbar">
-													<span class="homec-property__salebadge">{{a.status}}</span>
+													<span class="homec-property__salebadge">{{a.status_en}}</span>
 												</div>
 												<h3 class="homec-property__title"><a href="/{{dil}}{% url 'land:property_single' a.proje_ismi %}">{{a.proje_ismi_en}}</a></h3>
 												<div class="homec-property__text">
@@ -451,7 +451,7 @@
 										
 											<div class="homec-property__body">
 												<div class="homec-property__topbar">
-													<span class="homec-property__salebadge">{{a.status}}</span>
+													<span class="homec-property__salebadge">{{a.status_ar}}</span>
 												</div>
 												<h3 class="homec-property__title"><a href="/{{dil}}{% url 'land:property_single' a.proje_ismi %}">{{a.proje_ismi_ar}}</a></h3>
 												<div class="homec-property__text">
@@ -470,7 +470,7 @@
 										<div class="property-sidebar" style="background-color: transparent !important"> 
 											<div>
 												<div class="property-sidebar__filters">
-													<h4 style="color: #7166F0;">Görüşmeler Devam Ediyor...</h4>
+													<h4 style="color: #7166F0;">{% translate "Görüşmeler Devam Ediyor..." %}</h4>
 												</div>
 											</div>
 										</div>
@@ -574,7 +574,7 @@
 									
 								</div>
 								<form class="homec-form__form">
-									<input type="email" name="Email" placeholder="E-mailiniz" required="">
+									<input type="email" name="Email" placeholder="{% translate 'E-mailiniz' %}" required="">
 									<button type="submit" class="homec-btn"><span>{% translate "Kaydol" %}</span></button>
 								</form>
 							</div>

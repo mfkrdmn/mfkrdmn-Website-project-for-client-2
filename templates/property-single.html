@@ -76,9 +76,6 @@
 							<li ><a href="/{{dil}}{% url 'land:properties' %}">Projelerimiz</a>
 		
 							</li>
-							<li ><a href="https://landinvestgroup.sahibinden.com/" target="_blank">Porföylerimiz</a>
-							
-							</li>
 							<li ><a href="/{{dil}}{% url 'land:about' %}">Hakkımızda</a>
 						
 							</li>
@@ -192,9 +189,9 @@
 														</li>
 													<li class="menu-item-has-children"><a>{% translate "Projelerimiz" %}</a>
 															<ul class="sub-menu">
-																<li><a href="projelerimiz/durumu/devam ediyor">{% translate "Devam eden projeler" %} </a></li>
-																<li><a href="projelerimiz/durumu/planlanan">{% translate "Planlanan projeler" %}</a></li>
-																<li><a href="projelerimiz/durumu/tamamlandı">{% translate "Tamamlanan projeler" %}</a></li>
+																<li><a href="/{{dil}}/projelerimiz/durumu/devam ediyor">{% translate "Devam eden projeler" %} </a></li>
+																<li><a href="/{{dil}}/projelerimiz/durumu/planlanan">{% translate "Planlanan projeler" %}</a></li>
+																<li><a href="/{{dil}}/projelerimiz/durumu/tamamlandı">{% translate "Tamamlanan projeler" %}</a></li>
 																<li><a href="/{{dil}}/projelerimiz">{% translate "Tüm projeler" %}</a></li>
 															</ul>
 														</li>
@@ -301,7 +298,7 @@
 								<li>
 									<div class="homec-image-gallery">
 										
-										<img src="{{a.image_ana_foto.url}}" alt="#" style="height: 600px; width: 1800px;   object-fit: cover;">
+										<img src="{{a.image_ana_foto.url}}" alt="#" style="height: 600px; width: 1800px;   ">
 
 									</div>
 								</li>
@@ -313,7 +310,7 @@
 								<li>
 									<div class="homec-image-gallery">
 										
-										<img src="{{ ha.image_ana_foto.url }}" alt="#" style="height: 600px; width: 1800px;   object-fit: cover;">
+										<img src="{{ ha.image_ana_foto.url }}" alt="#" style="height: 600px; width: 1800px; ">
 										
 									</div>
 								</li>
@@ -330,7 +327,7 @@
 								<ul class="slides">
 									<li>
 										<div class="single-thumbs">
-											<img src="{{ a.image_ana_foto.url }}" alt="thumbs" style="height: 140px; width: 210px;  object-fit: cover;">
+											<img src="{{ a.image_ana_foto.url }}" alt="thumbs" style="height: 140px; width: 210px;">
 										</div>
 										
 									</li>
@@ -340,7 +337,7 @@
 											
 								<li>
 									<div class="single-thumbs">
-										<img src="{{ ha.image_ana_foto.url }}" alt="thumbs" style="height: 140px; width: 210px;  object-fit: cover;">
+										<img src="{{ ha.image_ana_foto.url }}" alt="thumbs" style="height: 140px; width: 210px;">
 									</div>
 									
 								</li>
@@ -613,7 +610,7 @@
 									
 								</div>
 								<form class="homec-form__form">
-									<input type="email" name="Email" placeholder="E-mailiniz" required="">
+									<input type="email" name="Email" placeholder="{% translate 'E-mailiniz' %}" required="">
 									<button type="submit" class="homec-btn"><span>{% translate "Kaydol" %}</span></button>
 								</form>
 							</div>

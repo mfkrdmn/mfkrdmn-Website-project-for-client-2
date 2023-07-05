@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-03 23:06+0300\n"
-"PO-Revision-Date: 2023-07-02 23:06+0000\n"
+"PO-Revision-Date: 2023-07-05 16:33+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -37,12 +37,12 @@ msgstr "arabic"
 
 #: .\templates\about.html:218 .\templates\about.html:618
 #: .\templates\blog-single.html:210 .\templates\blog-single.html:542
-#: .\templates\blog.html:76 .\templates\blog.html:190 .\templates\blog.html:527
-#: .\templates\contact.html:81 .\templates\contact.html:198
-#: .\templates\contact.html:496 .\templates\home.html:355
-#: .\templates\home.html:493 .\templates\home.html:1082
-#: .\templates\properties.html:212 .\templates\properties.html:633
-#: .\templates\properties_by_city.html:214
+#: .\templates\blog.html:76 .\templates\blog.html:190
+#: .\templates\blog.html:527 .\templates\contact.html:81
+#: .\templates\contact.html:198 .\templates\contact.html:496
+#: .\templates\home.html:355 .\templates\home.html:493
+#: .\templates\home.html:1082 .\templates\properties.html:212
+#: .\templates\properties.html:633 .\templates\properties_by_city.html:214
 #: .\templates\properties_by_city.html:629
 #: .\templates\properties_by_status.html:212
 #: .\templates\properties_by_status.html:631
@@ -65,7 +65,7 @@ msgstr "Home Page"
 #: .\templates\properties_by_status.html:632
 #: .\templates\property-single.html:193 .\templates\property-single.html:649
 msgid "Projelerimiz"
-msgstr "Project"
+msgstr "Projects"
 
 #: .\templates\about.html:223 .\templates\blog-single.html:215
 #: .\templates\blog.html:195 .\templates\contact.html:203
@@ -151,9 +151,9 @@ msgid ""
 "yatırımı yaparken kentlerin gelişen bölgelerini tespit edip bu bölgelerde "
 "yatırım yaptırmayı hedeflemiştir. Özelliklede imara açılmış yada yeni imara "
 "açılacak bölgelerde Şehir Plancılarıyla birlikte hareket ederek ve bu bilgi "
-"ve belgeleri de yatırımcılarıyla paylaşarak maximum kazanmayı sağlamaktayız. "
-"Özellikle gayrimenkul sektöründe önce GÜVEN sonra BELGE en son olarak BİLGİ "
-"paylaşmayı ilke edinmiş bir firmayız."
+"ve belgeleri de yatırımcılarıyla paylaşarak maximum kazanmayı sağlamaktayız."
+" Özellikle gayrimenkul sektöründe önce GÜVEN sonra BELGE en son olarak BİLGİ"
+" paylaşmayı ilke edinmiş bir firmayız."
 msgstr ""
 
 #: .\templates\about.html:331
@@ -198,8 +198,8 @@ msgstr ""
 
 #: .\templates\about.html:343
 msgid ""
-"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek "
-"kadar azdır."
+"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek"
+" kadar azdır."
 msgstr ""
 "Housing and business have a cost. The cost of land and land is almost "
 "negligible."
@@ -365,8 +365,8 @@ msgstr "MARMARA HOUSES HOUSING BUILDING COOPERATIVE"
 
 #: .\templates\home.html:596
 msgid ""
-"Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede, "
-"deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol "
+"Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede,"
+" deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol "
 "imzalamıştır."
 msgstr ""
 "Our cooperative signed a protocol for the purchase of a 16.106 m2 land in "
@@ -397,16 +397,16 @@ msgstr "Canal Istanbul Project"
 #: .\templates\home.html:628
 msgid ""
 "Kanal-İstanbul Projesi, İstanbul Avrupa Yakası'nın kuzeyinde Karadeniz'e "
-"kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer "
-"alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir "
-"alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde "
-"yer almaktadır."
+"kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer"
+" alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir "
+"alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde"
+" yer almaktadır."
 msgstr ""
 "Kanal-Istanbul Project is a real estate project located on the 3rd Bridge "
 "(Yavuz Sultan Selim Bridge) connection road, which has a coast to the Black "
 "Sea, in the north of the European Side of Istanbul. The project is located "
-"on a large area of ​​approximately 450,000 m² and is located in its neighbors "
-"Çatalca, Esenyurt and Başakşehir."
+"on a large area of ​​approximately 450,000 m² and is located in its "
+"neighbors Çatalca, Esenyurt and Başakşehir."
 
 #: .\templates\home.html:642
 msgid "Kanal Ankara Projesi"
@@ -418,7 +418,7 @@ msgstr "Check Out Our Projects"
 
 #: .\templates\home.html:727
 msgid "12 Yılı aşkın"
-msgstr "Over 12 years"
+msgstr "Over 10 years"
 
 #: .\templates\home.html:727
 msgid "Tecrübe"
@@ -437,8 +437,8 @@ msgid ""
 msgstr ""
 "As Land Invest Real Estate, we are a leading real estate company in the "
 "sector, with our expertise in real estate and our customer-oriented "
-"approach. Our mission is to exceed our clients' needs and expectations while "
-"providing quality real estate services."
+"approach. Our mission is to exceed our clients' needs and expectations while"
+" providing quality real estate services."
 
 #: .\templates\home.html:747
 msgid ""
@@ -447,8 +447,8 @@ msgid ""
 "geliştiriyoruz"
 msgstr ""
 "As Land Invest Real Estate, we are constantly improving ourselves to "
-"maintain our leadership in the sector and to provide the best service to our "
-"customers."
+"maintain our leadership in the sector and to provide the best service to our"
+" customers."
 
 #: .\templates\home.html:768
 msgid "4 Aşamada"
@@ -528,7 +528,8 @@ msgid ""
 "mülkler veya yatırım fırsatları gibi alanlarda uzmanlaşmışlardır."
 msgstr ""
 "Our real estate agents have different areas of expertise and specialize in "
-"areas such as residential, commercial properties or investment opportunities."
+"areas such as residential, commercial properties or investment "
+"opportunities."
 
 #: .\templates\home.html:914
 msgid "Sizden hizmet almanın güvencesi nedir?"

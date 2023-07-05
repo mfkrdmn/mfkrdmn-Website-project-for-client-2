@@ -42,23 +42,23 @@ def properties(request):
     projeler = Projeler.objects.all().order_by('-updated_at')
     isting_count = Projeler.objects.count()
     trans = translate(language='en')    
-    paginator = Paginator(projeler, 4) # Show 25 project per page
 
+    paginator = Paginator(projeler, 4) # Show 25 project per page
+    
     page = request.GET.get('page')
     try:
-        project = paginator.page(page)
+        projeler = paginator.page(page)
     except PageNotAnInteger:
         # If page is not an integer, deliver first page.
-        project = paginator.page(1)
+        projeler = paginator.page(1)
     except EmptyPage:
         # If page is out of range (e.g. 9999), deliver last page of results.
-        project = paginator.page(paginator.num_pages)
+        projeler = paginator.page(paginator.num_pages)
     link = "projelerimiz"
     context = {
         "trans":trans,"dil":dil_bilgisi(),
         'projeler' : projeler,
         'isting_count' : isting_count,
-        'project' : project,
         'link' : link
     }
 
@@ -81,7 +81,7 @@ def properties(request):
     return render(request, 'properties.html', context)
 
 def sehre_gore_projeler(request, sehir):
-    sehre_gore = Projeler.objects.filter(sehir=sehir)
+    sehre_gore = Projeler.objects.filter(sehir=sehir).order_by('-updated_at')
     sehir = sehir
     trans = translate(language='en')   
     paginator = Paginator(sehre_gore, 4) # Show 25 project per page
@@ -89,18 +89,18 @@ def sehre_gore_projeler(request, sehir):
     
     page = request.GET.get('page')
     try:
-        project = paginator.page(page)
+        sehre_gore = paginator.page(page)
     except PageNotAnInteger:
         # If page is not an integer, deliver first page.
-        project = paginator.page(1)
+        sehre_gore = paginator.page(1)
     except EmptyPage:
         # If page is out of range (e.g. 9999), deliver last page of results.
-        project = paginator.page(paginator.num_pages)
+        sehre_gore = paginator.page(paginator.num_pages)
     link = "projelerimiz/"+str(sehir)
     context = {
         "trans":trans,"dil":dil_bilgisi(),
         'sehre_gore' : sehre_gore,
-        'project' : project,
+        'project' : sehre_gore,
         'sehir' : sehir,
         'link' : link,
         'isting_count' : isting_count

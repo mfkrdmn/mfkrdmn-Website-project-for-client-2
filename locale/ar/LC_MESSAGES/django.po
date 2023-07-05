@@ -9,15 +9,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-03 23:06+0300\n"
-"PO-Revision-Date: 2023-07-02 22:49+0000\n"
+"PO-Revision-Date: 2023-07-05 16:34+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
 #: .\main\views.py:23
@@ -38,12 +37,12 @@ msgstr "Arabic"
 
 #: .\templates\about.html:218 .\templates\about.html:618
 #: .\templates\blog-single.html:210 .\templates\blog-single.html:542
-#: .\templates\blog.html:76 .\templates\blog.html:190 .\templates\blog.html:527
-#: .\templates\contact.html:81 .\templates\contact.html:198
-#: .\templates\contact.html:496 .\templates\home.html:355
-#: .\templates\home.html:493 .\templates\home.html:1082
-#: .\templates\properties.html:212 .\templates\properties.html:633
-#: .\templates\properties_by_city.html:214
+#: .\templates\blog.html:76 .\templates\blog.html:190
+#: .\templates\blog.html:527 .\templates\contact.html:81
+#: .\templates\contact.html:198 .\templates\contact.html:496
+#: .\templates\home.html:355 .\templates\home.html:493
+#: .\templates\home.html:1082 .\templates\properties.html:212
+#: .\templates\properties.html:633 .\templates\properties_by_city.html:214
 #: .\templates\properties_by_city.html:629
 #: .\templates\properties_by_status.html:212
 #: .\templates\properties_by_status.html:631
@@ -152,9 +151,9 @@ msgid ""
 "yatırımı yaparken kentlerin gelişen bölgelerini tespit edip bu bölgelerde "
 "yatırım yaptırmayı hedeflemiştir. Özelliklede imara açılmış yada yeni imara "
 "açılacak bölgelerde Şehir Plancılarıyla birlikte hareket ederek ve bu bilgi "
-"ve belgeleri de yatırımcılarıyla paylaşarak maximum kazanmayı sağlamaktayız. "
-"Özellikle gayrimenkul sektöründe önce GÜVEN sonra BELGE en son olarak BİLGİ "
-"paylaşmayı ilke edinmiş bir firmayız."
+"ve belgeleri de yatırımcılarıyla paylaşarak maximum kazanmayı sağlamaktayız."
+" Özellikle gayrimenkul sektöründe önce GÜVEN sonra BELGE en son olarak BİLGİ"
+" paylaşmayı ilke edinmiş bir firmayız."
 msgstr ""
 
 #: .\templates\about.html:331
@@ -199,8 +198,8 @@ msgstr ""
 
 #: .\templates\about.html:343
 msgid ""
-"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek "
-"kadar azdır."
+"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek"
+" kadar azdır."
 msgstr "السكن والعمل له تكلفة. تكلفة الأرض والأرض تكاد لا تذكر."
 
 #: .\templates\about.html:345
@@ -362,12 +361,13 @@ msgstr "مرمرة للبيوت السكنية التعاونية"
 
 #: .\templates\home.html:596
 msgid ""
-"Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede, "
-"deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol "
+"Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede,"
+" deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol "
 "imzalamıştır."
 msgstr ""
-"وقعت تعاونية لدينا بروتوكول لشراء أرض بمساحة 16.106 متر مربع في Arnavutköy ، "
-"اسطنبول ، على بعد 5.6 كم من مطار اسطنبول ، مع إطلالة على البحر وقناة اسطنبول."
+"وقعت تعاونية لدينا بروتوكول لشراء أرض بمساحة 16.106 متر مربع في Arnavutköy ،"
+" اسطنبول ، على بعد 5.6 كم من مطار اسطنبول ، مع إطلالة على البحر وقناة "
+"اسطنبول."
 
 #: .\templates\home.html:598 .\templates\home.html:614
 #: .\templates\home.html:630 .\templates\home.html:646
@@ -393,10 +393,10 @@ msgstr "مشروع قناة اسطنبول"
 #: .\templates\home.html:628
 msgid ""
 "Kanal-İstanbul Projesi, İstanbul Avrupa Yakası'nın kuzeyinde Karadeniz'e "
-"kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer "
-"alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir "
-"alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde "
-"yer almaktadır."
+"kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer"
+" alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir "
+"alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde"
+" yer almaktadır."
 msgstr ""
 "مشروع كانال-اسطنبول هو مشروع عقاري يقع على طريق اتصال الجسر الثالث (جسر "
 "يافوز سلطان سليم) والذي يمتد على ساحل البحر الأسود شمال الجانب الأوروبي من "
@@ -413,7 +413,7 @@ msgstr "تحقق من مشاريعنا"
 
 #: .\templates\home.html:727
 msgid "12 Yılı aşkın"
-msgstr "أكثر من 12 سنة"
+msgstr "أكثر من10 سنة"
 
 #: .\templates\home.html:727
 msgid "Tecrübe"
