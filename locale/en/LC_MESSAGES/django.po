@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-05 16:51+0300\n"
+"POT-Creation-Date: 2023-07-05 16:54+0300\n"
 "PO-Revision-Date: 2023-07-05 16:33+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -369,6 +369,24 @@ msgstr "Next page"
 msgid "Başa Dön"
 msgstr "Back to Top"
 
+#: .\templates\contact.html:317 .\templates\contact.html:388
+msgid "Email"
+msgstr "Email"
+
+#: .\templates\contact.html:320
+msgid "telefon"
+msgstr ""
+
+#: .\templates\contact.html:323
+#, fuzzy
+#| msgid "Konum"
+msgid "Konu"
+msgstr "Location"
+
+#: .\templates\contact.html:326
+msgid "Mesaj"
+msgstr ""
+
 #: .\templates\contact.html:328 .\templates\property-single.html:586
 msgid "Gönder"
 msgstr "Send"
@@ -376,10 +394,6 @@ msgstr "Send"
 #: .\templates\contact.html:366
 msgid "Konum"
 msgstr "Location"
-
-#: .\templates\contact.html:388
-msgid "Email"
-msgstr "Email"
 
 #: .\templates\home.html:594
 msgid "MARMARA EVLERİ KONUT YAPI KOOPERATİFİ"
