@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-07-03 23:06+0300\n"
+"POT-Creation-Date: 2023-07-05 16:51+0300\n"
 "PO-Revision-Date: 2023-07-05 16:34+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,7 +16,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
 #: .\main\views.py:23
@@ -35,35 +36,35 @@ msgstr "Turkish"
 msgid "arabic"
 msgstr "Arabic"
 
-#: .\templates\about.html:218 .\templates\about.html:618
-#: .\templates\blog-single.html:210 .\templates\blog-single.html:542
-#: .\templates\blog.html:76 .\templates\blog.html:190
-#: .\templates\blog.html:527 .\templates\contact.html:81
-#: .\templates\contact.html:198 .\templates\contact.html:496
-#: .\templates\home.html:355 .\templates\home.html:493
-#: .\templates\home.html:1082 .\templates\properties.html:212
-#: .\templates\properties.html:633 .\templates\properties_by_city.html:214
-#: .\templates\properties_by_city.html:629
+#: .\templates\about.html:218 .\templates\about.html:622
+#: .\templates\blog-single.html:210 .\templates\blog-single.html:543
+#: .\templates\blog.html:76 .\templates\blog.html:190 .\templates\blog.html:528
+#: .\templates\contact.html:81 .\templates\contact.html:198
+#: .\templates\contact.html:498 .\templates\home.html:355
+#: .\templates\home.html:493 .\templates\home.html:1148
+#: .\templates\properties.html:212 .\templates\properties.html:634
+#: .\templates\properties_by_city.html:214
+#: .\templates\properties_by_city.html:630
 #: .\templates\properties_by_status.html:212
-#: .\templates\properties_by_status.html:631
-#: .\templates\property-single.html:73 .\templates\property-single.html:190
-#: .\templates\property-single.html:648
+#: .\templates\properties_by_status.html:647
+#: .\templates\property-single.html:73 .\templates\property-single.html:187
+#: .\templates\property-single.html:683
 msgid "Ana Sayfa"
 msgstr "الصفحة الرئيسية"
 
-#: .\templates\about.html:221 .\templates\about.html:619
-#: .\templates\blog-single.html:213 .\templates\blog-single.html:543
-#: .\templates\blog.html:193 .\templates\blog.html:528
-#: .\templates\contact.html:201 .\templates\contact.html:497
-#: .\templates\home.html:496 .\templates\home.html:1083
-#: .\templates\properties.html:215 .\templates\properties.html:310
-#: .\templates\properties.html:634 .\templates\properties_by_city.html:217
-#: .\templates\properties_by_city.html:308
-#: .\templates\properties_by_city.html:630
+#: .\templates\about.html:221 .\templates\about.html:623
+#: .\templates\blog-single.html:213 .\templates\blog-single.html:544
+#: .\templates\blog.html:193 .\templates\blog.html:529
+#: .\templates\contact.html:201 .\templates\contact.html:499
+#: .\templates\home.html:496 .\templates\home.html:1149
+#: .\templates\properties.html:215 .\templates\properties.html:311
+#: .\templates\properties.html:635 .\templates\properties_by_city.html:217
+#: .\templates\properties_by_city.html:309
+#: .\templates\properties_by_city.html:631
 #: .\templates\properties_by_status.html:215
-#: .\templates\properties_by_status.html:311
-#: .\templates\properties_by_status.html:632
-#: .\templates\property-single.html:193 .\templates\property-single.html:649
+#: .\templates\properties_by_status.html:310
+#: .\templates\properties_by_status.html:648
+#: .\templates\property-single.html:190 .\templates\property-single.html:684
 msgid "Projelerimiz"
 msgstr "مشاريعنا"
 
@@ -72,7 +73,7 @@ msgstr "مشاريعنا"
 #: .\templates\home.html:499 .\templates\properties.html:217
 #: .\templates\properties_by_city.html:219
 #: .\templates\properties_by_status.html:218
-#: .\templates\property-single.html:195
+#: .\templates\property-single.html:192
 msgid "Devam eden projeler"
 msgstr "مشاريع جارية"
 
@@ -80,8 +81,8 @@ msgstr "مشاريع جارية"
 #: .\templates\blog.html:196 .\templates\contact.html:204
 #: .\templates\home.html:500 .\templates\properties.html:218
 #: .\templates\properties_by_city.html:220
-#: .\templates\properties_by_status.html:220
-#: .\templates\property-single.html:197
+#: .\templates\properties_by_status.html:219
+#: .\templates\property-single.html:193
 msgid "Planlanan projeler"
 msgstr "المشاريع المخطط لها"
 
@@ -89,106 +90,117 @@ msgstr "المشاريع المخطط لها"
 #: .\templates\blog.html:197 .\templates\contact.html:205
 #: .\templates\home.html:501 .\templates\properties.html:219
 #: .\templates\properties_by_city.html:221
-#: .\templates\properties_by_status.html:222
-#: .\templates\property-single.html:199
+#: .\templates\properties_by_status.html:220
+#: .\templates\property-single.html:194
 msgid "Tamamlanan projeler"
 msgstr "المشاريع المنجزة"
 
-#: .\templates\about.html:230 .\templates\about.html:312
-#: .\templates\about.html:620 .\templates\blog-single.html:222
-#: .\templates\blog-single.html:544 .\templates\blog.html:202
-#: .\templates\blog.html:529 .\templates\contact.html:211
-#: .\templates\contact.html:498 .\templates\home.html:508
-#: .\templates\home.html:738 .\templates\home.html:1084
-#: .\templates\properties.html:224 .\templates\properties.html:635
-#: .\templates\properties_by_city.html:226
-#: .\templates\properties_by_city.html:631
-#: .\templates\properties_by_status.html:227
-#: .\templates\properties_by_status.html:633
-#: .\templates\property-single.html:204 .\templates\property-single.html:650
+#: .\templates\about.html:226 .\templates\blog-single.html:218
+#: .\templates\blog.html:198 .\templates\contact.html:206
+#: .\templates\contact.html:207 .\templates\home.html:502
+#: .\templates\properties.html:220 .\templates\properties_by_city.html:222
+#: .\templates\properties_by_status.html:221
+#: .\templates\property-single.html:195
+#, fuzzy
+#| msgid "Tamamlanan projeler"
+msgid "Tüm projeler"
+msgstr "المشاريع المنجزة"
+
+#: .\templates\about.html:231 .\templates\about.html:313
+#: .\templates\about.html:624 .\templates\blog-single.html:223
+#: .\templates\blog-single.html:545 .\templates\blog.html:203
+#: .\templates\blog.html:530 .\templates\contact.html:213
+#: .\templates\contact.html:500 .\templates\home.html:509
+#: .\templates\home.html:738 .\templates\home.html:1150
+#: .\templates\properties.html:225 .\templates\properties.html:636
+#: .\templates\properties_by_city.html:227
+#: .\templates\properties_by_city.html:632
+#: .\templates\properties_by_status.html:226
+#: .\templates\properties_by_status.html:649
+#: .\templates\property-single.html:200 .\templates\property-single.html:685
 msgid "Hakkımızda"
 msgstr "معلومات عنا"
 
-#: .\templates\about.html:233 .\templates\about.html:621
-#: .\templates\blog-single.html:225 .\templates\blog-single.html:545
-#: .\templates\blog.html:205 .\templates\blog.html:530
-#: .\templates\contact.html:214 .\templates\contact.html:499
-#: .\templates\home.html:511 .\templates\home.html:1085
-#: .\templates\properties.html:227 .\templates\properties.html:636
-#: .\templates\properties_by_city.html:229
-#: .\templates\properties_by_city.html:632
-#: .\templates\properties_by_status.html:230
-#: .\templates\properties_by_status.html:634
-#: .\templates\property-single.html:207 .\templates\property-single.html:651
+#: .\templates\about.html:234 .\templates\about.html:625
+#: .\templates\blog-single.html:226 .\templates\blog-single.html:546
+#: .\templates\blog.html:206 .\templates\blog.html:531
+#: .\templates\contact.html:216 .\templates\contact.html:501
+#: .\templates\home.html:512 .\templates\home.html:1151
+#: .\templates\properties.html:228 .\templates\properties.html:637
+#: .\templates\properties_by_city.html:230
+#: .\templates\properties_by_city.html:633
+#: .\templates\properties_by_status.html:229
+#: .\templates\properties_by_status.html:650
+#: .\templates\property-single.html:203 .\templates\property-single.html:686
 msgid "Blog"
 msgstr "مدونة"
 
-#: .\templates\about.html:235 .\templates\about.html:622
-#: .\templates\blog-single.html:227 .\templates\blog-single.html:546
-#: .\templates\blog.html:207 .\templates\blog.html:531
-#: .\templates\contact.html:216 .\templates\contact.html:294
-#: .\templates\contact.html:350 .\templates\contact.html:500
-#: .\templates\home.html:513 .\templates\home.html:1086
-#: .\templates\properties.html:229 .\templates\properties.html:637
-#: .\templates\properties_by_city.html:231
-#: .\templates\properties_by_city.html:633
-#: .\templates\properties_by_status.html:232
-#: .\templates\properties_by_status.html:635
-#: .\templates\property-single.html:209 .\templates\property-single.html:652
+#: .\templates\about.html:236 .\templates\about.html:626
+#: .\templates\blog-single.html:228 .\templates\blog-single.html:547
+#: .\templates\blog.html:208 .\templates\blog.html:532
+#: .\templates\contact.html:218 .\templates\contact.html:296
+#: .\templates\contact.html:352 .\templates\contact.html:502
+#: .\templates\home.html:514 .\templates\home.html:1152
+#: .\templates\properties.html:230 .\templates\properties.html:638
+#: .\templates\properties_by_city.html:232
+#: .\templates\properties_by_city.html:634
+#: .\templates\properties_by_status.html:231
+#: .\templates\properties_by_status.html:651
+#: .\templates\property-single.html:205 .\templates\property-single.html:687
 msgid "İletişim"
 msgstr "تواصل"
 
-#: .\templates\about.html:327
+#: .\templates\about.html:328
 msgid ""
-"Parasını gayrimenkulde değerlendirmek isteyenlerin ilk tercihlerinden biri "
-"olan arsa yatırımı, en çok kazandıran yatırımlar arasında yer alıyor. Arsa "
-"yatırımından kazanç elde etmek için gayrimenkul uzmanlarının görüşü ise şu "
-"şekilde; Özellikle prim yapacak yerleri tespit edip burada doğru yatırımı "
-"yapanlar kazançlı çıkıyorlar. Dolayısıyla işin püf noktası doğru yere doğru "
-"zamanda, doğru yatırım yapmak. Bu yatırımlar orta ve uzun vadede "
-"yatırımcılara çok büyük getiri sağlayabiliyor. Başta Ankara olmak üzere "
-"Türkiye'nin her yerinden yatırım yaptırmayı ilke edinen LAND INVEST GROUP "
-"yatırımı yaparken kentlerin gelişen bölgelerini tespit edip bu bölgelerde "
-"yatırım yaptırmayı hedeflemiştir. Özelliklede imara açılmış yada yeni imara "
-"açılacak bölgelerde Şehir Plancılarıyla birlikte hareket ederek ve bu bilgi "
-"ve belgeleri de yatırımcılarıyla paylaşarak maximum kazanmayı sağlamaktayız."
-" Özellikle gayrimenkul sektöründe önce GÜVEN sonra BELGE en son olarak BİLGİ"
-" paylaşmayı ilke edinmiş bir firmayız."
-msgstr ""
-
-#: .\templates\about.html:331
-msgid ""
-"Öncelikle şunu belirtmeliyiz ki: Her arsa ve arazi iyi prim yapmaz. Uzun "
-"yıllar ortalamasına baktığımızda nüfusu artan ve artışını sürdürecek  "
-"yerleşim merkezlerinde alacağınız arsa ve araziler prim yapar. Bu yerleşim "
-"merkezlerinin gelişmekte olan lokasyonları ise daha fazla prim potansiyeli "
-"taşır.İkinci olarak: Teori derki, Uzun vadede arazi ve arsanın yapacağı "
-"prim, diğer tüm yatırım enstrümanlarını geçer Bizde diyoruz ki: Türkiye'de "
-"doğru lokasyonda, uygun fiyatla alınmış bir arazi, tüm yatırım "
-"enstrümanlarının toplamından uzun vadede daha fazla getiri sağlar."
+"Ülkemizdeki yapılı gayrimenkul fiyatlarındaki hızlı yükseliş halkın büyük "
+"bir kesimi için konut edinmeyi çok zor ve pahalı hale getirdi. Bu durum "
+"bizleri yeni alternatif çözüm yolları üretmeye zorladı.Bizler de ARSA "
+"YATIRIM ORTAKLIĞI İLE KONUT EDİNDİRME YÖNTEMİ'ni geliştirdik. Bu sayede "
+"insanlar arsa sahibi olup arsanın yüksek düzeyli getirisine veya yapım "
+"sürecini beklemeleri halinde konutlarına sahip olabiliyorlar."
 msgstr ""
 
 #: .\templates\about.html:332
+msgid "Yöntem çok basit;"
+msgstr ""
+
+#: .\templates\about.html:333
+msgid ""
+"1- Uzman ekibimizce detaylı araştırma yapılarak yatırıma uygun arsaları "
+"buluyoruz, konut getirili projeye dönüştürüyoruz(AR-GE)"
+msgstr ""
+
+#: .\templates\about.html:334
+msgid ""
+"2- Projemizi yatırımcılara/konut sahibi olmak isteyenlere sunuyoruz, arsa "
+"ortaklığı oluşturuyoruz (TALEP TOPLAMA) "
+msgstr ""
+
+#: .\templates\about.html:335
+msgid "3- kat karşılığı müteahhit firmalara veriyoruz (KAZANÇ)"
+msgstr ""
+
+#: .\templates\about.html:336
 msgid ""
 "Land Invest Group Ankara, İstanbul ve İzmir başta olmak üzere Türkiye nin "
-"gelişime açık muhtelif bölgelerinde kısa sürede yüksekkazanç sağlayacak  "
+"gelişime açık muhtelif bölgelerinde kısa sürede yüksek kazanç sağlayacak  "
 "arazileri, Şehir plancıları ile çalışarak imar projesi kapsamında "
 "yatırımcısı ile buluşturuyor."
 msgstr ""
 
-#: .\templates\about.html:334
+#: .\templates\about.html:338
 msgid "Peki arsa ve arazi neden çok prim yapar?"
 msgstr "فلماذا تحصل الأرض والأرض على مثل هذا القسط؟"
 
-#: .\templates\about.html:337
+#: .\templates\about.html:341
 msgid "Toplam nüfus arttığı için."
 msgstr "لأن إجمالي عدد السكان آخذ في الازدياد."
 
-#: .\templates\about.html:339
+#: .\templates\about.html:343
 msgid "Kentleşme oranı yükseldiği için."
 msgstr "مع ارتفاع معدل التحضر."
 
-#: .\templates\about.html:341
+#: .\templates\about.html:345
 msgid ""
 "Alternatif yatırım araçları uzmanlık gerektirmesine rağmen, arsa ve arazini "
 "neredeyse hiç uzmanlık gerektirmemesi"
@@ -196,20 +208,20 @@ msgstr ""
 "على الرغم من أن أدوات الاستثمار البديلة تتطلب خبرة ، فإن الأرض والأرض لا "
 "تتطلبان خبرة تقريبًا."
 
-#: .\templates\about.html:343
+#: .\templates\about.html:347
 msgid ""
-"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek"
-" kadar azdır."
+"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek "
+"kadar azdır."
 msgstr "السكن والعمل له تكلفة. تكلفة الأرض والأرض تكاد لا تذكر."
 
-#: .\templates\about.html:345
+#: .\templates\about.html:349
 msgid ""
 "Arsa ve arazi yatırımı sabır ister. İnsanlar çoğu zaman bu sabrı gösteremez."
 msgstr ""
 "يتطلب استثمار الأراضي والأراضي الصبر. لا يستطيع الناس في كثير من الأحيان "
 "إظهار هذا الصبر."
 
-#: .\templates\about.html:348
+#: .\templates\about.html:352
 msgid ""
 "Konut ve işyerinde beklenti bitmiştir. Arsa ve arazide ise beklenti "
 "yüksektir. Aldığınız arazinin, arsaya dönüşmesi, yani imar uygulaması bile "
@@ -218,140 +230,151 @@ msgstr ""
 "انتهى التوقع في السكن ومكان العمل. على الأرض والأرض ، التوقعات عالية. تحويل "
 "الأرض التي تشتريها إلى أرض ، أي أن تطبيق تقسيم المناطق هو توقع بحد ذاته."
 
-#: .\templates\about.html:372 .\templates\blog-single.html:373
+#: .\templates\about.html:376 .\templates\blog-single.html:374
 msgid "Son Yazılarımız"
 msgstr "مشاركاتنا الأخيرة"
 
-#: .\templates\about.html:391
+#: .\templates\about.html:395
 msgid "Bizi Takip Edin"
 msgstr "تابعنا"
 
-#: .\templates\about.html:449
+#: .\templates\about.html:453
 msgid "Başarılarımız"
 msgstr "إنجازاتنا"
 
-#: .\templates\about.html:451
+#: .\templates\about.html:455
 msgid ""
 "Müşteri memnuniyetini her zaman önceliğimiz olarak görüyor, şeffaflık ve "
 "güvenilirlik prensiplerine bağlı kalıyoruz."
 msgstr ""
 "نعتبر دائمًا رضا العملاء من أولوياتنا ، ونلتزم بمبادئ الشفافية والموثوقية."
 
-#: .\templates\about.html:456
+#: .\templates\about.html:460
 msgid "Uzman Ekip"
 msgstr "فريق الخبراء"
 
-#: .\templates\about.html:457
+#: .\templates\about.html:461
 msgid "Geniş Proje Portföyü"
 msgstr "محفظة مشاريع واسعة"
 
-#: .\templates\about.html:458
+#: .\templates\about.html:462
 msgid "Müşteri Memnuniyeti"
 msgstr "إسعاد المتعاملين"
 
-#: .\templates\about.html:462 .\templates\about.html:631
-#: .\templates\blog-single.html:555 .\templates\blog.html:540
-#: .\templates\contact.html:307 .\templates\contact.html:509
-#: .\templates\home.html:1095 .\templates\properties.html:646
-#: .\templates\properties_by_city.html:642
-#: .\templates\properties_by_status.html:644
-#: .\templates\property-single.html:661
+#: .\templates\about.html:466 .\templates\about.html:635
+#: .\templates\blog-single.html:556 .\templates\blog.html:541
+#: .\templates\contact.html:309 .\templates\contact.html:511
+#: .\templates\home.html:1161 .\templates\properties.html:647
+#: .\templates\properties_by_city.html:643
+#: .\templates\properties_by_status.html:660
+#: .\templates\property-single.html:696
 msgid "İletişime Geç!"
 msgstr "اتصل بنا!"
 
-#: .\templates\about.html:477
+#: .\templates\about.html:481
 msgid "Mutlu Müşteri"
 msgstr "عميل سعيد"
 
-#: .\templates\about.html:488
+#: .\templates\about.html:492
 msgid "Tamamlanmış Proje"
 msgstr "مشروع مكتمل"
 
-#: .\templates\about.html:500
+#: .\templates\about.html:504
 msgid "Yıllık tecrübe"
 msgstr "سنوات من الخبرة"
 
-#: .\templates\about.html:511
+#: .\templates\about.html:515
 msgid "Satış ve Kiralama"
 msgstr "المبيعات والإيجارات"
 
-#: .\templates\about.html:542 .\templates\blog-single.html:466
-#: .\templates\blog.html:451 .\templates\contact.html:420
-#: .\templates\home.html:930 .\templates\home.html:1006
-#: .\templates\properties.html:557 .\templates\properties_by_city.html:553
-#: .\templates\properties_by_status.html:555
-#: .\templates\property-single.html:572
+#: .\templates\about.html:546 .\templates\blog-single.html:467
+#: .\templates\blog.html:452 .\templates\contact.html:422
+#: .\templates\home.html:930 .\templates\home.html:1072
+#: .\templates\properties.html:558 .\templates\properties_by_city.html:554
+#: .\templates\properties_by_status.html:571
+#: .\templates\property-single.html:607
 msgid "Sizin İçin Buradayız"
 msgstr "نحن هنا من أجلك"
 
-#: .\templates\about.html:544 .\templates\blog-single.html:468
-#: .\templates\blog.html:453 .\templates\contact.html:422
-#: .\templates\home.html:1008 .\templates\properties.html:559
-#: .\templates\properties_by_city.html:555
-#: .\templates\properties_by_status.html:557
-#: .\templates\property-single.html:574
+#: .\templates\about.html:548 .\templates\blog-single.html:469
+#: .\templates\blog.html:454 .\templates\contact.html:424
+#: .\templates\home.html:1074 .\templates\properties.html:560
+#: .\templates\properties_by_city.html:556
+#: .\templates\properties_by_status.html:573
+#: .\templates\property-single.html:609
 msgid "Bültenimize Kaydol"
 msgstr "اشترك في نشرتنا الإخبارية"
 
-#: .\templates\about.html:549 .\templates\blog-single.html:473
-#: .\templates\blog.html:458 .\templates\contact.html:427
-#: .\templates\home.html:1013 .\templates\properties.html:564
+#: .\templates\about.html:552 .\templates\blog-single.html:473
+#: .\templates\blog.html:458 .\templates\contact.html:428
+#: .\templates\home.html:1078 .\templates\properties.html:564
 #: .\templates\properties_by_city.html:560
-#: .\templates\properties_by_status.html:562
-#: .\templates\property-single.html:579
+#: .\templates\properties_by_status.html:577
+#: .\templates\property-single.html:613
+#, fuzzy
+#| msgid "Email"
+msgid "E-mailiniz"
+msgstr "بريد إلكتروني"
+
+#: .\templates\about.html:553 .\templates\blog-single.html:474
+#: .\templates\blog.html:459 .\templates\contact.html:429
+#: .\templates\home.html:1079 .\templates\properties.html:565
+#: .\templates\properties_by_city.html:561
+#: .\templates\properties_by_status.html:578
+#: .\templates\property-single.html:614
 msgid "Kaydol"
 msgstr "يسجل"
 
-#: .\templates\about.html:565 .\templates\blog-single.html:489
-#: .\templates\blog.html:474 .\templates\contact.html:443
-#: .\templates\home.html:1029 .\templates\properties.html:580
-#: .\templates\properties_by_city.html:576
-#: .\templates\properties_by_status.html:578
-#: .\templates\property-single.html:595
+#: .\templates\about.html:569 .\templates\blog-single.html:490
+#: .\templates\blog.html:475 .\templates\contact.html:445
+#: .\templates\home.html:1095 .\templates\properties.html:581
+#: .\templates\properties_by_city.html:577
+#: .\templates\properties_by_status.html:594
+#: .\templates\property-single.html:630
 msgid "Gayrimenkulde Uzmanlık, Müşteri Memnuniyeti İlkesiyle"
 msgstr "خبرة في العقارات ، مع مبدأ إرضاء العميل"
 
-#: .\templates\about.html:616 .\templates\blog-single.html:540
-#: .\templates\blog.html:525 .\templates\contact.html:494
-#: .\templates\home.html:1080 .\templates\properties.html:631
-#: .\templates\properties_by_city.html:627
-#: .\templates\properties_by_status.html:629
-#: .\templates\property-single.html:646
+#: .\templates\about.html:620 .\templates\blog-single.html:541
+#: .\templates\blog.html:526 .\templates\contact.html:496
+#: .\templates\home.html:1146 .\templates\properties.html:632
+#: .\templates\properties_by_city.html:628
+#: .\templates\properties_by_status.html:645
+#: .\templates\property-single.html:681
 msgid "Sayfalar"
 msgstr "الصفحات"
 
-#: .\templates\blog-single.html:297 .\templates\blog.html:283
+#: .\templates\blog-single.html:298 .\templates\blog.html:284
 msgid "Blog Yazılarımız"
 msgstr "منشورات المدونة الخاصة بنا"
 
-#: .\templates\blog.html:318 .\templates\blog.html:351
-#: .\templates\blog.html:384
+#: .\templates\blog.html:319 .\templates\blog.html:352
+#: .\templates\blog.html:385
 msgid "Devamını Oku"
 msgstr "اقرأ أكثر"
 
-#: .\templates\blog.html:404
+#: .\templates\blog.html:405
 msgid "Önceki Sayfa"
 msgstr "الصفحة السابقة"
 
-#: .\templates\blog.html:431
+#: .\templates\blog.html:432
 msgid "Sonraki Sayfa"
 msgstr "الصفحة التالية"
 
-#: .\templates\blog.html:564 .\templates\home.html:1119
-#: .\templates\properties_by_city.html:666
-#: .\templates\properties_by_status.html:668
+#: .\templates\blog.html:565 .\templates\home.html:1185
+#: .\templates\properties_by_city.html:667
+#: .\templates\properties_by_status.html:684
 msgid "Başa Dön"
 msgstr "العودة إلى الأعلى"
 
-#: .\templates\contact.html:326
-msgid "Bize Yazın!"
-msgstr "اتصل بنا!"
+#: .\templates\contact.html:328 .\templates\property-single.html:586
+msgid "Gönder"
+msgstr "يرسل"
 
-#: .\templates\contact.html:364
+#: .\templates\contact.html:366
 msgid "Konum"
 msgstr "موقع"
 
-#: .\templates\contact.html:386
+#: .\templates\contact.html:388
 msgid "Email"
 msgstr "بريد إلكتروني"
 
@@ -361,13 +384,12 @@ msgstr "مرمرة للبيوت السكنية التعاونية"
 
 #: .\templates\home.html:596
 msgid ""
-"Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede,"
-" deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol "
+"Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede, "
+"deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol "
 "imzalamıştır."
 msgstr ""
-"وقعت تعاونية لدينا بروتوكول لشراء أرض بمساحة 16.106 متر مربع في Arnavutköy ،"
-" اسطنبول ، على بعد 5.6 كم من مطار اسطنبول ، مع إطلالة على البحر وقناة "
-"اسطنبول."
+"وقعت تعاونية لدينا بروتوكول لشراء أرض بمساحة 16.106 متر مربع في Arnavutköy ، "
+"اسطنبول ، على بعد 5.6 كم من مطار اسطنبول ، مع إطلالة على البحر وقناة اسطنبول."
 
 #: .\templates\home.html:598 .\templates\home.html:614
 #: .\templates\home.html:630 .\templates\home.html:646
@@ -393,10 +415,10 @@ msgstr "مشروع قناة اسطنبول"
 #: .\templates\home.html:628
 msgid ""
 "Kanal-İstanbul Projesi, İstanbul Avrupa Yakası'nın kuzeyinde Karadeniz'e "
-"kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer"
-" alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir "
-"alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde"
-" yer almaktadır."
+"kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer "
+"alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir "
+"alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde "
+"yer almaktadır."
 msgstr ""
 "مشروع كانال-اسطنبول هو مشروع عقاري يقع على طريق اتصال الجسر الثالث (جسر "
 "يافوز سلطان سليم) والذي يمتد على ساحل البحر الأسود شمال الجانب الأوروبي من "
@@ -539,79 +561,90 @@ msgstr ""
 msgid "Son yazılarımız"
 msgstr "أحدث منشوراتنا"
 
-#: .\templates\properties.html:365 .\templates\properties_by_city.html:363
-#: .\templates\properties_by_status.html:366
+#: .\templates\properties.html:328 .\templates\properties_by_city.html:326
+#: .\templates\properties_by_status.html:327
+msgid "Proje ara..."
+msgstr ""
+
+#: .\templates\properties.html:366 .\templates\properties_by_city.html:364
+#: .\templates\properties_by_status.html:365
 msgid "Ülke"
 msgstr "دولة"
 
-#: .\templates\properties.html:377 .\templates\properties_by_city.html:375
-#: .\templates\properties_by_status.html:378
+#: .\templates\properties.html:378 .\templates\properties_by_city.html:376
+#: .\templates\properties_by_status.html:377
 msgid "Şehir"
 msgstr "مدينة"
 
-#: .\templates\properties_by_city.html:308
+#: .\templates\properties_by_city.html:309
 msgid "aa"
 msgstr ""
 
-#: .\templates\properties_by_city.html:326
-#: .\templates\properties_by_status.html:329
+#: .\templates\properties_by_city.html:327
+#: .\templates\properties_by_status.html:328
 msgid "Ara"
 msgstr "اتصلي"
 
-#: .\templates\properties_by_city.html:330
-#: .\templates\properties_by_status.html:333
+#: .\templates\properties_by_city.html:331
+#: .\templates\properties_by_status.html:332
 msgid "Proje"
 msgstr "مشروع"
 
-#: .\templates\property-single.html:374
+#: .\templates\properties_by_status.html:473
+msgid "Görüşmeler Devam Ediyor..."
+msgstr ""
+
+#: .\templates\property-single.html:370
 msgid "Proje Detayları"
 msgstr "تفاصيل المشروع"
 
-#: .\templates\property-single.html:376
+#: .\templates\property-single.html:372
 msgid "Proje Planı"
 msgstr "خطة المشروع"
 
-#: .\templates\property-single.html:379
+#: .\templates\property-single.html:375
 msgid "Proje Videosu"
 msgstr "فيديو المشروع"
 
-#: .\templates\property-single.html:382
+#: .\templates\property-single.html:378
 msgid "Proje Lokasyonu"
 msgstr "موقع المشروع"
 
-#: .\templates\property-single.html:405
+#: .\templates\property-single.html:421
 msgid "Plan1"
 msgstr "خطة 1"
 
-#: .\templates\property-single.html:413 .\templates\property-single.html:430
-#: .\templates\property-single.html:447 .\templates\property-single.html:464
+#: .\templates\property-single.html:429 .\templates\property-single.html:446
+#: .\templates\property-single.html:463 .\templates\property-single.html:480
 msgid "Plan İçeriği"
 msgstr "محتوى الخطة"
 
-#: .\templates\property-single.html:422
+#: .\templates\property-single.html:438
 msgid "Plan2"
 msgstr "خطة 2"
 
-#: .\templates\property-single.html:439
+#: .\templates\property-single.html:455
 msgid "Plan3"
 msgstr "خطة 3"
 
-#: .\templates\property-single.html:456
+#: .\templates\property-single.html:472
 msgid "Plan4"
 msgstr "خطة 4"
 
-#: .\templates\property-single.html:488
+#: .\templates\property-single.html:504
 msgid "Videoyu Oynat"
 msgstr "شغل الفيديو"
 
-#: .\templates\property-single.html:511
+#: .\templates\property-single.html:527
 msgid "Adres"
 msgstr "عنوان"
 
-#: .\templates\property-single.html:535
-msgid "İletişime Geçin"
-msgstr "اتصل بنا"
+#: .\templates\property-single.html:565
+msgid "Bilgi Alın"
+msgstr ""
 
-#: .\templates\property-single.html:551
-msgid "Gönder"
-msgstr "يرسل"
+#~ msgid "Bize Yazın!"
+#~ msgstr "اتصل بنا!"
+
+#~ msgid "İletişime Geçin"
+#~ msgstr "اتصل بنا"
