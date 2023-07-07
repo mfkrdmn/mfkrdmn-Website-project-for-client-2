@@ -80,7 +80,7 @@ def properties(request):
     return render(request, 'properties.html', context)
 
 def sehre_gore_projeler(request, sehir):
-    sehre_gore = Projeler.objects.filter(sehir=sehir).order_by('-updated_at')
+    sehre_gore = Projeler.objects.filter(sehir=sehir).order_by('-id')
     sehir = sehir
     trans = translate(language='en')   
     paginator = Paginator(sehre_gore, 4) # Show 25 project per page
@@ -120,7 +120,7 @@ def sehre_gore_projeler(request, sehir):
     return render(request, 'properties_by_city.html', context)
 
 def proje_durumuna_gore(request, status):
-    durumuna_gore = Projeler.objects.filter(status=status)
+    durumuna_gore = Projeler.objects.filter(status=status).order_by('-id')
     projeler = Projeler.objects.all()
     isting_count = durumuna_gore.count()
     status = status
