@@ -321,14 +321,14 @@
 					<div class="col-12">
 						<!-- Proeprty Bar -->
 						<div class="homec-property-bar">
-							<div class="homec-property-bar__single">
+							<div class="homec-property-bar__single" id="searchbarprojects">
 								<form method="get" action="/{{dil}}{% url 'land:properties' %}" class="homec-form__form homec-form__form--bar">
-									<input type="text" name="key" placeholder="{% translate 'Proje ara...' %}">
-									<button type="submit" class="homec-btn"><span>{% translate "Ara" %}</span></button>
+									<input type="text" name="key" placeholder="{% translate 'Proje ara...' %}" >
+									<button type="submit" class="homec-btn" id="searchbtn"><span>Ara</span></button>
 								</form>
 								<!-- Show Results -->
 								<div class="hoemc-showing-results">
-									<p class="hoemc-showing-results__text"><span>{{isting_count}}</span> {% translate "Proje" %}</p>
+									<p class="hoemc-showing-results__text"><span>{{isting_count}}</span> proje</p>
 								</div>
 								<!-- End Show Results -->
 							</div>
@@ -364,7 +364,7 @@
 									<h4 class="property-sidebar__title">{% translate "Ülke" %}</h4>
 									<div class="form-group">
 										<select class="property-sidebar__group homec-border">
-											<option data-display="Bangladesh">Türkiye</option>
+											<option data-display="Türkiye">Türkiye</option>
 										</select>
 									</div>
 								</div>

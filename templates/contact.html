@@ -47,14 +47,24 @@
 		
 	</head>
 
-	<style>
-			.breadcrumbs__content{
-				background-image:url("{% static 'img/bread-overlay.jpg' %}");
-			}
-			.homec-contact-form{
-				background-image:url("{% static 'img/contact-bg.jpg' %}");
-			}
-	</style>
+<style>
+
+	.breadcrumbs__content{
+		background-image:url("{% static 'img/bread-overlay.jpg' %}");
+	}
+
+
+
+  
+  @media only screen and (min-width: 990px) {
+	/* For desktop: */
+	.homec-contact-form {background-image:url("{% static 'img/contact-bg.jpg' %}")};
+  
+  }
+
+
+
+</style>
 
 	<body>
 
