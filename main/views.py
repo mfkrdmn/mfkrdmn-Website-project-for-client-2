@@ -39,7 +39,7 @@ def home(request):
 
 
 def properties(request):
-    projeler = Projeler.objects.all().order_by('-updated_at')
+    projeler = Projeler.objects.all().order_by('-id')
     isting_count = Projeler.objects.count()
     trans = translate(language='en')    
 
@@ -70,7 +70,6 @@ def properties(request):
         if key:
             key_upper = str(key).capitalize().replace("I","İ")
             projects_searched = Projeler.objects.filter(proje_ismi__icontains=key_upper)
-            print(projects_searched,key_upper)
 
             context["project"] = projects_searched
         else:
