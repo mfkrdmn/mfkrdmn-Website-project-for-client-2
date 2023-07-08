@@ -70,8 +70,9 @@ def properties(request):
         if key:
             key_upper = str(key).capitalize().replace("I","İ")
             projects_searched = Projeler.objects.filter(proje_ismi__icontains=key_upper)
-
+            isting_count = Projeler.objects.filter(proje_ismi__icontains=key_upper).count()
             context["project"] = projects_searched
+            context['isting_count'] = isting_count
         else:
             context["project"] = projeler  # Tüm içeriği göster
     else:
