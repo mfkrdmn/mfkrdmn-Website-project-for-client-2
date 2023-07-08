@@ -65,27 +65,30 @@
 					<!-- offcanvas-logo-start -->
 					 <div class="offcanvas-logo">
 						<div class="homec-header__logo">
-					<a href="/{{dil}}{% url 'land:home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
+							<a href="/{{dil}}{% url 'land:home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
 						</div>
 					</div>
 					<!-- offcanvas-logo-end -->
 					<!-- offcanvas-menu start -->
-					<nav id="offcanvas-menu" class="offcanvas-menu">
+			<nav id="offcanvas-menu" class="offcanvas-menu">
 						<!-- Main Menu -->
 						<ul class="nav-menu menu navigation list-none">
-								<li><a href="/{{dil}}{% url 'land:home' %}">{% translate "Ana Sayfa" %}</a>
-		
+							<li><a href="/{{dil}}{% url 'land:home' %}">{% translate "Ana Sayfa" %}</a>
 							</li>
-							<li ><a href="/{{dil}}{% url 'land:properties' %}">Projelerimiz</a>
-		
+							<li ><a >{% translate "Projelerimiz" %}</a>
+								<ul class="sub-menu">
+									<li><a href="/{{dil}}/projelerimiz/durumu/devam ediyor">{% translate "Devam eden projeler" %}</a></li>
+									<li><a href="/{{dil}}/projelerimiz/durumu/planlanan">{% translate "Planlanan projeler" %}</a></li>
+									<li><a href="/{{dil}}/projelerimiz/durumu/tamamlandı">{% translate "Tamamlanan projeler" %}</a></li>
+									<li><a href="/{{dil}}/projelerimiz">{% translate "Tüm projeler" %}</a></li>
+								</ul>
 							</li>
-							<li ><a href="/{{dil}}{% url 'land:about' %}">Hakkımızda</a>
-						
+							<li ><a href="/{{dil}}{% url 'land:about' %}">{% translate "Hakkımızda" %}</a>
+													
 							</li>
-							<li ><a href="/{{dil}}{% url 'land:blog' %}">Blog</a>
+							<li ><a href="/{{dil}}{% url 'land:blog' %}">{% translate "Blog" %}</a>
 							</li>
-							<li ><a href="/{{dil}}{% url 'land:contact' %}">İletişim</a>
-							</li>
+							<li ><a href="/{{dil}}{% url 'land:contact' %}">{% translate "İletişim" %}</a>
 						</ul>
 						<!-- End Main Menu -->
 					</nav>
@@ -253,18 +256,19 @@
 															
 														</li>
 												</ul>
-												<!-- End Main Menu -->
-											</div>
-										</div>
-									</div>
+									<!-- End Main Menu -->
 								</div>
-							
 							</div>
 						</div>
 					</div>
+					<button type="button" class="offcanvas-toggler" data-bs-toggle="modal" data-bs-target="#offcanvas-modal"><span class="line"></span><span class="line"></span><span class="line"></span>
+					</button>
 				</div>
 			</div>
-		</header>
+		</div>
+	</div>
+</div>
+</header>
 		<!-- End Header -->
 	<!-- side buttons  Hero -->
 	<div id="mySidenav" class="sidenav">

@@ -52,7 +52,7 @@
 	<body>
 
 		<!-- Mobile Menu Modal -->
-		<div class="modal offcanvas-modal fade" id="offcanvas-modal">
+	<div class="modal offcanvas-modal fade" id="offcanvas-modal">
 			<div class="modal-dialog offcanvas-dialog">
 				<div class="modal-content">
 					<div class="modal-header offcanvas-header">
@@ -61,51 +61,30 @@
 					<!-- offcanvas-logo-start -->
 					 <div class="offcanvas-logo">
 						<div class="homec-header__logo">
-					<a href="/{{dil}}{% url 'land:home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
+							<a href="/{{dil}}{% url 'land:home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
 						</div>
 					</div>
 					<!-- offcanvas-logo-end -->
 					<!-- offcanvas-menu start -->
-					<nav id="offcanvas-menu" class="offcanvas-menu">
+			<nav id="offcanvas-menu" class="offcanvas-menu">
 						<!-- Main Menu -->
 						<ul class="nav-menu menu navigation list-none">
-							<li><a href="#">Ana Sayfa</a>
+							<li><a href="/{{dil}}{% url 'land:home' %}">{% translate "Ana Sayfa" %}</a>
 							</li>
-							<li ><a href="#">Properties</a>
+							<li ><a >{% translate "Projelerimiz" %}</a>
 								<ul class="sub-menu">
-									<li><a href="property-grid.html">Properties</a></li>
-									<li><a href="property-single.html">Property Single</a></li>
-									<li><a href="add-property.html">Add Property</a></li>
-									<li><a href="dashboard.html">Dashboard</a></li>
-									<li><a href="submit-property.html">Submit Property</a></li>
-									<li><a href="edit-property.html">Edit Property</a></li>
-
+									<li><a href="/{{dil}}/projelerimiz/durumu/devam ediyor">{% translate "Devam eden projeler" %}</a></li>
+									<li><a href="/{{dil}}/projelerimiz/durumu/planlanan">{% translate "Planlanan projeler" %}</a></li>
+									<li><a href="/{{dil}}/projelerimiz/durumu/tamamlandı">{% translate "Tamamlanan projeler" %}</a></li>
+									<li><a href="/{{dil}}/projelerimiz">{% translate "Tüm projeler" %}</a></li>
 								</ul>
 							</li>
-							<li ><a href="#">Pages</a>
-								<ul class="sub-menu">
-									<li><a href="about.html">About Us</a></li>
-									<li><a href="pricing.html">Pricing</a></li>
-									<li><a href="payment-method.html">Payment Method</a></li>
-									<li><a href="faq.html">Faq's</a></li>
-									<li><a href="login.html">Login</a></li>
-									<li><a href="signup.html">Signup</a></li>
-									<li><a href="404.html">Error Page</a></li>
-								</ul>
+							<li ><a href="/{{dil}}{% url 'land:about' %}">{% translate "Hakkımızda" %}</a>
+													
 							</li>
-							<li ><a href="#">Agents</a>
-								<ul class="sub-menu">
-									<li><a href="our-agent.html">Our Agent</a></li>
-									<li><a href="agent-detail.html">Agent Details</a></li>
-								</ul>
+							<li ><a href="/{{dil}}{% url 'land:blog' %}">{% translate "Blog" %}</a>
 							</li>
-							<li ><a href="#">News</a>
-								<ul class="sub-menu">
-									<li><a href="blog.html">News</a></li>
-									<li><a href="blog-single.html">News Single</a></li>
-								</ul>
-							</li>
-							<li><a href="contact-us.html">Contact</a></li>
+							<li ><a href="/{{dil}}{% url 'land:contact' %}">{% translate "İletişim" %}</a>
 						</ul>
 						<!-- End Main Menu -->
 					</nav>
@@ -278,7 +257,8 @@
 										</div>
 									</div>
 								</div>
-						
+								<button type="button" class="offcanvas-toggler" data-bs-toggle="modal" data-bs-target="#offcanvas-modal"><span class="line"></span><span class="line"></span><span class="line"></span>
+								</button>
 							</div>
 						</div>
 					</div>

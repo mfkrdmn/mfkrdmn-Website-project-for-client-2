@@ -73,6 +73,18 @@ def properties(request):
             isting_count = Projeler.objects.filter(proje_ismi__icontains=key_upper).count()
             context["project"] = projects_searched
             context['isting_count'] = isting_count
+            paginator = Paginator(projects_searched, 4) # Show 25 project per page
+    
+            page = request.GET.get('page')
+            try:
+                projeler = paginator.page(page)
+            except PageNotAnInteger:
+                # If page is not an integer, deliver first page.
+                projeler = paginator.page(1)
+            except EmptyPage:
+                # If page is out of range (e.g. 9999), deliver last page of results.
+                projeler = paginator.page(paginator.num_pages)
+            context ['projeler'] =projeler
         else:
             context["project"] = projeler  # Tüm içeriği göster
     else:
