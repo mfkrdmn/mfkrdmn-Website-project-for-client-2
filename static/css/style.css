@@ -7637,3 +7637,22 @@ div.ck-editor.ck-rounded-corners {
  */
 
 
+@media only screen and (min-width: 100px) {
+	/* For phones: */
+	#sliderhtwo {font-size: 22px;};
+  
+  }
+  
+  @media only screen and (min-width: 600px) {
+	/* For tablets: */
+	#sliderhtwo {font-size: 28px;};
+  
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	/* For desktop: */
+	#sliderhtwo {font-size: 44px;};
+  
+  }
+
+
