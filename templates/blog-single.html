@@ -52,7 +52,7 @@
 	<body>
 
 		<!-- Mobile Menu Modal -->
-	<div class="modal offcanvas-modal fade" id="offcanvas-modal">
+		<div class="modal offcanvas-modal fade" id="offcanvas-modal">
 			<div class="modal-dialog offcanvas-dialog">
 				<div class="modal-content">
 					<div class="modal-header offcanvas-header">
@@ -66,12 +66,12 @@
 					</div>
 					<!-- offcanvas-logo-end -->
 					<!-- offcanvas-menu start -->
-			<nav id="offcanvas-menu" class="offcanvas-menu">
+					<nav id="offcanvas-menu" class="offcanvas-menu">
 						<!-- Main Menu -->
 						<ul class="nav-menu menu navigation list-none">
 							<li><a href="/{{dil}}{% url 'land:home' %}">{% translate "Ana Sayfa" %}</a>
 							</li>
-							<li ><a >{% translate "Projelerimiz" %}</a>
+							<li ><a >{% translate "Projelerimiz" %}<i class="fa-solid fa-chevron-down"></i></a>
 								<ul class="sub-menu">
 									<li><a href="/{{dil}}/projelerimiz/durumu/devam ediyor">{% translate "Devam eden projeler" %}</a></li>
 									<li><a href="/{{dil}}/projelerimiz/durumu/planlanan">{% translate "Planlanan projeler" %}</a></li>
@@ -84,7 +84,43 @@
 							</li>
 							<li ><a href="/{{dil}}{% url 'land:blog' %}">{% translate "Blog" %}</a>
 							</li>
-							<li ><a href="/{{dil}}{% url 'land:contact' %}">{% translate "İletişim" %}</a>
+							<li >{% if  dil == "tr" %}
+								<a>Türkçe <i class="fa-solid fa-chevron-down"></i></a>
+								{% elif dil == "en" %}
+								<a>English <i class="fa-solid fa-chevron-down"></i></a>
+								{% elif dil == "ar" %}
+								<a>عربي <i class="fa-solid fa-chevron-down"></i></a>
+								
+								{% else %}
+								<a>Deutsch <i class="fa-solid fa-chevron-down"></i></a>
+								{% endif %}
+							
+								
+										<ul class="sub-menu">
+											{% get_current_language as LANGUAGE_CODE %}
+										{% get_available_languages as LANGUAGES %}
+										{% get_language_info_list for LANGUAGES as languages %}
+										
+										{% for lang in languages %}
+										{% if lang.code == dil %}
+											
+										{% else %}
+										
+										<li><a href="/{{ lang.code }}/{{link}}">
+										
+											
+											{{ lang.name_local }}
+											
+										</a></li>
+										{% endif %}
+
+										{% endfor %}
+											
+										</ul>
+									</li>
+								
+									
+									
 						</ul>
 						<!-- End Main Menu -->
 					</nav>
@@ -98,7 +134,7 @@
 			<header id="active-sticky" class="homec-header">
 
 			
-				<div class="homec-header__middle mt-5">
+				<div class="homec-header__middle ">
 					<div class="container">
 						<div class="row align-items-center">
 							<div class="col-12 d-flex ">
@@ -226,7 +262,7 @@
                             <h1 class="homec-blog-content__title">{{a.blog_basligi}}</h1>
                             <p>{{a.yazi_icerigi| safe}}</p>
                             <img src="{{a.blog_ana_foto.url}}" alt="#">
-                            <p>The internet has changed our ways of accessing knowledge as well as information and art. Before, you would have had to go to a library, bookstore, magazine stand, or something similar. You wouldn’t find as many titles as you find online and you’d normally have to pay for them or borrow them for a few days. Nowadays, you’re lucky. You just need Google to find thousands of ways to read about your favorite subjects. You can choose as many as you want and even keep a library.</p>
+                            
                             <blockquote>{{a.quote}}</p>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -242,7 +278,7 @@
                             <h1 class="homec-blog-content__title">{{a.blog_basligi_en}}</h1>
                             <p>{{a.yazi_icerigi_en| safe}}</p>
                             <img src="{{a.blog_ana_foto.url}}" alt="#">
-                            <p>The internet has changed our ways of accessing knowledge as well as information and art. Before, you would have had to go to a library, bookstore, magazine stand, or something similar. You wouldn’t find as many titles as you find online and you’d normally have to pay for them or borrow them for a few days. Nowadays, you’re lucky. You just need Google to find thousands of ways to read about your favorite subjects. You can choose as many as you want and even keep a library.</p>
+                           
                             <blockquote>{{a.quote_en}}</p>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">
@@ -258,7 +294,7 @@
                             <h1 class="homec-blog-content__title">{{a.blog_basligi_ar}}</h1>
                             <p>{{a.yazi_icerigi_ar| safe}}</p>
                             <img src="{{a.blog_ana_foto.url}}" alt="#">
-                            <p>The internet has changed our ways of accessing knowledge as well as information and art. Before, you would have had to go to a library, bookstore, magazine stand, or something similar. You wouldn’t find as many titles as you find online and you’d normally have to pay for them or borrow them for a few days. Nowadays, you’re lucky. You just need Google to find thousands of ways to read about your favorite subjects. You can choose as many as you want and even keep a library.</p>
+                            
                             <blockquote>{{a.quote_ar}}</p>
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 col-12">

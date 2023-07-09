@@ -1028,7 +1028,7 @@ object {
 	background: #F6F8FF;
 }
 .section-padding{
-    padding: 120px 0px;
+    padding-bottom: 120px;
 }
 .section-padding-two{
     padding: 90px 0px 120px;

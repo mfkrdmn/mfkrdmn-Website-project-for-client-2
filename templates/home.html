@@ -378,7 +378,7 @@ html, body {
 						<ul class="nav-menu menu navigation list-none">
 							<li><a href="/{{dil}}{% url 'land:home' %}">{% translate "Ana Sayfa" %}</a>
 							</li>
-							<li ><a >{% translate "Projelerimiz" %}</a>
+							<li ><a >{% translate "Projelerimiz" %}<i class="fa-solid fa-chevron-down"></i></a>
 								<ul class="sub-menu">
 									<li><a href="/{{dil}}/projelerimiz/durumu/devam ediyor">{% translate "Devam eden projeler" %}</a></li>
 									<li><a href="/{{dil}}/projelerimiz/durumu/planlanan">{% translate "Planlanan projeler" %}</a></li>
@@ -391,7 +391,43 @@ html, body {
 							</li>
 							<li ><a href="/{{dil}}{% url 'land:blog' %}">{% translate "Blog" %}</a>
 							</li>
-							<li ><a href="/{{dil}}{% url 'land:contact' %}">{% translate "İletişim" %}</a>
+							<li >{% if  dil == "tr" %}
+								<a>Türkçe <i class="fa-solid fa-chevron-down"></i></a>
+								{% elif dil == "en" %}
+								<a>English <i class="fa-solid fa-chevron-down"></i></a>
+								{% elif dil == "ar" %}
+								<a>عربي <i class="fa-solid fa-chevron-down"></i></a>
+								
+								{% else %}
+								<a>Deutsch <i class="fa-solid fa-chevron-down"></i></a>
+								{% endif %}
+							
+								
+										<ul class="sub-menu">
+											{% get_current_language as LANGUAGE_CODE %}
+										{% get_available_languages as LANGUAGES %}
+										{% get_language_info_list for LANGUAGES as languages %}
+										
+										{% for lang in languages %}
+										{% if lang.code == dil %}
+											
+										{% else %}
+										
+										<li><a href="/{{ lang.code }}/{{link}}">
+										
+											
+											{{ lang.name_local }}
+											
+										</a></li>
+										{% endif %}
+
+										{% endfor %}
+											
+										</ul>
+									</li>
+								
+									
+									
 						</ul>
 						<!-- End Main Menu -->
 					</nav>
@@ -405,7 +441,7 @@ html, body {
 		<header id="active-sticky" class="homec-header">
 
 			
-			<div class="homec-header__middle mt-5">
+			<div class="homec-header__middle ">
 				<div class="container">
 					<div class="row align-items-center">
 						<div class="col-12 d-flex ">
@@ -550,42 +586,7 @@ html, body {
 				  </div>
 				</div>
 			  </div>
-			  <div class="slide slide-2">
-				<div class="slide__bg d-flex justify-content-center align-items-center" id="slide__bg"></div>
-				<div class="slide__content">
-				  <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-					<path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-				  </svg>
-				  <div class="slide__text">
-					<a href="propertysingle/KANAL-İSTANBUL%20PROJESİ">
-					<h2 class="slide__text-heading" id="sliderhtwo">{% translate "Kanal İstanbul Projesi" %}</h2>
-					</a>
-					
-					<p class="slide__text-desc">{% translate "Kanal-İstanbul Projesi, İstanbul Avrupa Yakası'nın kuzeyinde Karadeniz'e kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde yer almaktadır." %}</p>
-					
-					<a class="slide__text-link" href="propertysingle/KANAL-İSTANBUL%20PROJESİ" target="_blank" >{% translate "Projeyi Görüntüle" %}
-</a>
-				  </div>
-				</div>
-			  </div>
-			  <div class="slide slide-3">
-			<div class="slide__bg d-flex justify-content-center align-items-center" id="slide__bg"></div>
-				<div class="slide__content">
-				  <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
-					<path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
-				  </svg>
-				  <div class="slide__text">
-					<a href="propertysingle/KANAL-ANKARA%20PROJESİ">
-						<h2 class="slide__text-heading" id="sliderhtwo">{% translate "Kanal Ankara Projesi" %}</h2>
-					</a>
-					
-					<p class="slide__text-desc" >{% translate "Eymir Gölü'nden İmrahor Viyadüküne kadar olan 11   km lik alanda en dar yeri 22 mt olan kanal yapılacaktır.
-						Kanalda gondollar ile gezinti yapılabilecek,kanalın bazı kısımlarında göletler oluşturulacak. Ayrıca kanalın üzerinde köprüler olacak." %}</p>
-					<a class="slide__text-link" href="propertysingle/KANAL-ANKARA%20PROJESİ" target="_blank">{% translate "Projeyi Görüntüle" %}
-</a>
-				  </div>
-				</div>
-			  </div>
+
 			</div>
 		  </div>
 		  
@@ -610,7 +611,7 @@ html, body {
 							<!-- Homec Single Listing -->
 							<div class="homec-listing__single">
 								<div class="homec-listing__inner">
-									<a href="projelerimiz/istanbul">
+									<a href="projelerimiz/istanbul/">
 										<div class="locationspic">
 											<img src="{% static 'img/galata.jpg' %}" style="max-width: 700px;">
 										</div>
@@ -623,7 +624,7 @@ html, body {
 							<!-- Homec Single Listing -->
 							<div class="homec-listing__single">
 								<div class="homec-listing__inner">
-									<a href="projelerimiz/ankara">
+									<a href="projelerimiz/ankara/">
 										<div class="locationspic">
 											<img src="{% static 'img/ankara.jpg' %}" style="max-width: 700px;">
 										</div>
@@ -726,7 +727,6 @@ html, body {
 								</div>
 								<div class="homec-features-list__body">
 									<h4 class="homec-features-list__title">{% translate "Geniş Portföy" %} </h4>
-									<p class="homec-features-list__text">{% translate "Geniş bir portföy sunuyoruz." %}</p>
 									
 								</div>
 							</div>
@@ -747,8 +747,6 @@ html, body {
 								<div class="homec-features-list__body">
 									<h4 class="homec-features-list__title">{% translate "Uzmanlık ve Deneyim" %}</h4>
 									
-									<p class="homec-features-list__text">{% translate "Sektörde uzman ve deneyimli bir ekibiz." %}</p>
-									
 								</div>
 							</div>
 							<!-- End Features Single -->
@@ -768,8 +766,6 @@ html, body {
 								<div class="homec-features-list__body">
 									<h4 class="homec-features-list__title">{% translate "Müşteri Memnuniyet" %}</h4>
 									
-									<p class="homec-features-list__text">{% translate "Sizler bizim önceliğimizsiniz" %}</p>
-									
 								</div>
 							</div>
 							<!-- End Features Single -->
@@ -785,7 +781,6 @@ html, body {
 								</div>
 								<div class="homec-features-list__body">
 									<h4 class="homec-features-list__title">{% translate "Etkili İletişim" %}</h4>
-									<p class="homec-features-list__text">{% translate "Doğru iletişim önceliğimizdir" %}</p>
 								</div>
 							</div>
 							<!-- End Features Single -->

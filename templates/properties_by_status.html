@@ -54,53 +54,89 @@
 	
 		
 			<!-- Mobile Menu Modal -->
-			<div class="modal offcanvas-modal fade" id="offcanvas-modal">
-				<div class="modal-dialog offcanvas-dialog">
-					<div class="modal-content">
-						<div class="modal-header offcanvas-header">
-							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-						</div>
-						<!-- offcanvas-logo-start -->
-						 <div class="offcanvas-logo">
-							<div class="homec-header__logo">
-								<a href="/{{dil}}{% url 'land:home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
-							</div>
-						</div>
-						<!-- offcanvas-logo-end -->
-						<!-- offcanvas-menu start -->
-						<nav id="offcanvas-menu" class="offcanvas-menu">
-							<!-- Main Menu -->
-							<ul class="nav-menu menu navigation list-none">
-								<li><a href="/{{dil}}{% url 'land:home' %}">{% translate "Ana Sayfa" %}</a>
-								</li>
-								<li ><a >{% translate "Projelerimiz" %}</a>
-									<ul class="sub-menu">
-										<li><a href="/{{dil}}/projelerimiz/durumu/devam ediyor">{% translate "Devam eden projeler" %}</a></li>
-										<li><a href="/{{dil}}/projelerimiz/durumu/planlanan">{% translate "Planlanan projeler" %}</a></li>
-										<li><a href="/{{dil}}/projelerimiz/durumu/tamamlandı">{% translate "Tamamlanan projeler" %}</a></li>
-										<li><a href="/{{dil}}/projelerimiz">{% translate "Tüm projeler" %}</a></li>
-									</ul>
-								</li>
-								<li ><a href="/{{dil}}{% url 'land:about' %}">{% translate "Hakkımızda" %}</a>
-														
-								</li>
-								<li ><a href="/{{dil}}{% url 'land:blog' %}">{% translate "Blog" %}</a>
-								</li>
-								<li ><a href="/{{dil}}{% url 'land:contact' %}">{% translate "İletişim" %}</a>
-							</ul>
-							<!-- End Main Menu -->
-						</nav>
-						<!-- offcanvas-menu end -->
+		<div class="modal offcanvas-modal fade" id="offcanvas-modal">
+			<div class="modal-dialog offcanvas-dialog">
+				<div class="modal-content">
+					<div class="modal-header offcanvas-header">
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
+					<!-- offcanvas-logo-start -->
+					 <div class="offcanvas-logo">
+						<div class="homec-header__logo">
+							<a href="/{{dil}}{% url 'land:home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
+						</div>
+					</div>
+					<!-- offcanvas-logo-end -->
+					<!-- offcanvas-menu start -->
+					<nav id="offcanvas-menu" class="offcanvas-menu">
+						<!-- Main Menu -->
+						<ul class="nav-menu menu navigation list-none">
+							<li><a href="/{{dil}}{% url 'land:home' %}">{% translate "Ana Sayfa" %}</a>
+							</li>
+							<li ><a >{% translate "Projelerimiz" %}<i class="fa-solid fa-chevron-down"></i></a>
+								<ul class="sub-menu">
+									<li><a href="/{{dil}}/projelerimiz/durumu/devam ediyor">{% translate "Devam eden projeler" %}</a></li>
+									<li><a href="/{{dil}}/projelerimiz/durumu/planlanan">{% translate "Planlanan projeler" %}</a></li>
+									<li><a href="/{{dil}}/projelerimiz/durumu/tamamlandı">{% translate "Tamamlanan projeler" %}</a></li>
+									<li><a href="/{{dil}}/projelerimiz">{% translate "Tüm projeler" %}</a></li>
+								</ul>
+							</li>
+							<li ><a href="/{{dil}}{% url 'land:about' %}">{% translate "Hakkımızda" %}</a>
+													
+							</li>
+							<li ><a href="/{{dil}}{% url 'land:blog' %}">{% translate "Blog" %}</a>
+							</li>
+							<li >{% if  dil == "tr" %}
+								<a>Türkçe <i class="fa-solid fa-chevron-down"></i></a>
+								{% elif dil == "en" %}
+								<a>English <i class="fa-solid fa-chevron-down"></i></a>
+								{% elif dil == "ar" %}
+								<a>عربي <i class="fa-solid fa-chevron-down"></i></a>
+								
+								{% else %}
+								<a>Deutsch <i class="fa-solid fa-chevron-down"></i></a>
+								{% endif %}
+							
+								
+										<ul class="sub-menu">
+											{% get_current_language as LANGUAGE_CODE %}
+										{% get_available_languages as LANGUAGES %}
+										{% get_language_info_list for LANGUAGES as languages %}
+										
+										{% for lang in languages %}
+										{% if lang.code == dil %}
+											
+										{% else %}
+										
+										<li><a href="/{{ lang.code }}/{{link}}">
+										
+											
+											{{ lang.name_local }}
+											
+										</a></li>
+										{% endif %}
+
+										{% endfor %}
+											
+										</ul>
+									</li>
+								
+									
+									
+						</ul>
+						<!-- End Main Menu -->
+					</nav>
+					<!-- offcanvas-menu end -->
 				</div>
 			</div>
-			<!-- End Mobile Menu Modal -->
+		</div>
+		<!-- End Mobile Menu Modal -->
 
 		<!-- Header -->
 		<header id="active-sticky" class="homec-header">
 
 			
-			<div class="homec-header__middle mt-5">
+			<div class="homec-header__middle ">
 				<div class="container">
 					<div class="row align-items-center">
 						<div class="col-12 d-flex ">

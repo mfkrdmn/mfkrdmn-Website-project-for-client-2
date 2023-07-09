@@ -70,12 +70,12 @@
 					</div>
 					<!-- offcanvas-logo-end -->
 					<!-- offcanvas-menu start -->
-			<nav id="offcanvas-menu" class="offcanvas-menu">
+					<nav id="offcanvas-menu" class="offcanvas-menu">
 						<!-- Main Menu -->
 						<ul class="nav-menu menu navigation list-none">
 							<li><a href="/{{dil}}{% url 'land:home' %}">{% translate "Ana Sayfa" %}</a>
 							</li>
-							<li ><a >{% translate "Projelerimiz" %}</a>
+							<li ><a >{% translate "Projelerimiz" %}<i class="fa-solid fa-chevron-down"></i></a>
 								<ul class="sub-menu">
 									<li><a href="/{{dil}}/projelerimiz/durumu/devam ediyor">{% translate "Devam eden projeler" %}</a></li>
 									<li><a href="/{{dil}}/projelerimiz/durumu/planlanan">{% translate "Planlanan projeler" %}</a></li>
@@ -88,7 +88,43 @@
 							</li>
 							<li ><a href="/{{dil}}{% url 'land:blog' %}">{% translate "Blog" %}</a>
 							</li>
-							<li ><a href="/{{dil}}{% url 'land:contact' %}">{% translate "İletişim" %}</a>
+							<li >{% if  dil == "tr" %}
+								<a>Türkçe <i class="fa-solid fa-chevron-down"></i></a>
+								{% elif dil == "en" %}
+								<a>English <i class="fa-solid fa-chevron-down"></i></a>
+								{% elif dil == "ar" %}
+								<a>عربي <i class="fa-solid fa-chevron-down"></i></a>
+								
+								{% else %}
+								<a>Deutsch <i class="fa-solid fa-chevron-down"></i></a>
+								{% endif %}
+							
+								
+										<ul class="sub-menu">
+											{% get_current_language as LANGUAGE_CODE %}
+										{% get_available_languages as LANGUAGES %}
+										{% get_language_info_list for LANGUAGES as languages %}
+										
+										{% for lang in languages %}
+										{% if lang.code == dil %}
+											
+										{% else %}
+										
+										<li><a href="/{{ lang.code }}/{{link}}">
+										
+											
+											{{ lang.name_local }}
+											
+										</a></li>
+										{% endif %}
+
+										{% endfor %}
+											
+										</ul>
+									</li>
+								
+									
+									
 						</ul>
 						<!-- End Main Menu -->
 					</nav>
@@ -102,7 +138,7 @@
 		<header id="active-sticky" class="homec-header">
 
 			
-			<div class="homec-header__middle mt-5">
+			<div class="homec-header__middle ">
 				<div class="container">
 					<div class="row align-items-center">
 						<div class="col-12 d-flex ">
