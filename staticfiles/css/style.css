@@ -43,9 +43,9 @@ Version:	1.0
     Header Area
 ========================================*/
 
-			.breadcrumbs__content{
-				background-image:url("{% static 'img/bread-overlay.jpg' %}");
-			}
+.breadcrumbs__content{
+	background-image:url("{% static 'img/bread-overlay.jpg' %}");
+}
 
 .homec-header{
 	z-index: 10000;
@@ -88,7 +88,6 @@ Version:	1.0
 .homec-header__middle {
 	width: 100%;
 }
-
 .homec-header__inside {
 	background: #fff;
 	padding: 20px;
@@ -96,6 +95,8 @@ Version:	1.0
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin: auto;
+	width: 83% !important;
 }
 .homec-header__group {
 	display: flex;
@@ -7479,3 +7480,179 @@ div.ck-editor.ck-rounded-corners {
 .blog_col{
 	height: 530px;
 }
+
+/**
+ * Boyutlandırma
+ */
+
+ /**
+  * Sidenav
+  */
+
+  @media only screen and (min-width: 100px) {
+	/* For phones: */
+	#mySidenav a {width: 40px !important;height: 40px !important;};
+  
+  }
+  
+  @media only screen and (min-width: 600px) {
+	/* For tablets: */
+	#mySidenav a {width: 50px !important;height: 50px !important;};
+  
+  }
+  
+  @media only screen and (min-width: 1300px) {
+	/* For desktop: */
+	#mySidenav a {width: 60px !important;height: 60px !important;};
+  
+  }
+
+  #about {
+    top: 170px;
+	font-size: 26px;
+     background-color: #7166F0;
+  }
+
+  @media only screen and (min-width: 100px) {
+	/* For phones: */
+	#about {font-size: 20px;};
+  
+  }
+  
+  @media only screen and (min-width: 600px) {
+	/* For tablets: */
+	#about {font-size: 24px;};
+  
+  }
+  
+  @media only screen and (min-width: 1300px) {
+	/* For desktop: */
+	#about {font-size: 26px;};
+  
+  }
+
+  @media only screen and (min-width: 100px) {
+	/* For phones: */
+	#mail {font-size: 26px;};
+  
+  }
+  
+  @media only screen and (min-width: 600px) {
+	/* For tablets: */
+	#mail {font-size: 28px;};
+  
+  }
+  
+  @media only screen and (min-width: 1300px) {
+	/* For desktop: */
+	#mail {font-size: 30px;};
+  
+  }
+
+  @media only screen and (min-width: 100px) {
+	/* For phones: */
+	#projects {font-size: 26px;};
+  
+  }
+  
+  @media only screen and (min-width: 600px) {
+	/* For tablets: */
+	#projects {font-size: 28px;};
+  
+  }
+  
+  @media only screen and (min-width: 1300px) {
+	/* For desktop: */
+	#projects {font-size: 32px;};
+  
+  }
+
+
+/**
+ * Footer
+ */
+
+
+@media only screen and (min-width: 100px) {
+	/* For phones: */
+	.single-widget li {font-size: 12px;};
+  
+  }
+  
+  @media only screen and (min-width: 600px) {
+	/* For tablets: */
+	.single-widget li {font-size: 14px;};
+  
+  }
+  
+  @media only screen and (min-width: 1300px) {
+	/* For desktop: */
+	.single-widget li {font-size: 16px;};
+  
+  }
+
+/**
+ * About
+ */
+  
+  @media only screen and (min-width:1000px) {
+	/* For desktop: */
+	.aboutpics {margin-bottom:300px ;};
+  
+  }
+
+  @media only screen and (max-width:1000px) {
+	/* For desktop: */
+	#fllwusabout {margin-bottom:100px ;};
+  
+  }
+
+  
+/**
+ * Projeler
+ */
+ 
+ 
+ @media only screen and (max-width:765px) {
+	/* For desktop: */
+	#searchbarprojects {width:100% };
+  
+  }
+
+  @media only screen and (max-width:765px) {
+	/* For desktop: */
+	.homec-form__form.homec-form__form--bar  button {min-width: 100%!important};
+  
+  }
+
+  @media only screen and (max-width:600px) {
+	/* For desktop: */
+	.page-link {font-size: 11px!important};
+  
+  }
+
+
+/**
+ * Home
+ */
+
+
+@media only screen and (min-width: 100px) {
+	/* For phones: */
+	#sliderhtwo {font-size: 22px;};
+  
+  }
+  
+  @media only screen and (min-width: 600px) {
+	/* For tablets: */
+	#sliderhtwo {font-size: 28px;};
+  
+  }
+  
+  @media only screen and (min-width: 1000px) {
+	/* For desktop: */
+	#sliderhtwo {font-size: 44px;};
+  
+  }
+
+

@@ -9,15 +9,15 @@
 		<meta name="keywords" content="Site keywords here">
 		<meta name="description" content="#">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		
+
 		<!-- Site Title -->
-		<title>Homeco - Real Estate HTML Template.</title>
-		
+		<title>Land Invest Group</title>
+
 		<!-- Fav Icon -->
 		<link rel="icon" href="img/favicon.png">
-		
+
 		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
 
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
@@ -37,73 +37,109 @@
 		<link rel="stylesheet" href="{% static 'css/video-popup.min.css' %}">
 		<!-- Jquery UI CSS -->
 		<link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}">
-		
+
 		<!-- Main CSS -->
 		<link rel="stylesheet" href="{% static 'css/theme-default.css' %}">
 		<link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-		
+
 	</head>
 	<style>
 			.breadcrumbs__content{
 				background-image:url("{% static 'img/bread-overlay.jpg' %}");
 			}
-			
+
 	</style>
 
 	<body>
 
 
-		<!-- Mobile Menu Modal -->
+	<!-- Mobile Menu Modal -->
 	<div class="modal offcanvas-modal fade" id="offcanvas-modal">
-			<div class="modal-dialog offcanvas-dialog">
-				<div class="modal-content">
-					<div class="modal-header offcanvas-header">
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<!-- offcanvas-logo-start -->
-					 <div class="offcanvas-logo">
-						<div class="homec-header__logo">
-							<a href="/{{dil}}{% url 'land:home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
-						</div>
-					</div>
-					<!-- offcanvas-logo-end -->
-					<!-- offcanvas-menu start -->
-			<nav id="offcanvas-menu" class="offcanvas-menu">
-						<!-- Main Menu -->
-						<ul class="nav-menu menu navigation list-none">
-							<li><a href="/{{dil}}{% url 'land:home' %}">{% translate "Ana Sayfa" %}</a>
-							</li>
-							<li ><a >{% translate "Projelerimiz" %}</a>
-								<ul class="sub-menu">
-									<li><a href="/{{dil}}/projelerimiz/durumu/devam ediyor">{% translate "Devam eden projeler" %}</a></li>
-									<li><a href="/{{dil}}/projelerimiz/durumu/planlanan">{% translate "Planlanan projeler" %}</a></li>
-									<li><a href="/{{dil}}/projelerimiz/durumu/tamamlandı">{% translate "Tamamlanan projeler" %}</a></li>
-									<li><a href="/{{dil}}/projelerimiz">{% translate "Tüm projeler" %}</a></li>
-								</ul>
-							</li>
-							<li ><a href="/{{dil}}{% url 'land:about' %}">{% translate "Hakkımızda" %}</a>
-													
-							</li>
-							<li ><a href="/{{dil}}{% url 'land:blog' %}">{% translate "Blog" %}</a>
-							</li>
-							<li ><a href="/{{dil}}{% url 'land:contact' %}">{% translate "İletişim" %}</a>
-						</ul>
-						<!-- End Main Menu -->
-					</nav>
-					<!-- offcanvas-menu end -->
+		<div class="modal-dialog offcanvas-dialog">
+			<div class="modal-content">
+				<div class="modal-header offcanvas-header">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
+				<!-- offcanvas-logo-start -->
+				 <div class="offcanvas-logo">
+					<div class="homec-header__logo">
+						<a href="/{{dil}}{% url 'land:home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
+					</div>
+				</div>
+				<!-- offcanvas-logo-end -->
+				<!-- offcanvas-menu start -->
+				<nav id="offcanvas-menu" class="offcanvas-menu">
+					<!-- Main Menu -->
+					<ul class="nav-menu menu navigation list-none">
+						<li><a href="/{{dil}}{% url 'land:home' %}">{% translate "Ana Sayfa" %}</a>
+						</li>
+						<li ><a >{% translate "Projelerimiz" %}<i class="fa-solid fa-chevron-down"></i></a>
+							<ul class="sub-menu">
+								<li><a href="/{{dil}}/projelerimiz/durumu/devam ediyor/">{% translate "Devam eden projeler" %}</a></li>
+								<li><a href="/{{dil}}/projelerimiz/durumu/planlanan/">{% translate "Planlanan projeler" %}</a></li>
+								<li><a href="/{{dil}}/projelerimiz/durumu/tamamlandı/">{% translate "Tamamlanan projeler" %}</a></li>
+								<li><a href="/{{dil}}/projelerimiz/">{% translate "Tüm projeler" %}</a></li>
+							</ul>
+						</li>
+						<li ><a href="/{{dil}}{% url 'land:about' %}">{% translate "Hakkımızda" %}</a>
+
+						</li>
+						<li ><a href="/{{dil}}{% url 'land:blog' %}">{% translate "Blog" %}</a>
+						</li>
+						<li >{% if  dil == "tr" %}
+							<a>Türkçe <i class="fa-solid fa-chevron-down"></i></a>
+							{% elif dil == "en" %}
+							<a>English <i class="fa-solid fa-chevron-down"></i></a>
+							{% elif dil == "ar" %}
+							<a>عربي <i class="fa-solid fa-chevron-down"></i></a>
+
+							{% else %}
+							<a>Deutsch <i class="fa-solid fa-chevron-down"></i></a>
+							{% endif %}
+
+
+									<ul class="sub-menu">
+										{% get_current_language as LANGUAGE_CODE %}
+									{% get_available_languages as LANGUAGES %}
+									{% get_language_info_list for LANGUAGES as languages %}
+
+									{% for lang in languages %}
+									{% if lang.code == dil %}
+
+									{% else %}
+
+									<li><a href="/{{ lang.code }}/{{link}}">
+
+
+										{{ lang.name_local }}
+
+									</a></li>
+									{% endif %}
+
+									{% endfor %}
+
+									</ul>
+								</li>
+
+
+
+					</ul>
+					<!-- End Main Menu -->
+				</nav>
+				<!-- offcanvas-menu end -->
 			</div>
 		</div>
-		<!-- End Mobile Menu Modal -->
+	</div>
+	<!-- End Mobile Menu Modal -->
 
 		<!-- Header -->
 		<header id="active-sticky" class="homec-header">
 
-			
-			<div class="homec-header__middle mt-5">
+
+			<div class="homec-header__middle ">
 				<div class="container">
 					<div class="row align-items-center">
 						<div class="col-12 d-flex ">
@@ -114,27 +150,27 @@
 									</div>
 									<div class="homec-header__menu">
 										<div class="navbar">
-											<div class="nav-item">                                      
+											<div class="nav-item">
 												<!-- Main Menu -->
 												<ul class="nav-menu menu navigation list-none">
 														<li><a href="/{{dil}}{% url 'land:home' %}">{% translate "Ana Sayfa" %}</a>
-									
+
 														</li>
 													<li class="menu-item-has-children"><a>{% translate "Projelerimiz" %}</a>
-													
+
 															<ul class="sub-menu">
-																<li><a href="/{{dil}}/projelerimiz/durumu/devam ediyor">{% translate "Devam eden projeler" %}</a></li>
-																<li><a href="/{{dil}}/projelerimiz/durumu/planlanan">{% translate "Planlanan projeler" %}</a></li>
-																<li><a href="/{{dil}}/projelerimiz/durumu/tamamlandı">{% translate "Tamamlanan projeler" %}</a></li>
-																<li><a href="/{{dil}}/projelerimiz">{% translate "Tüm projeler" %}</a></li>
-																
+																<li><a href="/{{dil}}/projelerimiz/durumu/devam ediyor/">{% translate "Devam eden projeler" %}</a></li>
+																<li><a href="/{{dil}}/projelerimiz/durumu/planlanan/">{% translate "Planlanan projeler" %}</a></li>
+																<li><a href="/{{dil}}/projelerimiz/durumu/tamamlandı/">{% translate "Tamamlanan projeler" %}</a></li>
+																<li><a href="/{{dil}}/projelerimiz/">{% translate "Tüm projeler" %}</a></li>
+
 															</ul>
 														</li>
 													</li>
-											
+
 													</li>
 														<li ><a href="/{{dil}}{% url 'land:about' %}">{% translate "Hakkımızda" %}</a>
-													
+
 														</li>
 														<li ><a href="/{{dil}}{% url 'land:blog' %}">{% translate "Blog" %}</a>
 														</li>
@@ -142,7 +178,7 @@
 														</li>
 														<li>
 															<select onchange="window.location.href=this.value;"  data-width="fit">
-																
+
 																{% get_current_language as LANGUAGE_CODE %}
 																{% get_available_languages as LANGUAGES %}
 																{% get_language_info_list for LANGUAGES as languages %}
@@ -167,14 +203,14 @@
 																{% endif %}
 																{% for lang in languages %}
 																{% if lang.code == dil %}
-																	
+
 																{% else %}
 																<option value="/{{ lang.code }}/{{link}}" >
 
 																<a class="dropdown-item" href="/{{ lang.code }}/{{link}}">
-																	
+
 																	{{ lang.name_local }}
-																	
+
 																</a>
 																</option>
 																{% endif %}
@@ -182,7 +218,7 @@
 																{% endfor %}
 
 															</select>
-															
+
 														</li>
 												</ul>
 												<!-- End Main Menu -->
@@ -215,24 +251,24 @@
 					<div class="col-12">
 						<div class="breadcrumb-content">
 							<h2 class="breadcrumb__title m-0">{% translate "Hakkımızda" %}</h2>
-						</div>	
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 		<!-- End breadcrumbs -->
-		
+
 		<section class="blog-single ">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-8 col-12 mg-top-30">
-	
+
 						<div class="homec-blog-content">
 							<h1 class="homec-blog-content__title">Land Invest Group</h1>
 							<p>{% translate "Ülkemizdeki yapılı gayrimenkul fiyatlarındaki hızlı yükseliş halkın büyük bir kesimi için konut edinmeyi çok zor ve pahalı hale getirdi. Bu durum bizleri yeni alternatif çözüm yolları üretmeye zorladı.Bizler de ARSA YATIRIM ORTAKLIĞI İLE KONUT EDİNDİRME YÖNTEMİ'ni geliştirdik. Bu sayede insanlar arsa sahibi olup arsanın yüksek düzeyli getirisine veya yapım sürecini beklemeleri halinde konutlarına sahip olabiliyorlar." %}</p>
-								
+
 							<img src="{% static 'img/create.jpg' %}" alt="#">
-							
+
 							<p>{% translate "Yöntem çok basit;" %}</p>
 							<p>{% translate "1- Uzman ekibimizce detaylı araştırma yapılarak yatırıma uygun arsaları buluyoruz, konut getirili projeye dönüştürüyoruz(AR-GE)" %}</p>
 							<p>{% translate "2- Projemizi yatırımcılara/konut sahibi olmak isteyenlere sunuyoruz, arsa ortaklığı oluşturuyoruz (TALEP TOPLAMA) " %}</p>
@@ -243,15 +279,15 @@
 							</b>
 								<ol>
 									<li>{% translate "Toplam nüfus arttığı için." %}</li>
-									
+
 									<li>{% translate "Kentleşme oranı yükseldiği için." %}</li>
-									
+
 									<li>{% translate "Alternatif yatırım araçları uzmanlık gerektirmesine rağmen, arsa ve arazini neredeyse hiç uzmanlık gerektirmemesi" %}</li>
-									
+
 									<li>{% translate "Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek kadar azdır." %}</li>
-									
+
 									<li>{% translate "Arsa ve arazi yatırımı sabır ister. İnsanlar çoğu zaman bu sabrı gösteremez." %}</li>
-									
+
 									<li>
 										{% translate "Konut ve işyerinde beklenti bitmiştir. Arsa ve arazide ise beklenti yüksektir. Aldığınız arazinin, arsaya dönüşmesi, yani imar uygulaması bile başlı başına bir beklentidir." %}
 									</li>
@@ -266,14 +302,14 @@
 								</div>
 							</div>
 						</div>
-					
-					
-			
+
+
+
 					</div>
 					<div class="col-lg-4 col-12">
 						<div class="homec-sidebar">
 							<!-- Blog Single Sidebar -->
-							
+
 							<!-- Blog Single Sidebar -->
 							<div class="homec-sidebar__single recent-post" style="margin-top: 80px;">
 								<h3 class="homec-sidebar__title">
@@ -288,13 +324,13 @@
                                         <h5 class="homec-sidebar__content--title"><a href="/{{dil}}{% url 'land:blog_single' a.blog_basligi %}">{{a.blog_basligi}}</a></h5>
                                     </div>
 							    </div>
-                          
-								{% endfor %} 
+
+								{% endfor %}
 						   </div>
 						   <!-- Blog Single Sidebar -->
-		
+
 						   <!-- Blog Single Sidebar -->
-	
+
 						   <div class="homec-sidebar__single side-tags" id="fllwusabout">
 							  <h3 class="homec-sidebar__title">{% translate "Bizi Takip Edin" %}</h3>
 								<ul class="homec-social homec-social__sidebar">
@@ -355,7 +391,7 @@
 									<div class="homec-funfact__inner">
 										<div class="homec-funfact__content"  data-aos="fade-up" data-aos-delay="300">
 											<h2 class="homec-section__title mg-btm-10">{% translate "Başarılarımız" %}</h2>
-											<p> 
+											<p>
 												{% translate "Müşteri memnuniyetini her zaman önceliğimiz olarak görüyor, şeffaflık ve güvenilirlik prensiplerine bağlı kalıyoruz." %}
 											</p>
 										</div>
@@ -369,7 +405,7 @@
 										<div class="homec-btn__main mg-top-40"  data-aos="fade-up" data-aos-delay="500">
 											<a href="/{{dil}}{% url 'land:contact' %}" class="homec-btn"><span>{% translate "İletişime Geç!" %}</span></a>
 										</div>
-										
+
 									</div>
 								</div>
 								<div class="col-lg-7 col-12">
@@ -402,7 +438,7 @@
 												<div class="homec-funfact__single homec-border">
 													<div class="homec-funfact__icon">
 														<img src="{% static 'img/funfact-icon3.svg' %}" alt="#">
-														
+
 													</div>
 													<h3 class="homec-funfact__number"><span class="counter">10</span></h3>
 													<p class="homec-funfact__text">{% translate "Yıllık tecrübe" %}</p>
@@ -448,9 +484,9 @@
 							<div class="homec-form mg-top-100">
 								<div class="homec-form__content">
 									<span class="homec-form__label">{% translate "Sizin İçin Buradayız" %}</span>
-									
+
 									<h3 class="homec-form__title">{% translate "Bültenimize Kaydol" %}</h3>
-									
+
 								</div>
 								<form class="homec-form__form">
 									<input type="email" name="Email" placeholder="{% translate 'E-mailiniz' %}" required="">
@@ -459,7 +495,7 @@
 							</div>
 							<!-- End Subscribe Form -->
 						</div>
-					</div>	
+					</div>
 					<div class="row">
 						<div class="col-12">
 							<div class="footer-top-inner pd-top-30 pd-btm-100">
@@ -471,7 +507,7 @@
 												<img src="{% static 'img/logo.png' %}" alt="#">
 											</div>
 											<p class="footer-about-text">{% translate "Gayrimenkulde Uzmanlık, Müşteri Memnuniyeti İlkesiyle" %}</p>
-											
+
 											<!-- Social -->
 											<ul class="homec-social homec-social__v2">
 												<li>
@@ -551,17 +587,17 @@
 										</div>
 									</div>
 								</div>
-							</div>	
+							</div>
 						</div>
-					</div>		
+					</div>
 				</div>
 
 			</footer>
-<!-- End Footer -->	
+<!-- End Footer -->
 
 		<!-- Scrool Top -->
 		<a href="#" class="scrollToTop">başa dön<i class="fa-solid fa-angle-right"></i></a>
-		
+
 		<!-- Jquery JS -->
 		<script src="{% static 'js/jquery.min.js' %}"></script>
 		<script src="{% static 'js/jquery-migrate.js' %}"></script>
@@ -591,7 +627,7 @@
 
 		<script>
 			var swiper = new Swiper(".homec-slider-agent", {
-				autoplay: { 
+				autoplay: {
 					 delay: 4000,
 				},
 				navigation: {
@@ -630,7 +666,7 @@
 					slidesPerView: "4",
 				  },
 				},
-			});	
+			});
 		 </script>
 	</body>
 </html>

@@ -9,15 +9,15 @@
 		<meta name="keywords" content="Site keywords here">
 		<meta name="description" content="#">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		
+
 		<!-- Site Title -->
-		<title>Homeco - Real Estate HTML Template.</title>
-		
+			<title>Land Invest Group</title>
+
 		<!-- Fav Icon -->
 		<link rel="icon" href="img/favicon.png">
-		
+
 		<!-- Google Fonts -->
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap" rel="stylesheet">
 
 		<!-- Bootstrap -->
 		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
@@ -37,14 +37,14 @@
 		<link rel="stylesheet" href="{% static 'css/video-popup.min.css' %}">
 		<!-- Jquery UI CSS -->
 		<link rel="stylesheet" href="{% static 'css/jquery-ui.min.css' %}">
-		
+
 		<!-- Main CSS -->
 		<link rel="stylesheet" href="{% static 'css/theme-default.css' %}">
 		<link rel="stylesheet" href="{% static 'css/style.css' %}">
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-		
+
 	</head>
 
 <style>
@@ -55,11 +55,11 @@
 
 
 
-  
+
   @media only screen and (min-width: 990px) {
 	/* For desktop: */
 	.homec-contact-form {background-image:url("{% static 'img/contact-bg.jpg' %}")};
-  
+
   }
 
 
@@ -68,56 +68,91 @@
 
 	<body>
 
-		
-		<!-- Mobile Menu Modal -->
-		<div class="modal offcanvas-modal fade" id="offcanvas-modal">
-			<div class="modal-dialog offcanvas-dialog">
-				<div class="modal-content">
-					<div class="modal-header offcanvas-header">
-						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-					</div>
-					<!-- offcanvas-logo-start -->
-					 <div class="offcanvas-logo">
-						<div class="homec-header__logo">
-							<a href="/{{dil}}{% url 'land:home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
-						</div>
-					</div>
-					<!-- offcanvas-logo-end -->
-					<!-- offcanvas-menu start -->
-			<nav id="offcanvas-menu" class="offcanvas-menu">
-						<!-- Main Menu -->
-						<ul class="nav-menu menu navigation list-none">
-							<li><a href="/{{dil}}{% url 'land:home' %}">{% translate "Ana Sayfa" %}</a>
-							</li>
-							<li ><a >{% translate "Projelerimiz" %}</a>
-								<ul class="sub-menu">
-									<li><a href="/{{dil}}/projelerimiz/durumu/devam ediyor">{% translate "Devam eden projeler" %}</a></li>
-									<li><a href="/{{dil}}/projelerimiz/durumu/planlanan">{% translate "Planlanan projeler" %}</a></li>
-									<li><a href="/{{dil}}/projelerimiz/durumu/tamamlandı">{% translate "Tamamlanan projeler" %}</a></li>
-									<li><a href="/{{dil}}/projelerimiz">{% translate "Tüm projeler" %}</a></li>
-								</ul>
-							</li>
-							<li ><a href="/{{dil}}{% url 'land:about' %}">{% translate "Hakkımızda" %}</a>
-													
-							</li>
-							<li ><a href="/{{dil}}{% url 'land:blog' %}">{% translate "Blog" %}</a>
-							</li>
-							<li ><a href="/{{dil}}{% url 'land:contact' %}">{% translate "İletişim" %}</a>
-						</ul>
-						<!-- End Main Menu -->
-					</nav>
-					<!-- offcanvas-menu end -->
+	<!-- Mobile Menu Modal -->
+	<div class="modal offcanvas-modal fade" id="offcanvas-modal">
+		<div class="modal-dialog offcanvas-dialog">
+			<div class="modal-content">
+				<div class="modal-header offcanvas-header">
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 				</div>
+				<!-- offcanvas-logo-start -->
+				 <div class="offcanvas-logo">
+					<div class="homec-header__logo">
+						<a href="/{{dil}}{% url 'land:home' %}"><img src="{% static 'img/logo.png' %}" alt="#"></a>
+					</div>
+				</div>
+				<!-- offcanvas-logo-end -->
+				<!-- offcanvas-menu start -->
+				<nav id="offcanvas-menu" class="offcanvas-menu">
+					<!-- Main Menu -->
+					<ul class="nav-menu menu navigation list-none">
+						<li><a href="/{{dil}}{% url 'land:home' %}">{% translate "Ana Sayfa" %}</a>
+						</li>
+						<li ><a >{% translate "Projelerimiz" %}<i class="fa-solid fa-chevron-down"></i></a>
+							<ul class="sub-menu">
+								<li><a href="/{{dil}}/projelerimiz/durumu/devam ediyor/">{% translate "Devam eden projeler" %}</a></li>
+								<li><a href="/{{dil}}/projelerimiz/durumu/planlanan/">{% translate "Planlanan projeler" %}</a></li>
+								<li><a href="/{{dil}}/projelerimiz/durumu/tamamlandı/">{% translate "Tamamlanan projeler" %}</a></li>
+								<li><a href="/{{dil}}/projelerimiz/">{% translate "Tüm projeler" %}</a></li>
+							</ul>
+						</li>
+						<li ><a href="/{{dil}}{% url 'land:about' %}">{% translate "Hakkımızda" %}</a>
+
+						</li>
+						<li ><a href="/{{dil}}{% url 'land:blog' %}">{% translate "Blog" %}</a>
+						</li>
+						<li >{% if  dil == "tr" %}
+							<a>Türkçe <i class="fa-solid fa-chevron-down"></i></a>
+							{% elif dil == "en" %}
+							<a>English <i class="fa-solid fa-chevron-down"></i></a>
+							{% elif dil == "ar" %}
+							<a>عربي <i class="fa-solid fa-chevron-down"></i></a>
+
+							{% else %}
+							<a>Deutsch <i class="fa-solid fa-chevron-down"></i></a>
+							{% endif %}
+
+
+									<ul class="sub-menu">
+										{% get_current_language as LANGUAGE_CODE %}
+									{% get_available_languages as LANGUAGES %}
+									{% get_language_info_list for LANGUAGES as languages %}
+
+									{% for lang in languages %}
+									{% if lang.code == dil %}
+
+									{% else %}
+
+									<li><a href="/{{ lang.code }}/{{link}}">
+
+
+										{{ lang.name_local }}
+
+									</a></li>
+									{% endif %}
+
+									{% endfor %}
+
+									</ul>
+								</li>
+
+
+
+					</ul>
+					<!-- End Main Menu -->
+				</nav>
+				<!-- offcanvas-menu end -->
 			</div>
 		</div>
-		<!-- End Mobile Menu Modal -->
+	</div>
+	<!-- End Mobile Menu Modal -->
 
 		<!-- Header -->
 		<!-- Header -->
 		<header id="active-sticky" class="homec-header">
 
-			
-			<div class="homec-header__middle mt-5">
+
+			<div class="homec-header__middle ">
 				<div class="container">
 					<div class="row align-items-center">
 						<div class="col-12 d-flex ">
@@ -128,27 +163,27 @@
 									</div>
 									<div class="homec-header__menu">
 										<div class="navbar">
-											<div class="nav-item">                                      
+											<div class="nav-item">
 												<!-- Main Menu -->
 												<ul class="nav-menu menu navigation list-none">
 														<li><a href="/{{dil}}{% url 'land:home' %}">{% translate "Ana Sayfa" %}</a>
-									
+
 														</li>
 													<li class="menu-item-has-children"><a>{% translate "Projelerimiz" %}</a>
-													
+
 															<ul class="sub-menu">
-																<li><a href="/{{dil}}/projelerimiz/durumu/devam ediyor">{% translate "Devam eden projeler" %}</a></li>
-																<li><a href="/{{dil}}/projelerimiz/durumu/planlanan">{% translate "Planlanan projeler" %}</a></li>
-																<li><a href="/{{dil}}/projelerimiz/durumu/tamamlandı">{% translate "Tamamlanan projeler" %}</a></li>
-																<li><a href="/{{dil}}/projelerimiz">{% translate "Tüm projeler" %}</a></li>
-																
+																<li><a href="/{{dil}}/projelerimiz/durumu/devam ediyor/">{% translate "Devam eden projeler" %}</a></li>
+																<li><a href="/{{dil}}/projelerimiz/durumu/planlanan/">{% translate "Planlanan projeler" %}</a></li>
+																<li><a href="/{{dil}}/projelerimiz/durumu/tamamlandı/">{% translate "Tamamlanan projeler" %}</a></li>
+																<li><a href="/{{dil}}/projelerimiz/">{% translate "Tüm projeler" %}</a></li>
+
 															</ul>
 														</li>
 													</li>
-											
+
 													</li>
 														<li ><a href="/{{dil}}{% url 'land:about' %}">{% translate "Hakkımızda" %}</a>
-													
+
 														</li>
 														<li ><a href="/{{dil}}{% url 'land:blog' %}">{% translate "Blog" %}</a>
 														</li>
@@ -156,7 +191,7 @@
 														</li>
 														<li>
 															<select onchange="window.location.href=this.value;"  data-width="fit">
-																
+
 																{% get_current_language as LANGUAGE_CODE %}
 																{% get_available_languages as LANGUAGES %}
 																{% get_language_info_list for LANGUAGES as languages %}
@@ -181,14 +216,14 @@
 																{% endif %}
 																{% for lang in languages %}
 																{% if lang.code == dil %}
-																	
+
 																{% else %}
 																<option value="/{{ lang.code }}/{{link}}" >
 
 																<a class="dropdown-item" href="/{{ lang.code }}/{{link}}">
-																	
+
 																	{{ lang.name_local }}
-																	
+
 																</a>
 																</option>
 																{% endif %}
@@ -196,7 +231,7 @@
 																{% endfor %}
 
 															</select>
-															
+
 														</li>
 												</ul>
 												<!-- End Main Menu -->
@@ -220,10 +255,10 @@
 		<a href="https://wa.me/+905057376999" target="_blank" id="projects"><i class="fa-brands fa-whatsapp  ms-1" style="margin-left: 0!important;" ></i></a>
 	</div>
 		<!-- end of side buttons  -->
-		
+
 		<!-- Breadcrumbs -->
 		<section class="breadcrumbs__content" >
-	
+
 			<!-- <div class="homec-overlay"></div> -->
 			<div class="container">
 				<div class="row">
@@ -232,13 +267,13 @@
 						<div class="breadcrumb-content">
 
 							<h2 class="breadcrumb__title m-0">{% translate "İletişim" %}</h2>
-						</div>	
+						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 		<!-- End breadcrumbs -->
-		
+
 		<section class="homec-contact-form homec-bg-cover pd-top-80 pd-btm-80 mg-top-100" >
 			<div class="container">
 				<div class="row">
@@ -320,7 +355,7 @@
 										<path d="M8.03516 17C8.03516 16.4499 7.58917 16.0039 7.03906 16.0039H5.04688C4.49677 16.0039 4.05078 16.4499 4.05078 17C4.05078 17.5501 4.49677 17.9961 5.04688 17.9961H7.03906C7.58917 17.9961 8.03516 17.5501 8.03516 17Z"/>
 										<path d="M25.9648 17C25.9648 17.5501 26.4108 17.9961 26.9609 17.9961H28.9531C29.5032 17.9961 29.9492 17.5501 29.9492 17C29.9492 16.4499 29.5032 16.0039 28.9531 16.0039H26.9609C26.4108 16.0039 25.9648 16.4499 25.9648 17Z"/>
 										<path d="M17.9961 16.5879V11.0239C17.9961 10.4738 17.5501 10.0278 17 10.0278C16.4499 10.0278 16.0039 10.4738 16.0039 11.0239V17.0005C16.0039 17.2647 16.1089 17.518 16.2957 17.7049L22.2723 23.6814C22.6612 24.0704 23.2919 24.0704 23.6809 23.6814C24.0699 23.2924 24.0699 22.6618 23.6809 22.2727L17.9961 16.5879Z"/>
-									</svg>										
+									</svg>
 								</div>
 								<div class="homec-contact__content">
 									<p class="homec-contact__label">{% translate "Email" %}</p>
@@ -358,9 +393,9 @@
 							<div class="homec-form mg-top-100">
 								<div class="homec-form__content">
 									<span class="homec-form__label">{% translate "Sizin İçin Buradayız" %}</span>
-									
+
 									<h3 class="homec-form__title">{% translate "Bültenimize Kaydol" %}</h3>
-									
+
 								</div>
 								<form class="homec-form__form">
 									<input type="email" name="Email" placeholder="{% translate 'E-mailiniz' %}" required="">
@@ -369,7 +404,7 @@
 							</div>
 							<!-- End Subscribe Form -->
 						</div>
-					</div>	
+					</div>
 					<div class="row">
 						<div class="col-12">
 							<div class="footer-top-inner pd-top-30 pd-btm-100">
@@ -381,7 +416,7 @@
 												<img src="{% static 'img/logo.png' %}" alt="#">
 											</div>
 											<p class="footer-about-text">{% translate "Gayrimenkulde Uzmanlık, Müşteri Memnuniyeti İlkesiyle" %}</p>
-											
+
 											<!-- Social -->
 											<ul class="homec-social homec-social__v2">
 												<li>
@@ -461,17 +496,17 @@
 										</div>
 									</div>
 								</div>
-							</div>	
+							</div>
 						</div>
-					</div>		
+					</div>
 				</div>
 
 			</footer>
-<!-- End Footer -->	
+<!-- End Footer -->
 
 		<!-- Scrool Top -->
 		<a href="#" class="scrollToTop">başa dön<i class="fa-solid fa-angle-right"></i></a>
-		
+
 		<!-- Jquery JS -->
 		<script src="{% static 'js/jquery.min.js' %}"></script>
 		<script src="{% static 'js/jquery-migrate.js' %}"></script>
