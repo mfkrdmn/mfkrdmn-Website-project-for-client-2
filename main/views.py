@@ -108,7 +108,7 @@ def sehre_gore_projeler(request, sehir):
     except EmptyPage:
         # If page is out of range (e.g. 9999), deliver last page of results.
         sehre_gore = paginator.page(paginator.num_pages)
-    link = "projelerimiz/"+str(sehir)
+    link = "projelerimiz"+str(sehir)
     context = {
         "trans":trans,"dil":dil_bilgisi(),
         'sehre_gore' : sehre_gore,
