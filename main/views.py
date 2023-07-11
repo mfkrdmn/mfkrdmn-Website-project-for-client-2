@@ -30,11 +30,14 @@ def home(request):
     projeler = Projeler.objects.all()[:2]
     blog_yazıları = Blog.objects.all()[:4]
     trans = translate(language='en')
-    context = {"trans":trans,"dil":dil_bilgisi(),
+    link = "anasayfa/"
+    context = {
+        'link' : link,"trans":trans,"dil":dil_bilgisi(),
         'projeler' : projeler,
         'blog_yazıları' : blog_yazıları,
         # 'sehre_gore_projeler' : sehre_gore_projeler
     }
+
     return render(request, 'home.html', context)
 
 
