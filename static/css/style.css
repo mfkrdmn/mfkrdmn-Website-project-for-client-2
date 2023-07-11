@@ -7656,3 +7656,25 @@ div.ck-editor.ck-rounded-corners {
   }
 
 
+/**
+ * Single Project
+ */
+
+
+ @media only screen and (min-width: 100px) {
+	/* For phones: */
+	#projectslidepictop {height: 300px; width: 1800px;};
+  
+  }
+  
+  @media only screen and (min-width: 600px) {
+	/* For tablets: */
+	#projectslidepictop {height: 400px; width: 1800px;};
+  
+  }
+  
+  @media only screen and (min-width: 1300px) {
+	/* For desktop: */
+	#projectslidepictop {height: 600px; width: 1800px;};
+  
+  }

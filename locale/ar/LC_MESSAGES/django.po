@@ -9,15 +9,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-05 17:09+0300\n"
-"PO-Revision-Date: 2023-07-05 16:34+0000\n"
+"PO-Revision-Date: 2023-07-11 13:09+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
 #: .\main\views.py:23
@@ -38,12 +37,12 @@ msgstr "Arabic"
 
 #: .\templates\about.html:218 .\templates\about.html:622
 #: .\templates\blog-single.html:210 .\templates\blog-single.html:543
-#: .\templates\blog.html:76 .\templates\blog.html:190 .\templates\blog.html:528
-#: .\templates\contact.html:81 .\templates\contact.html:198
-#: .\templates\contact.html:498 .\templates\home.html:355
-#: .\templates\home.html:493 .\templates\home.html:1148
-#: .\templates\properties.html:212 .\templates\properties.html:666
-#: .\templates\properties_by_city.html:214
+#: .\templates\blog.html:76 .\templates\blog.html:190
+#: .\templates\blog.html:528 .\templates\contact.html:81
+#: .\templates\contact.html:198 .\templates\contact.html:498
+#: .\templates\home.html:355 .\templates\home.html:493
+#: .\templates\home.html:1148 .\templates\properties.html:212
+#: .\templates\properties.html:666 .\templates\properties_by_city.html:214
 #: .\templates\properties_by_city.html:662
 #: .\templates\properties_by_status.html:212
 #: .\templates\properties_by_status.html:651
@@ -101,10 +100,9 @@ msgstr "المشاريع المنجزة"
 #: .\templates\properties.html:220 .\templates\properties_by_city.html:222
 #: .\templates\properties_by_status.html:221
 #: .\templates\property-single.html:195
-#, fuzzy
 #| msgid "Tamamlanan projeler"
 msgid "Tüm projeler"
-msgstr "المشاريع المنجزة"
+msgstr "كل المشاريع"
 
 #: .\templates\about.html:231 .\templates\about.html:313
 #: .\templates\about.html:624 .\templates\blog-single.html:223
@@ -159,26 +157,35 @@ msgid ""
 "insanlar arsa sahibi olup arsanın yüksek düzeyli getirisine veya yapım "
 "sürecini beklemeleri halinde konutlarına sahip olabiliyorlar."
 msgstr ""
+"أدى الارتفاع السريع في أسعار العقارات المبنية في بلدنا إلى جعل الحصول على "
+"مساكن لجزء كبير من السكان أمرًا صعبًا ومكلفًا للغاية. أجبرنا هذا الوضع على "
+"إنتاج حلول بديلة جديدة ، كما قمنا بتطوير طريقة الإسكان مع ثقة الاستثمار في "
+"الأراضي. بهذه الطريقة ، يمكن للناس امتلاك الأرض والحصول على دخل مرتفع من "
+"الأرض أو منازلهم إذا انتظروا عملية البناء."
 
 #: .\templates\about.html:332
 msgid "Yöntem çok basit;"
-msgstr ""
+msgstr "الطريقه بسيطه جدا؛"
 
 #: .\templates\about.html:333
 msgid ""
 "1- Uzman ekibimizce detaylı araştırma yapılarak yatırıma uygun arsaları "
 "buluyoruz, konut getirili projeye dönüştürüyoruz(AR-GE)"
 msgstr ""
+"1- يقوم فريق الخبراء لدينا بإجراء بحث تفصيلي وإيجاد الأراضي المناسبة "
+"للاستثمار وتحويلها إلى مشاريع ذات عوائد سكنية (R & D)"
 
 #: .\templates\about.html:334
 msgid ""
 "2- Projemizi yatırımcılara/konut sahibi olmak isteyenlere sunuyoruz, arsa "
 "ortaklığı oluşturuyoruz (TALEP TOPLAMA) "
 msgstr ""
+"2- نقدم مشروعنا للمستثمرين / الراغبين بامتلاك منزل ، نقوم بتكوين شراكة أرض "
+"(طلب التحصيل)"
 
 #: .\templates\about.html:335
 msgid "3- kat karşılığı müteahhit firmalara veriyoruz (KAZANÇ)"
-msgstr ""
+msgstr "3- نعطي لشركات المقاولات مقابل ارضية (GAIN)"
 
 #: .\templates\about.html:336
 msgid ""
@@ -187,6 +194,9 @@ msgid ""
 "arazileri, Şehir plancıları ile çalışarak imar projesi kapsamında "
 "yatırımcısı ile buluşturuyor."
 msgstr ""
+"تجمع Land Invest Group الأراضي التي ستوفر أرباحًا عالية في وقت قصير في مختلف"
+" مناطق تركيا المفتوحة للتطوير ، خاصة في أنقرة وإسطنبول وإزمير ، مع "
+"المستثمرين في نطاق مشروع تقسيم المناطق من خلال العمل مع مخططي المدن ."
 
 #: .\templates\about.html:338
 msgid "Peki arsa ve arazi neden çok prim yapar?"
@@ -210,8 +220,8 @@ msgstr ""
 
 #: .\templates\about.html:347
 msgid ""
-"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek "
-"kadar azdır."
+"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek"
+" kadar azdır."
 msgstr "السكن والعمل له تكلفة. تكلفة الأرض والأرض تكاد لا تذكر."
 
 #: .\templates\about.html:349
@@ -311,10 +321,9 @@ msgstr "اشترك في نشرتنا الإخبارية"
 #: .\templates\properties_by_city.html:592
 #: .\templates\properties_by_status.html:581
 #: .\templates\property-single.html:613
-#, fuzzy
 #| msgid "Email"
 msgid "E-mailiniz"
-msgstr "بريد إلكتروني"
+msgstr "بريدك الالكتروني"
 
 #: .\templates\about.html:553 .\templates\blog-single.html:474
 #: .\templates\blog.html:459 .\templates\contact.html:429
@@ -368,7 +377,7 @@ msgstr "العودة إلى الأعلى"
 
 #: .\templates\contact.html:314
 msgid "İsim Soyisim"
-msgstr ""
+msgstr "اسم اللقب"
 
 #: .\templates\contact.html:317 .\templates\contact.html:388
 msgid "Email"
@@ -376,17 +385,16 @@ msgstr "بريد إلكتروني"
 
 #: .\templates\contact.html:320
 msgid "telefon"
-msgstr ""
+msgstr "هاتف"
 
 #: .\templates\contact.html:323
-#, fuzzy
 #| msgid "Konum"
 msgid "Konu"
-msgstr "موقع"
+msgstr "موضوع"
 
 #: .\templates\contact.html:326
 msgid "Mesaj"
-msgstr ""
+msgstr "رسالة"
 
 #: .\templates\contact.html:328 .\templates\property-single.html:586
 msgid "Gönder"
@@ -402,12 +410,13 @@ msgstr "مرمرة للبيوت السكنية التعاونية"
 
 #: .\templates\home.html:596
 msgid ""
-"Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede, "
-"deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol "
+"Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede,"
+" deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol "
 "imzalamıştır."
 msgstr ""
-"وقعت تعاونية لدينا بروتوكول لشراء أرض بمساحة 16.106 متر مربع في Arnavutköy ، "
-"اسطنبول ، على بعد 5.6 كم من مطار اسطنبول ، مع إطلالة على البحر وقناة اسطنبول."
+"وقعت تعاونية لدينا بروتوكول لشراء أرض بمساحة 16.106 متر مربع في Arnavutköy ،"
+" اسطنبول ، على بعد 5.6 كم من مطار اسطنبول ، مع إطلالة على البحر وقناة "
+"اسطنبول."
 
 #: .\templates\home.html:598 .\templates\home.html:614
 #: .\templates\home.html:630 .\templates\home.html:646
@@ -433,10 +442,10 @@ msgstr "مشروع قناة اسطنبول"
 #: .\templates\home.html:628
 msgid ""
 "Kanal-İstanbul Projesi, İstanbul Avrupa Yakası'nın kuzeyinde Karadeniz'e "
-"kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer "
-"alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir "
-"alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde "
-"yer almaktadır."
+"kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer"
+" alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir "
+"alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde"
+" yer almaktadır."
 msgstr ""
 "مشروع كانال-اسطنبول هو مشروع عقاري يقع على طريق اتصال الجسر الثالث (جسر "
 "يافوز سلطان سليم) والذي يمتد على ساحل البحر الأسود شمال الجانب الأوروبي من "
@@ -582,7 +591,7 @@ msgstr "أحدث منشوراتنا"
 #: .\templates\properties.html:328 .\templates\properties_by_city.html:326
 #: .\templates\properties_by_status.html:327
 msgid "Proje ara..."
-msgstr ""
+msgstr "بحث عن مشروع ..."
 
 #: .\templates\properties.html:366 .\templates\properties_by_city.html:364
 #: .\templates\properties_by_status.html:365
@@ -596,7 +605,7 @@ msgstr "مدينة"
 
 #: .\templates\properties_by_city.html:309
 msgid "aa"
-msgstr ""
+msgstr "AA"
 
 #: .\templates\properties_by_city.html:327
 #: .\templates\properties_by_status.html:328
@@ -610,7 +619,7 @@ msgstr "مشروع"
 
 #: .\templates\properties_by_status.html:473
 msgid "Görüşmeler Devam Ediyor..."
-msgstr ""
+msgstr "استمرار المفاوضات ..."
 
 #: .\templates\property-single.html:370
 msgid "Proje Detayları"
@@ -659,7 +668,7 @@ msgstr "عنوان"
 
 #: .\templates\property-single.html:565
 msgid "Bilgi Alın"
-msgstr ""
+msgstr "احصل على المعلومات"
 
 #~ msgid "Bize Yazın!"
 #~ msgstr "اتصل بنا!"

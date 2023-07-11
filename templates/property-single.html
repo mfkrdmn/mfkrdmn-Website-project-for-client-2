@@ -255,7 +255,7 @@
 		</section>
 		<!-- End breadcrumbs -->
  <!-- Property Single Slider -->
- <section class="pd-top-80 pd-btm-80">
+ <section class="pd-top-40 pd-btm-80">
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
@@ -266,19 +266,19 @@
 								<li>
 									<div class="homec-image-gallery">
 
-										<img src="{{a.image_ana_foto.url}}" alt="#" style="height: 600px; width: 1800px;   ">
+										<img src="{{a.image_ana_foto.url}}" alt="#" id="projectslidepictop">
 
 									</div>
 								</li>
 
-								{% for ha  in resim %}
+								{% for ha in resim %}
 								{% if ha.image_ana_foto.url %}
 
 
 								<li>
 									<div class="homec-image-gallery">
 
-										<img src="{{ ha.image_ana_foto.url }}" alt="#" style="height: 600px; width: 1800px; ">
+										<img src="{{ ha.image_ana_foto.url }}" alt="#" id="projectslidepictop" >
 
 									</div>
 								</li>

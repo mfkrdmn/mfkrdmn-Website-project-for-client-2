@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-05 17:09+0300\n"
-"PO-Revision-Date: 2023-07-05 16:33+0000\n"
+"PO-Revision-Date: 2023-07-11 13:07+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -37,12 +37,12 @@ msgstr "Arapça"
 
 #: .\templates\about.html:218 .\templates\about.html:622
 #: .\templates\blog-single.html:210 .\templates\blog-single.html:543
-#: .\templates\blog.html:76 .\templates\blog.html:190 .\templates\blog.html:528
-#: .\templates\contact.html:81 .\templates\contact.html:198
-#: .\templates\contact.html:498 .\templates\home.html:355
-#: .\templates\home.html:493 .\templates\home.html:1148
-#: .\templates\properties.html:212 .\templates\properties.html:666
-#: .\templates\properties_by_city.html:214
+#: .\templates\blog.html:76 .\templates\blog.html:190
+#: .\templates\blog.html:528 .\templates\contact.html:81
+#: .\templates\contact.html:198 .\templates\contact.html:498
+#: .\templates\home.html:355 .\templates\home.html:493
+#: .\templates\home.html:1148 .\templates\properties.html:212
+#: .\templates\properties.html:666 .\templates\properties_by_city.html:214
 #: .\templates\properties_by_city.html:662
 #: .\templates\properties_by_status.html:212
 #: .\templates\properties_by_status.html:651
@@ -100,10 +100,9 @@ msgstr "Tamamlanan projeler"
 #: .\templates\properties.html:220 .\templates\properties_by_city.html:222
 #: .\templates\properties_by_status.html:221
 #: .\templates\property-single.html:195
-#, fuzzy
 #| msgid "Tamamlanan projeler"
 msgid "Tüm projeler"
-msgstr "Tamamlanan projeler"
+msgstr "Tüm projeler"
 
 #: .\templates\about.html:231 .\templates\about.html:313
 #: .\templates\about.html:624 .\templates\blog-single.html:223
@@ -158,26 +157,36 @@ msgid ""
 "insanlar arsa sahibi olup arsanın yüksek düzeyli getirisine veya yapım "
 "sürecini beklemeleri halinde konutlarına sahip olabiliyorlar."
 msgstr ""
+"Ülkemizdeki yapılı gayrimenkul fiyatlarındaki hızlı yükseliş halkın büyük "
+"bir kesimi için konut edinmeyi çok zor ve pahalı hale getirdi. Bu durum "
+"bizleri yeni alternatif çözüm yolları üretmeye zorladı.Bizler de ARSA "
+"YATIRIM ORTAKLIĞI İLE KONUT EDİNDİRME YÖNTEMİ'ni geliştirdik. Bu sayede "
+"insanlar arsa sahibi olup arsanın yüksek düzeyli getirisine veya yapım "
+"sürecini beklemeleri halinde konutlarına sahip olabiliyorlar."
 
 #: .\templates\about.html:332
 msgid "Yöntem çok basit;"
-msgstr ""
+msgstr "Yöntem çok basit;"
 
 #: .\templates\about.html:333
 msgid ""
 "1- Uzman ekibimizce detaylı araştırma yapılarak yatırıma uygun arsaları "
 "buluyoruz, konut getirili projeye dönüştürüyoruz(AR-GE)"
 msgstr ""
+"1- Uzman ekibimizce detaylı araştırma yapılarak yatırıma uygun arsaları "
+"buluyoruz, konut getirili projeye dönüştürüyoruz(AR-GE)"
 
 #: .\templates\about.html:334
 msgid ""
 "2- Projemizi yatırımcılara/konut sahibi olmak isteyenlere sunuyoruz, arsa "
 "ortaklığı oluşturuyoruz (TALEP TOPLAMA) "
 msgstr ""
+"2- Projemizi yatırımcılara/konut sahibi olmak isteyenlere sunuyoruz, arsa "
+"ortaklığı oluşturuyoruz (TALEP TOPLAMA)"
 
 #: .\templates\about.html:335
 msgid "3- kat karşılığı müteahhit firmalara veriyoruz (KAZANÇ)"
-msgstr ""
+msgstr "3- kat karşılığı müteahhit firmalara veriyoruz (KAZANÇ)"
 
 #: .\templates\about.html:336
 msgid ""
@@ -186,6 +195,10 @@ msgid ""
 "arazileri, Şehir plancıları ile çalışarak imar projesi kapsamında "
 "yatırımcısı ile buluşturuyor."
 msgstr ""
+"Land Invest Group Ankara, İstanbul ve İzmir başta olmak üzere Türkiye nin "
+"gelişime açık muhtelif bölgelerinde kısa sürede yüksek kazanç sağlayacak "
+"arazileri, Şehir plancıları ile çalışarak imar projesi kapsamında "
+"yatırımcısı ile buluşturuyor."
 
 #: .\templates\about.html:338
 msgid "Peki arsa ve arazi neden çok prim yapar?"
@@ -209,11 +222,11 @@ msgstr ""
 
 #: .\templates\about.html:347
 msgid ""
-"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek "
-"kadar azdır."
+"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek"
+" kadar azdır."
 msgstr ""
-"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek "
-"kadar azdır."
+"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek"
+" kadar azdır."
 
 #: .\templates\about.html:349
 msgid ""
@@ -313,10 +326,9 @@ msgstr "Bültenimize Kaydol"
 #: .\templates\properties_by_city.html:592
 #: .\templates\properties_by_status.html:581
 #: .\templates\property-single.html:613
-#, fuzzy
 #| msgid "Email"
 msgid "E-mailiniz"
-msgstr "Email"
+msgstr "E-mailiniz"
 
 #: .\templates\about.html:553 .\templates\blog-single.html:474
 #: .\templates\blog.html:459 .\templates\contact.html:429
@@ -370,7 +382,7 @@ msgstr "Başa Dön"
 
 #: .\templates\contact.html:314
 msgid "İsim Soyisim"
-msgstr ""
+msgstr "İsim Soyisim"
 
 #: .\templates\contact.html:317 .\templates\contact.html:388
 msgid "Email"
@@ -378,17 +390,16 @@ msgstr "Email"
 
 #: .\templates\contact.html:320
 msgid "telefon"
-msgstr ""
+msgstr "telefon"
 
 #: .\templates\contact.html:323
-#, fuzzy
 #| msgid "Konum"
 msgid "Konu"
-msgstr "Konum"
+msgstr "Konu"
 
 #: .\templates\contact.html:326
 msgid "Mesaj"
-msgstr ""
+msgstr "Mesaj"
 
 #: .\templates\contact.html:328 .\templates\property-single.html:586
 msgid "Gönder"
@@ -404,12 +415,12 @@ msgstr "MARMARA EVLERİ KONUT YAPI KOOPERATİFİ"
 
 #: .\templates\home.html:596
 msgid ""
-"Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede, "
-"deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol "
+"Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede,"
+" deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol "
 "imzalamıştır."
 msgstr ""
-"Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede, "
-"deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol "
+"Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede,"
+" deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol "
 "imzalamıştır."
 
 #: .\templates\home.html:598 .\templates\home.html:614
@@ -436,16 +447,16 @@ msgstr "Kanal İstanbul Projesi"
 #: .\templates\home.html:628
 msgid ""
 "Kanal-İstanbul Projesi, İstanbul Avrupa Yakası'nın kuzeyinde Karadeniz'e "
-"kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer "
-"alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir "
-"alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde "
-"yer almaktadır."
+"kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer"
+" alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir "
+"alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde"
+" yer almaktadır."
 msgstr ""
 "Kanal-İstanbul Projesi, İstanbul Avrupa Yakası'nın kuzeyinde Karadeniz'e "
-"kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer "
-"alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir "
-"alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde "
-"yer almaktadır."
+"kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer"
+" alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir "
+"alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde"
+" yer almaktadır."
 
 #: .\templates\home.html:642
 msgid "Kanal Ankara Projesi"
@@ -588,7 +599,7 @@ msgstr "Son yazılarımız"
 #: .\templates\properties.html:328 .\templates\properties_by_city.html:326
 #: .\templates\properties_by_status.html:327
 msgid "Proje ara..."
-msgstr ""
+msgstr "Proje ara..."
 
 #: .\templates\properties.html:366 .\templates\properties_by_city.html:364
 #: .\templates\properties_by_status.html:365
@@ -616,7 +627,7 @@ msgstr "Proje"
 
 #: .\templates\properties_by_status.html:473
 msgid "Görüşmeler Devam Ediyor..."
-msgstr ""
+msgstr "Görüşmeler Devam Ediyor..."
 
 #: .\templates\property-single.html:370
 msgid "Proje Detayları"
@@ -665,7 +676,7 @@ msgstr "Adres"
 
 #: .\templates\property-single.html:565
 msgid "Bilgi Alın"
-msgstr ""
+msgstr "Bilgi Alın"
 
 #~ msgid "Bize Yazın!"
 #~ msgstr "Bize Yazın!"
