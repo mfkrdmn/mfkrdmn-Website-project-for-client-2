@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-11 20:11+0300\n"
-"PO-Revision-Date: 2023-07-11 13:05+0000\n"
+"PO-Revision-Date: 2023-07-11 21:05+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -38,12 +38,13 @@ msgstr "arabic"
 #: .\templates\about.html:77 .\templates\about.html:156
 #: .\templates\about.html:562 .\templates\blog-single.html:72
 #: .\templates\blog-single.html:151 .\templates\blog-single.html:487
-#: .\templates\blog.html:76 .\templates\blog.html:155 .\templates\blog.html:496
-#: .\templates\contact.html:89 .\templates\contact.html:169
-#: .\templates\contact.html:471 .\templates\home.html:379
-#: .\templates\home.html:458 .\templates\home.html:1002
-#: .\templates\properties.html:74 .\templates\properties.html:154
-#: .\templates\properties.html:655 .\templates\properties_by_city.html:76
+#: .\templates\blog.html:76 .\templates\blog.html:155
+#: .\templates\blog.html:496 .\templates\contact.html:89
+#: .\templates\contact.html:169 .\templates\contact.html:471
+#: .\templates\home.html:379 .\templates\home.html:458
+#: .\templates\home.html:1002 .\templates\properties.html:74
+#: .\templates\properties.html:154 .\templates\properties.html:655
+#: .\templates\properties_by_city.html:76
 #: .\templates\properties_by_city.html:157
 #: .\templates\properties_by_city.html:651
 #: .\templates\properties_by_status.html:74
@@ -57,13 +58,13 @@ msgstr "Home Page"
 #: .\templates\about.html:79 .\templates\about.html:159
 #: .\templates\about.html:563 .\templates\blog-single.html:74
 #: .\templates\blog-single.html:154 .\templates\blog-single.html:488
-#: .\templates\blog.html:78 .\templates\blog.html:158 .\templates\blog.html:497
-#: .\templates\contact.html:91 .\templates\contact.html:172
-#: .\templates\contact.html:472 .\templates\home.html:381
-#: .\templates\home.html:461 .\templates\home.html:1003
-#: .\templates\properties.html:76 .\templates\properties.html:157
-#: .\templates\properties.html:256 .\templates\properties.html:656
-#: .\templates\properties_by_city.html:78
+#: .\templates\blog.html:78 .\templates\blog.html:158
+#: .\templates\blog.html:497 .\templates\contact.html:91
+#: .\templates\contact.html:172 .\templates\contact.html:472
+#: .\templates\home.html:381 .\templates\home.html:461
+#: .\templates\home.html:1003 .\templates\properties.html:76
+#: .\templates\properties.html:157 .\templates\properties.html:256
+#: .\templates\properties.html:656 .\templates\properties_by_city.html:78
 #: .\templates\properties_by_city.html:160
 #: .\templates\properties_by_city.html:254
 #: .\templates\properties_by_city.html:652
@@ -156,12 +157,13 @@ msgstr "About Us"
 #: .\templates\about.html:90 .\templates\about.html:175
 #: .\templates\about.html:565 .\templates\blog-single.html:85
 #: .\templates\blog-single.html:170 .\templates\blog-single.html:490
-#: .\templates\blog.html:89 .\templates\blog.html:174 .\templates\blog.html:499
-#: .\templates\contact.html:102 .\templates\contact.html:188
-#: .\templates\contact.html:474 .\templates\home.html:392
-#: .\templates\home.html:477 .\templates\home.html:1005
-#: .\templates\properties.html:87 .\templates\properties.html:173
-#: .\templates\properties.html:658 .\templates\properties_by_city.html:89
+#: .\templates\blog.html:89 .\templates\blog.html:174
+#: .\templates\blog.html:499 .\templates\contact.html:102
+#: .\templates\contact.html:188 .\templates\contact.html:474
+#: .\templates\home.html:392 .\templates\home.html:477
+#: .\templates\home.html:1005 .\templates\properties.html:87
+#: .\templates\properties.html:173 .\templates\properties.html:658
+#: .\templates\properties_by_city.html:89
 #: .\templates\properties_by_city.html:176
 #: .\templates\properties_by_city.html:654
 #: .\templates\properties_by_status.html:87
@@ -261,8 +263,8 @@ msgstr ""
 
 #: .\templates\about.html:287
 msgid ""
-"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek "
-"kadar azdır."
+"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek"
+" kadar azdır."
 msgstr ""
 "Housing and business have a cost. The cost of land and land is almost "
 "negligible."
@@ -449,12 +451,12 @@ msgstr "Location"
 
 #: .\templates\home.html:561
 msgid "İstanbul Prestij Konutları"
-msgstr ""
+msgstr "Istanbul Prestige Residences"
 
 #: .\templates\home.html:564
 msgid ""
 "E-5 Karayolunun ve Kartal metro istasyonunun yanıbaşında bir yapı kompleksi"
-msgstr ""
+msgstr "A building complex next to the E-5 Highway and Kartal metro station"
 
 #: .\templates\home.html:566 .\templates\home.html:584
 msgid "Projeyi Görüntüle"
@@ -462,11 +464,11 @@ msgstr "View Project"
 
 #: .\templates\home.html:579
 msgid "İstanbul Bürokratlar Prestij Evleri"
-msgstr ""
+msgstr "Istanbul Bureaucrats Prestige Houses"
 
 #: .\templates\home.html:582
 msgid "Kalamış yapı ile kat karşılığı izmalanmıştır"
-msgstr ""
+msgstr "It was tracked against floor with Kalamış structure."
 
 #: .\templates\home.html:600
 msgid "Projelerimizi İnceleyin"
@@ -493,8 +495,8 @@ msgid ""
 msgstr ""
 "As Land Invest Real Estate, we are a leading real estate company in the "
 "sector, with our expertise in real estate and our customer-oriented "
-"approach. Our mission is to exceed our clients' needs and expectations while "
-"providing quality real estate services."
+"approach. Our mission is to exceed our clients' needs and expectations while"
+" providing quality real estate services."
 
 #: .\templates\home.html:686
 msgid ""
@@ -503,8 +505,8 @@ msgid ""
 "geliştiriyoruz"
 msgstr ""
 "As Land Invest Real Estate, we are constantly improving ourselves to "
-"maintain our leadership in the sector and to provide the best service to our "
-"customers."
+"maintain our leadership in the sector and to provide the best service to our"
+" customers."
 
 #: .\templates\home.html:707
 msgid "4 Aşamada"
@@ -585,9 +587,9 @@ msgstr "Get Information"
 #~ msgstr "MARMARA HOUSES HOUSING BUILDING COOPERATIVE"
 
 #~ msgid ""
-#~ "Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km "
-#~ "mesafede, deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için "
-#~ "protokol imzalamıştır."
+#~ "Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede,"
+#~ " deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol "
+#~ "imzalamıştır."
 #~ msgstr ""
 #~ "Our cooperative signed a protocol for the purchase of a 16.106 m2 land in "
 #~ "Arnavutköy, Istanbul, 5.6 km from Istanbul Airport, with sea and Canal "
@@ -597,27 +599,26 @@ msgstr "Get Information"
 #~ msgstr "GERDER PROJECT"
 
 #~ msgid ""
-#~ "( 4.600 m2 ) dönüm hazine arazisinde toplu konut veya Üniversite "
-#~ "kampüslari tasarlanıyor. Bunların her ikisi'de yapılaşmayı "
-#~ "hızlandıracaktır."
+#~ "( 4.600 m2 ) dönüm hazine arazisinde toplu konut veya Üniversite kampüslari "
+#~ "tasarlanıyor. Bunların her ikisi'de yapılaşmayı hızlandıracaktır."
 #~ msgstr ""
-#~ "Mass housing or university campuses are being designed on (4,600 m2) "
-#~ "acres of treasury land. Both of these will speed up construction."
+#~ "Mass housing or university campuses are being designed on (4,600 m2) acres "
+#~ "of treasury land. Both of these will speed up construction."
 
 #~ msgid "Kanal İstanbul Projesi"
 #~ msgstr "Canal Istanbul Project"
 
 #~ msgid ""
 #~ "Kanal-İstanbul Projesi, İstanbul Avrupa Yakası'nın kuzeyinde Karadeniz'e "
-#~ "kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde "
-#~ "yer alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş "
-#~ "bir alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir "
-#~ "içlerinde yer almaktadır."
+#~ "kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer"
+#~ " alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir "
+#~ "alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde"
+#~ " yer almaktadır."
 #~ msgstr ""
 #~ "Kanal-Istanbul Project is a real estate project located on the 3rd Bridge "
-#~ "(Yavuz Sultan Selim Bridge) connection road, which has a coast to the "
-#~ "Black Sea, in the north of the European Side of Istanbul. The project is "
-#~ "located on a large area of ​​approximately 450,000 m² and is located in its "
+#~ "(Yavuz Sultan Selim Bridge) connection road, which has a coast to the Black "
+#~ "Sea, in the north of the European Side of Istanbul. The project is located "
+#~ "on a large area of ​​approximately 450,000 m² and is located in its "
 #~ "neighbors Çatalca, Esenyurt and Başakşehir."
 
 #~ msgid "Kanal Ankara Projesi"
@@ -648,8 +649,8 @@ msgstr "Get Information"
 #~ "Uzmanlık, deneyim, geniş portföy, müşteri memnuniyeti odaklı hizmetler ve "
 #~ "profesyonel iletişim gibi avantajlarımız bulunmaktadır."
 #~ msgstr ""
-#~ "We have advantages such as expertise, experience, wide portfolio, "
-#~ "customer satisfaction-oriented services and professional communication."
+#~ "We have advantages such as expertise, experience, wide portfolio, customer "
+#~ "satisfaction-oriented services and professional communication."
 
 #~ msgid "Referanslarınızı paylaşabilir misiniz?"
 #~ msgstr "Can you share your references?"
@@ -661,24 +662,23 @@ msgstr "Get Information"
 #~ msgstr "What are the areas of expertise of your real estate agents?"
 
 #~ msgid ""
-#~ "Emlak danışmanlarımız farklı uzmanlık alanlarına sahip olup, konut, "
-#~ "ticari mülkler veya yatırım fırsatları gibi alanlarda uzmanlaşmışlardır."
+#~ "Emlak danışmanlarımız farklı uzmanlık alanlarına sahip olup, konut, ticari "
+#~ "mülkler veya yatırım fırsatları gibi alanlarda uzmanlaşmışlardır."
 #~ msgstr ""
-#~ "Our real estate agents have different areas of expertise and specialize "
-#~ "in areas such as residential, commercial properties or investment "
+#~ "Our real estate agents have different areas of expertise and specialize in "
+#~ "areas such as residential, commercial properties or investment "
 #~ "opportunities."
 
 #~ msgid "Sizden hizmet almanın güvencesi nedir?"
 #~ msgstr "What is the assurance of getting service from you?"
 
 #~ msgid ""
-#~ "Firmamız, sektördeki deneyimi, müşteri memnuniyetine verdiği önem ve "
-#~ "uzman kadrosuyla size güvenilir bir hizmet sunmanın garantisini "
-#~ "vermektedir."
+#~ "Firmamız, sektördeki deneyimi, müşteri memnuniyetine verdiği önem ve uzman "
+#~ "kadrosuyla size güvenilir bir hizmet sunmanın garantisini vermektedir."
 #~ msgstr ""
-#~ "Our company, with its experience in the sector, the importance it "
-#~ "attaches to customer satisfaction and its expert staff, guarantees you a "
-#~ "reliable service."
+#~ "Our company, with its experience in the sector, the importance it attaches "
+#~ "to customer satisfaction and its expert staff, guarantees you a reliable "
+#~ "service."
 
 #~ msgid "Ara"
 #~ msgstr "Search"

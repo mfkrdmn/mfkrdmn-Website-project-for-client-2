@@ -9,15 +9,14 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-07-11 20:11+0300\n"
-"PO-Revision-Date: 2023-07-11 13:09+0000\n"
+"PO-Revision-Date: 2023-07-11 21:07+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 "X-Translated-Using: django-rosetta 0.9.8\n"
 
 #: .\main\views.py:23
@@ -39,12 +38,13 @@ msgstr "Arabic"
 #: .\templates\about.html:77 .\templates\about.html:156
 #: .\templates\about.html:562 .\templates\blog-single.html:72
 #: .\templates\blog-single.html:151 .\templates\blog-single.html:487
-#: .\templates\blog.html:76 .\templates\blog.html:155 .\templates\blog.html:496
-#: .\templates\contact.html:89 .\templates\contact.html:169
-#: .\templates\contact.html:471 .\templates\home.html:379
-#: .\templates\home.html:458 .\templates\home.html:1002
-#: .\templates\properties.html:74 .\templates\properties.html:154
-#: .\templates\properties.html:655 .\templates\properties_by_city.html:76
+#: .\templates\blog.html:76 .\templates\blog.html:155
+#: .\templates\blog.html:496 .\templates\contact.html:89
+#: .\templates\contact.html:169 .\templates\contact.html:471
+#: .\templates\home.html:379 .\templates\home.html:458
+#: .\templates\home.html:1002 .\templates\properties.html:74
+#: .\templates\properties.html:154 .\templates\properties.html:655
+#: .\templates\properties_by_city.html:76
 #: .\templates\properties_by_city.html:157
 #: .\templates\properties_by_city.html:651
 #: .\templates\properties_by_status.html:74
@@ -58,13 +58,13 @@ msgstr "الصفحة الرئيسية"
 #: .\templates\about.html:79 .\templates\about.html:159
 #: .\templates\about.html:563 .\templates\blog-single.html:74
 #: .\templates\blog-single.html:154 .\templates\blog-single.html:488
-#: .\templates\blog.html:78 .\templates\blog.html:158 .\templates\blog.html:497
-#: .\templates\contact.html:91 .\templates\contact.html:172
-#: .\templates\contact.html:472 .\templates\home.html:381
-#: .\templates\home.html:461 .\templates\home.html:1003
-#: .\templates\properties.html:76 .\templates\properties.html:157
-#: .\templates\properties.html:256 .\templates\properties.html:656
-#: .\templates\properties_by_city.html:78
+#: .\templates\blog.html:78 .\templates\blog.html:158
+#: .\templates\blog.html:497 .\templates\contact.html:91
+#: .\templates\contact.html:172 .\templates\contact.html:472
+#: .\templates\home.html:381 .\templates\home.html:461
+#: .\templates\home.html:1003 .\templates\properties.html:76
+#: .\templates\properties.html:157 .\templates\properties.html:256
+#: .\templates\properties.html:656 .\templates\properties_by_city.html:78
 #: .\templates\properties_by_city.html:160
 #: .\templates\properties_by_city.html:254
 #: .\templates\properties_by_city.html:652
@@ -157,12 +157,13 @@ msgstr "معلومات عنا"
 #: .\templates\about.html:90 .\templates\about.html:175
 #: .\templates\about.html:565 .\templates\blog-single.html:85
 #: .\templates\blog-single.html:170 .\templates\blog-single.html:490
-#: .\templates\blog.html:89 .\templates\blog.html:174 .\templates\blog.html:499
-#: .\templates\contact.html:102 .\templates\contact.html:188
-#: .\templates\contact.html:474 .\templates\home.html:392
-#: .\templates\home.html:477 .\templates\home.html:1005
-#: .\templates\properties.html:87 .\templates\properties.html:173
-#: .\templates\properties.html:658 .\templates\properties_by_city.html:89
+#: .\templates\blog.html:89 .\templates\blog.html:174
+#: .\templates\blog.html:499 .\templates\contact.html:102
+#: .\templates\contact.html:188 .\templates\contact.html:474
+#: .\templates\home.html:392 .\templates\home.html:477
+#: .\templates\home.html:1005 .\templates\properties.html:87
+#: .\templates\properties.html:173 .\templates\properties.html:658
+#: .\templates\properties_by_city.html:89
 #: .\templates\properties_by_city.html:176
 #: .\templates\properties_by_city.html:654
 #: .\templates\properties_by_status.html:87
@@ -234,9 +235,9 @@ msgid ""
 "arazileri, Şehir plancıları ile çalışarak imar projesi kapsamında "
 "yatırımcısı ile buluşturuyor."
 msgstr ""
-"تجمع Land Invest Group الأراضي التي ستوفر أرباحًا عالية في وقت قصير في مختلف "
-"مناطق تركيا المفتوحة للتطوير ، خاصة في أنقرة وإسطنبول وإزمير ، مع المستثمرين "
-"في نطاق مشروع تقسيم المناطق من خلال العمل مع مخططي المدن ."
+"تجمع Land Invest Group الأراضي التي ستوفر أرباحًا عالية في وقت قصير في مختلف"
+" مناطق تركيا المفتوحة للتطوير ، خاصة في أنقرة وإسطنبول وإزمير ، مع "
+"المستثمرين في نطاق مشروع تقسيم المناطق من خلال العمل مع مخططي المدن ."
 
 #: .\templates\about.html:278
 msgid "Peki arsa ve arazi neden çok prim yapar?"
@@ -260,8 +261,8 @@ msgstr ""
 
 #: .\templates\about.html:287
 msgid ""
-"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek "
-"kadar azdır."
+"Konut ve işyerinde bir maliyet vardır. Arsa ve arazide maliyet yok denilecek"
+" kadar azdır."
 msgstr "السكن والعمل له تكلفة. تكلفة الأرض والأرض تكاد لا تذكر."
 
 #: .\templates\about.html:289
@@ -444,12 +445,12 @@ msgstr "موقع"
 
 #: .\templates\home.html:561
 msgid "İstanbul Prestij Konutları"
-msgstr ""
+msgstr "اسطنبول برستيج ريزيدنس"
 
 #: .\templates\home.html:564
 msgid ""
 "E-5 Karayolunun ve Kartal metro istasyonunun yanıbaşında bir yapı kompleksi"
-msgstr ""
+msgstr "مجمع مباني بجوار الطريق السريع E-5 ومحطة مترو كارتال"
 
 #: .\templates\home.html:566 .\templates\home.html:584
 msgid "Projeyi Görüntüle"
@@ -457,11 +458,11 @@ msgstr "عرض مشروع"
 
 #: .\templates\home.html:579
 msgid "İstanbul Bürokratlar Prestij Evleri"
-msgstr ""
+msgstr "منازل هيبة البيروقراطيين في اسطنبول"
 
 #: .\templates\home.html:582
 msgid "Kalamış yapı ile kat karşılığı izmalanmıştır"
-msgstr ""
+msgstr "تم تعقبه على أرضية بهيكل Kalamış."
 
 #: .\templates\home.html:600
 msgid "Projelerimizi İnceleyin"
@@ -578,39 +579,38 @@ msgstr "احصل على المعلومات"
 #~ msgstr "مرمرة للبيوت السكنية التعاونية"
 
 #~ msgid ""
-#~ "Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km "
-#~ "mesafede, deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için "
-#~ "protokol imzalamıştır."
+#~ "Kooperatifimiz İstanbul, Arnavutköy de İstanbul Havaalanına 5,6 km mesafede,"
+#~ " deniz ve Kanal İstanbul manzaralı 16.106 m2 arsanın alımı için protokol "
+#~ "imzalamıştır."
 #~ msgstr ""
-#~ "وقعت تعاونية لدينا بروتوكول لشراء أرض بمساحة 16.106 متر مربع في "
-#~ "Arnavutköy ، اسطنبول ، على بعد 5.6 كم من مطار اسطنبول ، مع إطلالة على "
-#~ "البحر وقناة اسطنبول."
+#~ "وقعت تعاونية لدينا بروتوكول لشراء أرض بمساحة 16.106 متر مربع في Arnavutköy ،"
+#~ " اسطنبول ، على بعد 5.6 كم من مطار اسطنبول ، مع إطلالة على البحر وقناة "
+#~ "اسطنبول."
 
 #~ msgid "GERDER PROJESİ"
 #~ msgstr "مشروع جيردر"
 
 #~ msgid ""
-#~ "( 4.600 m2 ) dönüm hazine arazisinde toplu konut veya Üniversite "
-#~ "kampüslari tasarlanıyor. Bunların her ikisi'de yapılaşmayı "
-#~ "hızlandıracaktır."
+#~ "( 4.600 m2 ) dönüm hazine arazisinde toplu konut veya Üniversite kampüslari "
+#~ "tasarlanıyor. Bunların her ikisi'de yapılaşmayı hızlandıracaktır."
 #~ msgstr ""
-#~ "يجري تصميم مساكن جماعية أو حرم جامعي على مساحة (4600 م 2) من أراضي "
-#~ "الخزينة. كلاهما سوف يسرع البناء."
+#~ "يجري تصميم مساكن جماعية أو حرم جامعي على مساحة (4600 م 2) من أراضي الخزينة. "
+#~ "كلاهما سوف يسرع البناء."
 
 #~ msgid "Kanal İstanbul Projesi"
 #~ msgstr "مشروع قناة اسطنبول"
 
 #~ msgid ""
 #~ "Kanal-İstanbul Projesi, İstanbul Avrupa Yakası'nın kuzeyinde Karadeniz'e "
-#~ "kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde "
-#~ "yer alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş "
-#~ "bir alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir "
-#~ "içlerinde yer almaktadır."
+#~ "kıyısı olan 3. Köprü (Yavuz Sultan Selim Köprüsü) bağlantı yolu üzerinde yer"
+#~ " alan bir gayrimenkul projesidir. Proje, yaklaşık 450.000 m²'lik geniş bir "
+#~ "alanda konumlanmıştır ve komşuları Çatalca, Esenyurt ve Başakşehir içlerinde"
+#~ " yer almaktadır."
 #~ msgstr ""
 #~ "مشروع كانال-اسطنبول هو مشروع عقاري يقع على طريق اتصال الجسر الثالث (جسر "
-#~ "يافوز سلطان سليم) والذي يمتد على ساحل البحر الأسود شمال الجانب الأوروبي "
-#~ "من اسطنبول. يقع المشروع على مساحة كبيرة تقارب 450.000 متر مربع ويقع في "
-#~ "جيرانها كاتالجا وإسنيورت وباشاك شهير."
+#~ "يافوز سلطان سليم) والذي يمتد على ساحل البحر الأسود شمال الجانب الأوروبي من "
+#~ "اسطنبول. يقع المشروع على مساحة كبيرة تقارب 450.000 متر مربع ويقع في جيرانها "
+#~ "كاتالجا وإسنيورت وباشاك شهير."
 
 #~ msgid "Kanal Ankara Projesi"
 #~ msgstr "مشروع قناة أنقرة"
@@ -653,8 +653,8 @@ msgstr "احصل على المعلومات"
 #~ msgstr "ما هي مجالات خبرة وكلائك العقاريين؟"
 
 #~ msgid ""
-#~ "Emlak danışmanlarımız farklı uzmanlık alanlarına sahip olup, konut, "
-#~ "ticari mülkler veya yatırım fırsatları gibi alanlarda uzmanlaşmışlardır."
+#~ "Emlak danışmanlarımız farklı uzmanlık alanlarına sahip olup, konut, ticari "
+#~ "mülkler veya yatırım fırsatları gibi alanlarda uzmanlaşmışlardır."
 #~ msgstr ""
 #~ "يتمتع وكلاؤنا العقاريون بخبرات مختلفة ومتخصصون في مجالات مثل العقارات "
 #~ "السكنية أو التجارية أو فرص الاستثمار."
@@ -663,9 +663,8 @@ msgstr "احصل على المعلومات"
 #~ msgstr "ما هو ضمان الحصول على الخدمة منك؟"
 
 #~ msgid ""
-#~ "Firmamız, sektördeki deneyimi, müşteri memnuniyetine verdiği önem ve "
-#~ "uzman kadrosuyla size güvenilir bir hizmet sunmanın garantisini "
-#~ "vermektedir."
+#~ "Firmamız, sektördeki deneyimi, müşteri memnuniyetine verdiği önem ve uzman "
+#~ "kadrosuyla size güvenilir bir hizmet sunmanın garantisini vermektedir."
 #~ msgstr ""
 #~ "تضمن لك شركتنا ، بخبرتها في القطاع ، والأهمية التي توليها لرضا العملاء "
 #~ "وموظفيها الخبراء ، خدمة موثوقة."
