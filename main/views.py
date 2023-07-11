@@ -13,7 +13,8 @@ from django.http import HttpResponse
 from django.shortcuts import render
 from django.utils.translation  import gettext as _
 from django.utils.translation import get_language, activate, gettext
-
+def anasayfa(request):
+    return redirect("/tr/anasayfa/")
 def dil_bilgisi():
     return get_language()
 def translate(language):

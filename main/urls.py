@@ -3,7 +3,8 @@ from . import views
 app_name = "land"
 
 urlpatterns = [
-    path('', views.home, name='home'),
+    path('', views.anasayfa, name='anasayfa'),
+    path('anasayfa/', views.home, name='home'),
     path('projelerimiz', views.properties, name='properties'),
     path('projelerimiz/<str:sehir>/', views.sehre_gore_projeler, name='sehre_gore_projeler'),
     path('projelerimiz/durumu/<str:status>/', views.proje_durumuna_gore, name='proje_durumuna_gore'),
