@@ -185,15 +185,15 @@
 																	</option>
 
 																	{% elif dil == "en" %}
-																	<option value="/{{ lang.code }}/{{link}}" >
+																	<option value="/{{ lang.code }}/{{link}}/" >
 																	English
 																	</option>
 																	{% elif dil == "ar" %}
-																	<option value="/{{ lang.code }}/{{link}}" >
+																	<option value="/{{ lang.code }}/{{link}}/" >
 																		عربي
 																	</option>
 																	{% else %}
-																	<option value="/{{ lang.code }}/{{link}}" >
+																	<option value="/{{ lang.code }}/{{link}}/" >
 																	Deutsch
 																	</option>
 																	{% endif %}
@@ -264,31 +264,22 @@
 						<div class="flexslider" id="f1">
 							<ul class="slides">
 								<li>
-									<div class="homec-image-gallery">
-
-										<img src="{{a.image_ana_foto.url}}" alt="#" id="projectslidepictop">
-
-									</div>
+								  <div class="homec-image-gallery">
+									<img src="{{a.image_ana_foto.url}}" alt="#">
+								  </div>
 								</li>
-
+							  
 								{% for ha in resim %}
 								{% if ha.image_ana_foto.url %}
-
-
 								<li>
-									<div class="homec-image-gallery">
-
-										<img src="{{ ha.image_ana_foto.url }}" alt="#" id="projectslidepictop" >
-
-									</div>
+								  <div class="homec-image-gallery">
+									<img src="{{ ha.image_ana_foto.url }}" alt="#">
+								  </div>
 								</li>
-
-
 								{% else %}
 								{% endif %}
 								{% endfor %}
-
-							</ul>
+							  </ul>
 						</div>
 						<div class="homec-property-thumbs mg-top-10">
 							<div class="flexslider carousel" id="f2">
