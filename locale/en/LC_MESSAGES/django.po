@@ -88,7 +88,7 @@ msgstr "Projects"
 #: .\templates\properties_by_status.html:78
 #: .\templates\properties_by_status.html:159
 #: .\templates\property-single.html:77 .\templates\property-single.html:158
-msgid "Devam eden projeler"
+msgid "Satışı devam eden"
 msgstr "Ongoing projects"
 
 #: .\templates\about.html:82 .\templates\about.html:163
@@ -102,7 +102,7 @@ msgstr "Ongoing projects"
 #: .\templates\properties_by_status.html:79
 #: .\templates\properties_by_status.html:160
 #: .\templates\property-single.html:78 .\templates\property-single.html:159
-msgid "Planlanan projeler"
+msgid "Satışı planlanan"
 msgstr "Planned projects"
 
 #: .\templates\about.html:83 .\templates\about.html:164
@@ -116,7 +116,7 @@ msgstr "Planned projects"
 #: .\templates\properties_by_status.html:80
 #: .\templates\properties_by_status.html:161
 #: .\templates\property-single.html:79 .\templates\property-single.html:160
-msgid "Tamamlanan projeler"
+msgid "Satışı tamamlanan"
 msgstr "Completed projects"
 
 #: .\templates\about.html:84 .\templates\about.html:165
